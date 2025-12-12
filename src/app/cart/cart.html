@@ -1,0 +1,15 @@
+<h2>Cart</h2>
+<div *ngFor="let i of items$ | async">
+<p>{{ i.title }} — {{ i.price | number }}
+<button (click)="remove(i.id)">Remove</button>
+<span>
+<!-- <button (click)="decrease(i.id)">-</button>
+ {{ i.Quantity }}
+<button (click)="increase(i.id)">+</button> -->
+<input min="1" type="number" [ngModel]="i.Quantity"  (ngModelChange)="updateQte(i.id, $event)">
+
+<div>Subtotal: {{ i.subtotal }} EGP</div>
+</span>
+</p>
+</div>
+<p>Total: {{ total$ | async | number }}</p>

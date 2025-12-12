@@ -1,0 +1,8 @@
+{
+  "products":[
+  { "id": 1, "title": "Phone", "price": 200, "img": "https://m.media-amazon.com/images/I/61V7NjE8V+L._UF894,1000_QL80_.jpg" },
+  { "id": 2, "title": "Laptop", "price": 500, "img": "https://p2-ofp.static.pub//fes/cms/2024/07/17/109vq5fdalv01w5jsu6vh35ncnk5jn890135.png" },
+  { "id": 3, "title": "TV", "price": 300, "img": "https://amstradworld.com/wp-content/uploads/2023/12/Amstrad-AM65UWGTA-WebOS-TV_front.jpg" },
+  { "id": 4, "title": "taplet", "price": 250, "img": "https://imgaz1.staticbg.com/thumb/view/oaupload/banggood/images/0F/EE/ab4f4e2e-c199-41e3-8186-15209ea49815.jpg.webp" }
+] 
+}
