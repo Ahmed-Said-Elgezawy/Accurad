@@ -1,0 +1,7 @@
+<div *transloco="let t">
+    <label for="lang">{{t('choose_language')}}</label>
+    <select name="" id="lang" (change)="onChange($event)">
+      <option [value]="lang" *ngFor="let lang of languages"  [selected]="lang === currentLang">{{t(lang)}}</option>
+    </select>
+</div> 
+ 

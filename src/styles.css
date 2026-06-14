@@ -1,1 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* font-family: "Encode Sans Expanded", sans-serif; */
+    /* font-family: "Cairo", sans-serif; */
+}
+html[dir="ltr"] body{
+  font-family: "Encode Sans Expanded", sans-serif;
+}
+
+html[dir="rtl"] body{
+  font-family: "Cairo", sans-serif;
+}
+:root{
+    --main-color:#622d87;
+    --white-color: white;
+    --background-color: rgb(243, 243, 243);
+    --gray-color:#ccc;
+    --dark-white-color:rgba(255,255,255,.7);
+
+    --small-size: clamp(14px,2vw,15px);
+    --medium-size: clamp(14px,2vw,16px);
+    --larg-size: clamp(28px,4vw,40px);
+    --small-heading:clamp(19px,4vw,20px);
+    --small-heading2:clamp(23px,4vw,25px);
+}
+.ant-collapse-content > .ant-collapse-content-box{
+    padding: 0 16px;
+}
+[role=button], a, area, button, input:not([type=range]), label, select, summary, textarea{
+    display: flex;
+    /* align-items: center; */
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow svg{
+    font-size: 17px;
+
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow{
+    position: relative;
+    transform: translateY(33%);
+}
+
+
+/* ===== */
+/* LTR */
+html[dir="ltr"] .sidebar.active .content .icon-con.x span.two{
+    transform: translateX(-30rem);
+}
+
+/* RTL */
+html[dir="rtl"] .sidebar.active .content .icon-con.x span.two{
+    transform: translateX(30rem);
+}
+
+/* ======= */
+html[dir="ltr"] .sidebar.active .content .social-home .icon-con.f{
+    transform: translate(-100px, 75px);
+}
+html[dir="ltr"] .sidebar.active .content .social-home .icon-con.t{
+    transform: translate(-50px, 39px);
+}
+
+html[dir="rtl"] .sidebar.active .content .social-home .icon-con.f{
+    transform: translate(100px, 75px);
+}
+
+html[dir="rtl"] .sidebar.active .content .social-home .icon-con.t{
+    transform: translate(50px, 39px);
+}
+
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow svg {
+    font-size: 12px;
+}
