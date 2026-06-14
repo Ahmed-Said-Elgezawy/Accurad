@@ -1,0 +1,21 @@
+{
+   "h1":"Contact Us",
+   "text":"For inquiries, please contact us using the form on this page or use the email address and phone number provided to reach us directly.",
+   "phone":"Phone",
+    "number":"+20 10 45277919",
+   "whatsapp":"WhatsApp",
+   "country":"Country",
+   "address":"Address",
+   "address-details":"Cairo, Nasr City",
+   "name":"Name",
+   "email":"Email",
+   "message":"Message",
+   "button":"Send",
+
+   "placeholder-name":"Enter your name",
+   "placeholder-email":"Enter your email",
+    "placeholder-message":"Enter your message",
+    "placeholder-phone":"Enter your phone number",
+    "placeholder-country":"Enter your country"
+
+}
