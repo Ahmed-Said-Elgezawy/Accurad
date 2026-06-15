@@ -141,9 +141,32 @@
     margin-bottom: 30px;
     width: 100%;
 }
+.contact .content .item-con{
+    padding: 0;
+}
+.contact .content .contact-info form{
+    padding: 0;
+}
 }
 @media  (max-width: 576px){
     .contact{
-        padding: 30px 14px;
+        padding: 30px 11.6px;
     }
+    .contact .content .item{
+        border: 1px solid var(--gray-white-color);
+        margin-bottom: .6rem;
+    }
+    .contact .content .contact-info form ul{
+        padding:  .6rem;
+        border: 1px solid var(--gray-white-color);
+    }
+    .contact .content .contact-info form ul li input{
+        margin-bottom: 10px;
+        padding: 12px;
+        border: 1px solid var(--gray-white-color);
+    }
+    .contact .content .contact-info form ul li input::placeholder{
+        font-size: 13px;
+    }
+    
 }

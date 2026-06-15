@@ -226,12 +226,12 @@ header nav ul li .text{
     .ticket-Logo .part{
         width: 4px;
     }
-    :host-context([dir="ltr"]) header nav ul li{
+    /* :host-context([dir="ltr"]) header nav ul li{
         padding-right: .5rem;
     }
     :host-context([dir="rtl"]) header nav ul li{
         padding-left: .5rem;
-    }
+    } */
 :host-context([dir="rtl"]) header nav ul li:not(header nav ul li:nth-last-child(1))::after{
         position: absolute;
         content: " ";
@@ -579,11 +579,13 @@ footer .logo {
 
 .footer-bottom p {
   color: var(--dark-white-color);
+  font-size: var(--small-size);
 }
 
 .footer-policy {
   display: flex;
   gap: 18px;
+    font-size: var(--small-size);
 }
 
 .footer-policy a {
@@ -612,7 +614,7 @@ footer .logo {
       grid-template-columns:1fr;
       gap: 1.5rem;
       justify-items: center;
-      padding: 0 5% 20px;
+      padding: 0 11.6px 20px;
   }
 
   .footer-column::after{
@@ -621,14 +623,40 @@ footer .logo {
 
   .footer-bottom{
       flex-direction:column;
-      gap:20px;
       text-align:center;
   }
   .footer-column h3 {
     text-align: center;
   }
     .footer-bottom{
-        padding: 20px 5%;
-        gap: 15px;
+        padding: 15px 6px;
+        gap: 10px;
     }
+}
+@media  (max-width: 576px){
+    .footer .content{
+        padding-top: 40px;
+    }
+    .company p{
+        margin-top: 20px;
+    }
+:host-context([dir="ltr"]) .socials {
+  margin-top: 20px;
+}
+:host-context([dir="rtl"]) .socials {
+  margin-top: 30px;
+}
+.links-con{
+    gap: 42px;
+}
+.links li:nth-last-of-type(1){
+    margin-bottom: 10px;
+}
+.footer-column h3{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.footer-column .contacttitle{
+    margin-top: 0px;
+}
 }
