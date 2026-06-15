@@ -165,7 +165,11 @@
         padding: 12px;
         border: 1px solid var(--gray-white-color);
     }
-    .contact .content .contact-info form ul li input::placeholder{
+    .contact .content .contact-info form  ul li textarea{
+        border: 1px solid var(--gray-white-color);
+    }
+    .contact .content .contact-info form ul li input::placeholder , 
+    .contact .content .contact-info form ul li textarea::placeholder{
         font-size: 13px;
     }
     

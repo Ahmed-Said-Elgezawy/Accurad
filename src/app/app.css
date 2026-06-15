@@ -585,12 +585,13 @@ footer .logo {
 .footer-policy {
   display: flex;
   gap: 18px;
-    font-size: var(--small-size);
+  
 }
 
 .footer-policy a {
   color: rgba(255,255,255,.8);
   text-decoration: none;
+  font-size: var(--small-size);
   transition: .3s;
 }
 
@@ -601,6 +602,9 @@ footer .logo {
     .logo-wrapper{
         flex-direction: column;
         justify-content: center;
+    }
+    .logo-wrapper .text{
+        text-align: center;
     }
     .company p{
         text-align: center;
