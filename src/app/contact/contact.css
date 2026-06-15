@@ -150,7 +150,13 @@
 }
 @media  (max-width: 576px){
     .contact{
-        padding: 30px 11.6px;
+        padding: 25px 11.6px;
+    }
+    .contact .content h1{
+        margin-bottom: 20px;
+    }
+    .contact .content .text-con p{
+        margin-bottom: 20px;
     }
     .contact .content .item{
         border: 1px solid var(--gray-white-color);
@@ -174,3 +180,6 @@
     }
     
 }
+
+ /* ng build --configuration production --base-href "https://Ahmed-Said-Elgezawy.github.io/Accurad/"
+ npx angular-cli-ghpages --dir=dist/app/browser  */

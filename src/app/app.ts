@@ -23,6 +23,7 @@ export class App {
       this.isActive = value;
       this.removeActive = false
     });
+
   }
     closeMenu(){
       setTimeout(()=>{
@@ -56,6 +57,11 @@ export class App {
             this.translocoService.setActiveLang(langCode);
             this.currentLang = langCode;
 
-             document.documentElement.dir = langCode === 'ar' ? 'rtl' : 'ltr';
+            //  document.documentElement.dir = langCode === 'ar' ? 'rtl' : 'ltr';
+            //    this.isActive = true;
+
+            //     setTimeout(() => {
+            //       this.isActive = false;
+            //     }, 0);
         }
 }

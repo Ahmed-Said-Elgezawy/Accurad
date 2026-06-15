@@ -23,13 +23,14 @@ header .logo .menu svg{
     cursor: pointer;
 }
 .logo-img{
-    /* width: 114px;
-    height: 56px; */
+    width: 125px;;
+    height: 70px;
     cursor: pointer;
 }
 .logo-img img{
     width: 100%;
     height: 100%;
+    object-fit:cover;
 }
 .ticket-Logo{
     display: flex;
@@ -318,7 +319,7 @@ html[dir="ltr"] .sidebar.active .content .icon-con.x span.two{
 
 /* RTL */
 html[dir="rtl"] .sidebar.active .content .icon-con.x span.two{
-    transform: translateX(30rem);
+    transform: translateX(-30rem);
 }
 
 /* ========= */
@@ -343,19 +344,32 @@ html[dir="rtl"] .sidebar.active .content .icon-con.x span.two{
     transition: .5s ease;
     cursor: pointer;
 }
-.sidebar .content  nav ul .licon{
-    transform: translateX(-150%);
+:host-context([dir="ltr"]) .sidebar .content  nav ul .licon{
+    transform: translateX(-110%);
     transition: .3s ease;
-    transition-delay: calc((0.8s / 6) * var(--i));
+    transition-delay: calc((0.8s / 8) * var(--i));
 }
-.sidebar.active .content  nav ul .licon{
+:host-context([dir="ltr"]) .sidebar.active .content  nav ul .licon{
     transform: translateX(0);  
 }
-
-.sidebar.removeActive .content  nav ul .licon{
-    transform: translateX(-150%);
+:host-context([dir="ltr"]) .sidebar.removeActive .content  nav ul .licon{
+    transform: translateX(-110%);
     transition: .3s ease;
-    transition-delay: calc((0.5s / 6) * var(--x));
+    transition-delay: calc((0.5s / 8) * var(--x));
+}
+/* === */
+:host-context([dir="rtl"]) .sidebar .content  nav ul .licon{
+    transform: translateX(110%);
+    transition: .3s ease;
+    transition-delay: calc((0.8s / 8) * var(--i));
+}
+:host-context([dir="rtl"]) .sidebar.active .content  nav ul .licon{
+    transform: translateX(0);  
+}
+:host-context([dir="rtl"]) .sidebar.removeActive .content  nav ul .licon{
+    transform: translateX(110%);
+    transition: .3s ease;
+    transition-delay: calc((0.5s / 8) * var(--x));
 }
 
 .sidebar .content  nav ul .licon:not(.sidebar .content  nav ul .licon:nth-last-child(1)){
@@ -407,13 +421,14 @@ html[dir="rtl"] .sidebar.active .content .icon-con.x span.two{
 /* footer ======= */
 .footer {
    background-color: var(--background-color);
+
 }
 .footer .content {
   background-color: var(--main-color);
   color: white;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  overflow: hidden;
+  /* overflow: hidden; */
   padding-top: 70px;
   /* font-family: "Poppins", sans-serif; */
 }
@@ -455,6 +470,15 @@ footer .logo {
   font-size: 40px;
   color: #5471ff;
 }
+footer .Logo-img-footer{
+    width: 151px;
+    height: 84px;
+}
+footer .Logo-img-footer img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .logo-wrapper h2 {
   font-size: var(--small-heading2);
   margin-bottom: 8px;
@@ -470,7 +494,7 @@ footer .logo {
   max-width: 500px;
   line-height: 1.8;
   color: var(--dark-white-color);
-  font-size: var(--small-size);
+  font-size: var(--small-size2);
 }
 .socials {
   display: flex;
@@ -546,7 +570,7 @@ footer .logo {
 .links a {
   color: var(--dark-white-color);
   text-decoration: none;
-  font-size: var(--small-size);
+  font-size: var(--small-size2);
   display: flex;
   justify-content: space-between;
   width: fit-content;
@@ -559,8 +583,12 @@ footer .logo {
   align-items: center;
   gap: 18px;
   margin-bottom: 25px;
-  font-size: var(--small-size);
+  font-size: var(--small-size2);
 }
+.contact .email span ,
+.contact .phone span{
+    font-family: "Roboto", sans-serif;
+} 
 .contact span{
     color: var(--dark-white-color);
 }
@@ -650,8 +678,11 @@ footer .logo {
 :host-context([dir="rtl"]) .socials {
   margin-top: 30px;
 }
-.links-con{
+:host-context([dir="ltr"]) .links-con{
     gap: 42px;
+}
+:host-context([dir="rtl"]) .links-con{
+    gap: 50px;
 }
 .links li:nth-last-of-type(1){
     margin-bottom: 10px;
@@ -659,6 +690,8 @@ footer .logo {
 .footer-column h3{
     margin-top: 10px;
     margin-bottom: 30px;
+    letter-spacing: 3px;
+    font-weight: 500;
 }
 .footer-column .contacttitle{
     margin-top: 0px;
