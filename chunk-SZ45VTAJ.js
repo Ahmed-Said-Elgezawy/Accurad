@@ -1,0 +1,1 @@
+import{O as a,j as t}from"./chunk-BQO3LNFZ.js";var r=class e{sidebarState=new t(!1);sidebar$=this.sidebarState.asObservable();toggleSidebar(){this.sidebarState.next(!this.sidebarState.value)}closeSidebar(){this.sidebarState.next(!1)}static \u0275fac=function(i){return new(i||e)};static \u0275prov=a({token:e,factory:e.\u0275fac,providedIn:"root"})};export{r as a};
