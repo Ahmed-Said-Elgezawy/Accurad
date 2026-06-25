@@ -82,16 +82,16 @@
         <div class="licon" style="--i:4; --x:8;"  routerLink="/home" (click)="closeMenul()">
           <li>{{t ('n1')}}</li>
         </div>
-        <div class="licon" style="--i:5;--x:7;"  routerLink="/stadium" (click)="closeMenul()">
+        <div class="licon" style="--i:5;--x:7;"  routerLink="/about" (click)="closeMenul()">
         <li>{{t ('n2')}}</li>
         </div>
-        <div class="licon" style="--i:6;--x:6;"  routerLink="/story" (click)="closeMenul()">
+        <div class="licon" style="--i:6;--x:6;"  routerLink="/service" (click)="closeMenul()">
         <li>{{t ('n3')}}</li>
         </div>
         <div class="licon" style="--i:7;--x:5;"  routerLink="/faq" (click)="closeMenul()">
         <li>{{t ('n4')}}</li>
         </div>
-        <div class="licon" style="--i:8;--x:4;"  routerLink="/about" (click)="closeMenul()">
+        <div class="licon" style="--i:8;--x:4;"  routerLink="/contact" (click)="closeMenul()">
         <li>{{t ('n5')}}</li>
         </div>
       </ul>
@@ -110,11 +110,7 @@
    </div>
 </div>
 <router-outlet />
-<!-- <div class="bar">
-  <div class="img-con">
-    <img src="logo1.png" alt="">
-  </div>
-</div> -->
+
 <footer class="footer" *transloco="let t">
   <div class="content">
   <div class="footer-container">
@@ -254,12 +250,7 @@
           </svg>
         <span>{{t('phone')}}</span>
       </div>
-
-
-
-
     </div>
-
   </div>
 
   <div class="footer-bottom">
@@ -273,3 +264,14 @@
   </div>
   </div>
 </footer>
+
+<div class="items">
+  <div class="scroll-up" [class.active]="isSticky" [style.--progress]="scrollPercent + '%'" (click)="scrollToTop()">
+    <div class="mini-circle">
+      <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+      fill="currentColor" viewBox="0 0 24 24" >
+      <path d="M13 18V9.91l3.29 3.3 1.42-1.42L12 6.09l-5.71 5.7 1.42 1.42L11 9.91V18z"></path>
+      </svg>
+    </div>
+</div>
+</div>

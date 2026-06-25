@@ -1,6 +1,10 @@
 {
    "h1":"Contact Us",
+   "h1-2":"We Are Here To Help",
    "text":"For inquiries, please contact us using the form on this page or use the email address and phone number provided to reach us directly.",
+   
+   "h2":"Send Us a Message",
+   "h2-2":"Contact Information",
    "phone":"Phone",
     "number":"+20 10 45277919",
    "whatsapp":"WhatsApp",

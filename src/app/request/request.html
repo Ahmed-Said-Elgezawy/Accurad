@@ -1,0 +1,361 @@
+
+ <div class="request">
+    <div class="content">
+ 
+<div class="page-wrapper">
+  <div class="form-card">
+    <div class="form-layout">
+ 
+      <!-- ── SIDEBAR ── -->
+      <div class="sidebar">
+ 
+        <div class="step-item" *ngFor="let step of steps; let i = index"
+             [class.active]="currentStep === i + 1"
+             [class.done]="currentStep > i + 1">
+          <div class="step-badge">
+            <span *ngIf="currentStep <= i + 1">{{ i + 1 }}</span>
+            <svg *ngIf="currentStep > i + 1" width="14" height="14" fill="none"
+                 stroke="white" stroke-width="3" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+            </svg>
+          </div>
+          <div class="step-info">
+            <h4>{{ step.title }}</h4>
+            <p>{{ step.desc }}</p>
+          </div>
+        </div>
+ 
+        <div class="help-box">
+          <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 18v-6a9 9 0 0118 0v6M3 18a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0
+                 00-2-2H3v5zm18 0a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3v5z"/>
+          </svg>
+          <div>
+            <h5>Need Help?</h5>
+            <p>Your team is here to assist you at every step.</p>
+          </div>
+        </div>
+ 
+      </div>
+ 
+      <!-- ── CONTENT ── -->
+      <div class="content-area">
+ 
+        <!-- Progress Bar -->
+        <div class="progress-bar-wrapper">
+          <ng-container *ngFor="let step of steps; let i = index; let last = last">
+            <div class="prog-circle"
+                 [class.filled]="currentStep === i + 1"
+                 [class.done]="currentStep > i + 1">
+              <span *ngIf="currentStep <= i + 1">{{ i + 1 }}</span>
+              <svg *ngIf="currentStep > i + 1" width="14" height="14" fill="none"
+                   stroke="white" stroke-width="3" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+              </svg>
+            </div>
+            <div *ngIf="!last" class="prog-line" [class.done-line]="currentStep > i + 1"></div>
+          </ng-container>
+        </div>
+ 
+        <!-- ══ STEP 1 ══ -->
+        <div class="step-block" *ngIf="currentStep === 1">
+          <div class="step-header">
+            <h2>Basic Information</h2>
+            <p>Please provide some basic information about you and your medical center.</p>
+          </div>
+ 
+          <label class="field-label">Doctor's Name</label>
+          <div class="input-wrapper">
+            <svg class="input-icon" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+              <circle cx="12" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <input type="text" placeholder="Enter your full name" [(ngModel)]="formData.doctorName"/>
+          </div>
+ 
+          <label class="field-label">Medical Center / Hospital Name</label>
+          <div class="input-wrapper">
+            <svg class="input-icon" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M6 21V7l6-4 6 4v14M9 21v-4h6v4"/>
+            </svg>
+            <input type="text" placeholder="Enter center or hospital name" [(ngModel)]="formData.centerName"/>
+          </div>
+ 
+          <label class="field-label">Country</label>
+          <div class="input-wrapper select-wrapper">
+            <svg class="input-icon" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10
+                   A15.3 15.3 0 018 12a15.3 15.3 0 014-10z"/>
+            </svg>
+            <select [(ngModel)]="formData.country">
+              <option value="" disabled>Select your country</option>
+              <option>Egypt</option>
+              <option>Saudi Arabia</option>
+              <option>United Arab Emirates</option>
+              <option>United States</option>
+              <option>United Kingdom</option>
+            </select>
+            <svg class="chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </div>
+ 
+          <div class="security-box">
+            <svg width="20" height="20" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955
+                   0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622
+                   5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+            <div>
+              <h5>Your Information is Secure</h5>
+              <p>All information you provide is encrypted and will only be used to serve you better.</p>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- ══ STEP 2 ══ -->
+        <div class="step-block" *ngIf="currentStep === 2">
+          <div class="step-header">
+            <h2>Facility Type</h2>
+            <p>What type of facility do you represent?</p>
+          </div>
+ 
+          <div class="options-grid">
+            <label class="option-card" [class.selected]="formData.facilityType === 'Hospital'">
+              <input type="radio" name="facility" value="Hospital" [(ngModel)]="formData.facilityType"/>
+              <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M6 21V7l6-4 6 4v14M9 21v-4h6v4"/>
+              </svg>
+              <span>Hospital</span>
+            </label>
+ 
+            <label class="option-card" [class.selected]="formData.facilityType === 'Imaging Center'">
+              <input type="radio" name="facility" value="Imaging Center" [(ngModel)]="formData.facilityType"/>
+              <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35"/>
+              </svg>
+              <span>Imaging Center</span>
+            </label>
+ 
+            <label class="option-card" [class.selected]="formData.facilityType === 'Clinic'">
+              <input type="radio" name="facility" value="Clinic" [(ngModel)]="formData.facilityType"/>
+              <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0
+                     00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2
+                     2 0 012 2M12 12v4M10 14h4"/>
+              </svg>
+              <span>Clinic</span>
+            </label>
+ 
+            <label class="option-card" [class.selected]="formData.facilityType === 'Telehealth Provider'">
+              <input type="radio" name="facility" value="Telehealth Provider" [(ngModel)]="formData.facilityType"/>
+              <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 21h8M12 17v4"/>
+              </svg>
+              <span>Telehealth Provider</span>
+            </label>
+          </div>
+        </div>
+ 
+        <!-- ══ STEP 3 ══ -->
+        <div class="step-block" *ngIf="currentStep === 3">
+          <div class="step-header">
+            <h2>Imaging Volume</h2>
+            <p>What is your average monthly imaging volume?</p>
+          </div>
+ 
+          <div class="options-grid">
+            <label class="option-card" [class.selected]="formData.imagingVolume === 'Less than 500'">
+              <input type="radio" name="volume" value="Less than 500" [(ngModel)]="formData.imagingVolume"/>
+              <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V15M12 19V9M15 19v-4"/>
+              </svg>
+              <span>Less than 500</span>
+            </label>
+ 
+            <label class="option-card" [class.selected]="formData.imagingVolume === '500 - 1000'">
+              <input type="radio" name="volume" value="500 - 1000" [(ngModel)]="formData.imagingVolume"/>
+              <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V11M12 19V5M15 19v-8"/>
+              </svg>
+              <span>500 – 1,000</span>
+            </label>
+ 
+            <label class="option-card" [class.selected]="formData.imagingVolume === '1000 - 5000'">
+              <input type="radio" name="volume" value="1000 - 5000" [(ngModel)]="formData.imagingVolume"/>
+              <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V9M12 19V5M15 19v-7"/>
+              </svg>
+              <span>1,000 – 5,000</span>
+            </label>
+ 
+            <label class="option-card" [class.selected]="formData.imagingVolume === 'More than 5000'">
+              <input type="radio" name="volume" value="More than 5000" [(ngModel)]="formData.imagingVolume"/>
+              <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V5M12 19V9M15 19v-3"/>
+              </svg>
+              <span>More than 5,000</span>
+            </label>
+          </div>
+        </div>
+ 
+        <!-- ══ STEP 4 ══ -->
+        <div class="step-block" *ngIf="currentStep === 4">
+          <div class="step-header">
+            <h2>Modalities</h2>
+            <p>Which modalities are you interested in? (Select all that apply)</p>
+          </div>
+ 
+          <div class="options-grid">
+            <label class="option-card" [class.selected]="formData.modalities.includes('X-Ray')">
+              <input type="checkbox" (change)="onModalityChange($event, 'X-Ray')"
+                     [checked]="formData.modalities.includes('X-Ray')"/>
+              <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
+                <rect x="3" y="3" width="18" height="18" rx="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 9l6 6M15 9l-6 6"/>
+              </svg>
+              <span>X-Ray</span>
+            </label>
+ 
+            <label class="option-card" [class.selected]="formData.modalities.includes('CT')">
+              <input type="checkbox" (change)="onModalityChange($event, 'CT')"
+                     [checked]="formData.modalities.includes('CT')"/>
+              <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="9" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>CT</span>
+            </label>
+ 
+            <label class="option-card" [class.selected]="formData.modalities.includes('MRI')">
+              <input type="checkbox" (change)="onModalityChange($event, 'MRI')"
+                     [checked]="formData.modalities.includes('MRI')"/>
+              <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h8M12 8v8"/>
+              </svg>
+              <span>MRI</span>
+            </label>
+ 
+            <label class="option-card" [class.selected]="formData.modalities.includes('Ultrasound')">
+              <input type="checkbox" (change)="onModalityChange($event, 'Ultrasound')"
+                     [checked]="formData.modalities.includes('Ultrasound')"/>
+              <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M9 19c-4.418 0-8-1.79-8-4s3.582-4 8-4 8 1.79 8 4-3.582 4-8 4z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8c2.21 0 4 1.79 4 4s-1.79 4-4 4"/>
+              </svg>
+              <span>Ultrasound</span>
+            </label>
+          </div>
+        </div>
+ 
+        <!-- ══ STEP 5 ══ -->
+        <div class="step-block" *ngIf="currentStep === 5">
+          <div class="step-header">
+            <h2>Coverage</h2>
+            <p>What type of coverage do you require?</p>
+          </div>
+ 
+          <div class="options-grid single-col">
+            <label class="option-card" [class.selected]="formData.coverage === 'Day Coverage'">
+              <input type="radio" name="coverage" value="Day Coverage" [(ngModel)]="formData.coverage"/>
+              <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42
+                     M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+              </svg>
+              <span>Day Coverage</span>
+            </label>
+ 
+            <label class="option-card" [class.selected]="formData.coverage === 'Night Coverage'">
+              <input type="radio" name="coverage" value="Night Coverage" [(ngModel)]="formData.coverage"/>
+              <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+              </svg>
+              <span>Night Coverage</span>
+            </label>
+ 
+            <label class="option-card" [class.selected]="formData.coverage === '24/7 Coverage'">
+              <input type="radio" name="coverage" value="24/7 Coverage" [(ngModel)]="formData.coverage"/>
+              <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/>
+              </svg>
+              <span>24/7 Coverage</span>
+            </label>
+          </div>
+        </div>
+ 
+        <!-- ── Buttons ── -->
+        <div class="btn-row">
+          <button class="btn-back" (click)="previousStep()" [disabled]="currentStep === 1">
+            Back
+          </button>
+          <button class="btn-next" (click)="currentStep < 5 ? nextStep() : submitForm()"
+                  [disabled]="!isStepValid()">
+            {{ currentStep < 5 ? 'Next' : 'Submit' }}
+            <svg *ngIf="currentStep < 5" width="16" height="16" fill="none"
+                 stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+ 
+      </div>
+    </div>
+</div>
+
+  <div class="success-overlay" [class.show]="showSuccess">
+  <div class="success-card">
+ 
+    <!-- Confetti dots -->
+    <div class="confetti">
+      <span *ngFor="let dot of confettiDots"
+            class="dot"
+            [style.background]="dot.color"
+            [style.left]="dot.left"
+            [style.top]="dot.top"
+            [style.width]="dot.size"
+            [style.height]="dot.size"
+            [style.--tx]="dot.tx"
+            [style.--ty]="dot.ty"
+            [style.animation-delay]="dot.delay"
+            [style.animation-duration]="dot.duration">
+      </span>
+    </div>
+ 
+    <!-- Check circle -->
+    <div class="check-circle">
+      <svg viewBox="0 0 52 52" fill="none" stroke="white"
+           stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+        <path class="check-path" d="M14 27l9 9 16-18"/>
+      </svg>
+    </div>
+ 
+    <h2 class="success-title">Request Sent Successfully! 🎉</h2>
+    <p class="success-sub">
+      Thank you! Your registration has been received.<br/>
+      Our team will review your information and get back to you shortly.
+    </p>
+ 
+    <button class="btn-done" (click)="showSuccess = false">
+      Back to Home
+    </button>
+ 
+  </div>
+</div>
+</div>
+
+  </div>
+ </div>

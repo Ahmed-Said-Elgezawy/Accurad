@@ -1,0 +1,585 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.request .content{
+      padding: 20px 90px 15px;
+}
+.page-wrapper {
+  min-height: 100vh;
+  /* background: linear-gradient(135deg, #0d2b6b 0%, #1a4fa8 50%, #2d7dd2 100%); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 24px 16px; */
+}
+
+/* ── Card ── */
+.form-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  /* max-width: 900px; */
+}
+ 
+.form-layout {
+  display: flex;
+  flex-direction: row;
+}
+ 
+/* ══════════════════════════════════════
+   SIDEBAR
+══════════════════════════════════════ */
+.sidebar {
+  width: 40%;
+  min-width: 260px;
+  background: #f7f8fc;
+  border-right: 1px solid #e8eaf0;
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+}
+ 
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid #eaecf2;
+  transition: opacity 0.2s;
+}
+ 
+.step-item:last-of-type {
+  border-bottom: none;
+}
+ 
+.step-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e4e7f0;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: background 0.3s, color 0.3s;
+}
+ .step-badge svg{
+  width: 20px;
+  height: 20px;
+ }
+.step-item.active .step-badge {
+  background: var(--main-color);
+  color: #fff;
+}
+ 
+.step-item.done .step-badge {
+  background: #22c55e;
+  color: #fff;
+}
+ 
+.step-info h4 {
+  font-size: var(--small-size2);
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 6px;
+}
+ 
+.step-info p {
+  font-size: var(--small-size);
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.4;
+}
+ 
+.help-box {
+  background: #ead0fc4b;
+  border-radius: 10px;
+  padding: 14px;
+  margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+ 
+.help-box h5 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px;
+}
+ 
+.help-box p {
+  font-size: clamp(11.5px,2vw,14px);
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.4;
+}
+ 
+/* ══════════════════════════════════════
+   CONTENT AREA
+══════════════════════════════════════ */
+.content-area {
+  flex: 1;
+  padding: 36px 40px;
+  display: flex;
+  flex-direction: column;
+}
+ 
+/* Progress bar */
+.progress-bar-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 36px;
+}
+ 
+.prog-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e4e7f0;
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: background 0.3s;
+}
+ .prog-circle svg{
+  width: 22px;
+  height: 22px;
+ }
+.prog-circle.filled {
+  background: var(--main-color);
+  color: #fff;
+}
+ 
+.prog-circle.done {
+  background: #22c55e;
+  color: #fff;
+}
+ 
+.prog-line {
+  flex: 1;
+  height: 2px;
+  background: #e4e7f0;
+  transition: background 0.3s;
+}
+ 
+.prog-line.done-line {
+  background: #22c55e;
+}
+ 
+/* ── Step blocks ── */
+.step-block {
+  animation: fadeSlide 0.3s ease;
+  flex: 1;
+}
+ 
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+ 
+.step-header {
+  margin-bottom: 28px;
+}
+ 
+.step-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px;
+}
+ 
+.step-header p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+}
+ 
+/* ── Labels & Inputs ── */
+.field-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 8px;
+}
+ 
+.input-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+ 
+.input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: #9ca3af;
+  pointer-events: none;
+}
+ 
+.input-wrapper input[type="text"],
+.input-wrapper select {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #374151;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+ 
+.input-wrapper input[type="text"]::placeholder {
+  color: #9ca3af;
+}
+ 
+.input-wrapper input[type="text"]:focus,
+.input-wrapper select:focus {
+  border-color: var(--main-color);
+  box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.08);
+}
+ 
+.select-wrapper .chevron {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: #6b7280;
+  pointer-events: none;
+}
+ 
+/* ── Security box ── */
+.security-box {
+  background: #ead0fc4b;
+  border: 1.5px solid #612d8796;
+  border-radius: 10px;
+  padding: 16px 18px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-top: 8px;
+}
+ 
+.security-box h5 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--main-color);
+  margin: 0 0 4px;
+}
+ 
+.security-box p {
+  font-size: clamp(12.5px,2vw,14px);
+  color: #374151;
+  margin: 0;
+  line-height: 1.5;
+}
+ .security-box svg{
+  width: 22px;
+  height: 22px;
+ }
+/* ── Option cards (radio & checkbox) ── */
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+ 
+.options-grid.single-col {
+  grid-template-columns: 1fr;
+}
+ 
+.option-card {
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+  user-select: none;
+}
+ 
+.option-card:hover {
+  border-color: #612d8796;
+  background: #ead0fc4b;
+}
+ 
+.option-card.selected {
+  border-color: #612d8796;
+  background: #ead0fc4b;
+  box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.08);
+}
+ 
+.option-card input[type="radio"],
+.option-card input[type="checkbox"] {
+  accent-color: var(--main-color);
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+ 
+.option-card span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+ 
+/* ── Buttons ── */
+.btn-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+}
+ 
+.btn-back {
+  background: #e9ebf0;
+  color: #6b7280;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: var(--small-size2);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+ 
+.btn-back:hover:not(:disabled) {
+  background: #d1d5db;
+}
+ 
+.btn-back:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+ 
+.btn-next {
+  background: var(--main-color);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-size: var(--small-size2);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s;
+}
+ 
+.btn-next:hover:not(:disabled) {
+  background: var(--main-color);
+}
+ 
+.btn-next:disabled {
+  background: #b48bd1;
+  cursor: not-allowed;
+}
+ 
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 768px) {
+  .form-layout {
+    flex-direction: column;
+  }
+ 
+  .sidebar {
+    width: 100%;
+    min-width: unset;
+    border-right: none;
+    border-bottom: 1px solid #e8eaf0;
+    padding: 20px 16px;
+  }
+ 
+  .content-area {
+    padding: 24px 16px;
+  }
+ 
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+ 
+  .step-header h2 {
+    font-size: 20px;
+  }
+}
+/* Overlay */
+.success-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: #9166af78;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+ 
+.success-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+}
+ 
+/* Card */
+.success-card {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 52px 44px 44px;
+  text-align: center;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.22);
+  transform: scale(0.85);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+ 
+.success-overlay.show .success-card {
+  transform: scale(1);
+}
+ 
+/* Check circle */
+.check-circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  box-shadow: 0 8px 28px rgba(34, 197, 94, 0.38);
+  animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s both;
+}
+ 
+.check-circle svg {
+  width: 46px;
+  height: 46px;
+}
+ 
+.check-path {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 60;
+  animation: drawCheck 0.4s ease 0.55s forwards;
+}
+ 
+@keyframes popIn {
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
+}
+ 
+@keyframes drawCheck {
+  to { stroke-dashoffset: 0; }
+}
+ 
+/* Text */
+.success-title {
+  font-size: var(--small-heading);
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 12px;
+}
+ 
+.success-sub {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.7;
+  margin: 0 0 32px;
+}
+ 
+/* Button */
+.btn-done {
+  /* background: linear-gradient(135deg, #1a56db, #2d7dd2); */
+  background-color: var(--main-color);
+  color: #fff;
+  border: none;
+  padding: 13px 40px;
+  border-radius: 10px;
+  font-size: var(--medium-size);
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: opacity 0.2s, transform 0.2s;
+  display: block;
+  width: 100%;
+}
+ 
+.btn-done:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+ 
+/* Confetti */
+.confetti {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+ 
+.dot {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  animation: flyDot 1s ease forwards;
+}
+ 
+@keyframes flyDot {
+  0%   { opacity: 1; transform: translate(0, 0) scale(1); }
+  100% { opacity: 0; transform: translate(var(--tx), var(--ty)) scale(0.2); }
+}
+
+@media (max-width:815px) {
+    .request .content{
+      padding: 20px  39px 15px;
+    }
+}
+@media (max-width:576px) {
+    .request .content{
+      padding: 28px  11.6px 15px;
+    }
+    .step-header{
+       text-align: center;
+    }
+    .prog-circle{
+       width: 36px;
+       height: 36px;
+       font-size: 14px;
+    }
+    .success-overlay {
+      padding: 11.6px;
+    }
+    .success-card{
+      padding: 15px 13px ;
+      width: 100%;
+    }
+
+}

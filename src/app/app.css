@@ -157,6 +157,7 @@ header nav ul li .text{
     transition: .1s ease;
     overflow: hidden;
     border: .1px solid rgba(255, 255, 255, 0.486);
+    z-index: 100;
 }
 .dropdown .lang{
     display: flex;
@@ -636,6 +637,56 @@ footer .Logo-img-footer img{
 .footer-policy a:hover {
   color: var(--white-color);
 }
+/* === scroll-scroll-up === */
+.items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .7rem;
+    position: fixed;
+    left: .8rem;
+    bottom: 16px;
+    z-index: 100;
+}
+ .scroll-up{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: conic-gradient(var(--main-color) var(--progress), transparent  0);
+    color: white;
+    cursor: pointer;
+    transition: .5s ease;
+    z-index: 100;
+    position: relative;
+    top: 5rem;
+    z-index: -1;
+    color: white;
+    gap: .7rem;
+  }
+   .scroll-up.active{
+    top: 0rem;
+   }
+  .scroll-up .mini-circle{
+    content: "";
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    border: 1px solid var(--white-color);
+    z-index: 150;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ .scroll-up svg{
+    width: 30px;
+    height: 30px; 
+ }
+
 @media  (max-width:1109px){
     .logo-wrapper{
         flex-direction: column;

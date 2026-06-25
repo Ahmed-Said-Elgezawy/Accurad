@@ -6,6 +6,8 @@
     /* font-family: "Encode Sans Expanded", sans-serif; */
     /* font-family: "Cairo", sans-serif; */
 }
+
+
 html[dir="ltr"] body{
   /* font-family: "Encode Sans Expanded", sans-serif; */
   font-family: "Roboto", sans-serif;
@@ -16,18 +18,33 @@ html[dir="rtl"] body{
 }
 :root{
     --main-color:#622d87;
+    /* --main-color:#612d873f; */
     --white-color: white;
     --background-color: rgb(243, 243, 243);
     --gray-color:#ccc;
     --gray-white-color:#dddddd;
     --dark-white-color:rgba(255,255,255,.7);
+    
+    --less-size: clamp(14px,2vw,13px);
+    --feature-size: clamp(15px,2vw,13px);
 
     --small-size: clamp(13px,2vw,15px);
-    --small-size2: clamp(14px,2vw,15px);
+    --small-size2: clamp(14px,2vw,16px);
     --medium-size: clamp(13.5px,2vw,16px);
-    --larg-size: clamp(28px,4vw,40px);
-    --small-heading:clamp(20px,4vw,21px);
+    --larg-size: clamp(20px,4vw,40px);
+    --larg-size2: clamp(23px,4vw,50px);
+    --main-heading:clamp(45px,5vw,70px);
+    --small-heading:clamp(19px,4vw,21px);
     --small-heading2:clamp(23px,4vw,25px);
+    --sumary-size:clamp(18px,2vw,20px)
+
+
+    --primary:#2563eb;
+    --primary-dark:#081a4b;
+    --dark:#081224;
+    --text:#0f172a;
+    --gray:#64748b;
+    --light:#f8fafc;
 }
 
 .ant-collapse-content > .ant-collapse-content-box{

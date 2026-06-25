@@ -1,21 +1,14 @@
-import { Component, inject, Renderer2 } from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { Sidebar } from '../service/sidebar';
-import { TranslocoDirective, TranslocoService } from '@jsverse/transloco';
 import { CommonModule } from '@angular/common';
+import { Component, Renderer2 } from '@angular/core';
+import { TranslocoDirective, TranslocoService } from '@jsverse/transloco';
 
 @Component({
-  selector: 'app-contact',
+  selector: 'app-about',
   imports: [CommonModule,TranslocoDirective],
-  templateUrl: './contact.html',
-  styleUrl: './contact.css',
+  templateUrl: './about.html',
+  styleUrl: './about.css',
 })
-export class Contact {
-  sidebar = inject(Sidebar)
-  toggleMenu(){
-    this.sidebar.toggleSidebar();
-  }
-
+export class About {
 currentLang: string;
 languages: string[];
 

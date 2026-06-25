@@ -1,0 +1,244 @@
+<div *transloco="let t">
+    <section class="hero">
+        <div class="overlay"></div>
+
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 hero-content">
+                    <h1>{{ t('about.h1-1') }}</h1>
+                    <h1>{{ t('about.h1-2') }}</h1>
+                    <p>{{ t('about.h-p') }}</p>
+                </div>
+                <div class="hero-img ">
+                    <div class="hero-img-con">
+                        <img src="hero.png" class="img-fluid hero-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <div class="about">
+        <section class="section-space about-section">
+                <div class="row ">
+                    <div class="img-con col-sm-12 col-md-12 col-lg-5  ">
+                        <img src="about4.png" class="img-fluid who-img">
+                    </div>
+                    <div class="data col-sm-12 col-md-12 col-lg-7 ">
+                        <span class="section-label">{{ t('about.who-span') }}</span>
+                        <h1>{{ t('about.who-h1') }}</h1>
+
+                        <p class="text partone">{{ t('about.who-p2') }}</p>
+                        <p class="text partthree">{{ t('about.who-p3') }}</p>
+                        <div class="features-row row">
+
+                            <div class="mini-feature col-md-4 col-sm-12">
+                                <i class="fa-solid fa-user-doctor"></i>
+                                <div class="info">
+                                    <h6>{{ t('about.who-f-h6-1') }}</h6>
+                                    <p>{{ t('about.who-f-p1') }}</p>
+                                </div>
+                            </div>
+
+                            <div class="mini-feature col-md-4 col-sm-12">
+                                <i class="fa-solid fa-globe"></i>
+                                <div class="info">
+                                    <h6>{{ t('about.who-f-h6-2') }}</h6>
+                                    <p>{{ t('about.who-f-p2') }}</p>
+                                </div>
+                            </div>
+
+                            <div class="mini-feature col-md-4 col-sm-12">
+                                <i class="fa-solid fa-award"></i>
+                                <div class="info">
+                                    <h6>{{ t('about.who-f-h6-3') }}</h6>
+                                    <p>{{ t('about.who-f-p3') }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <section class="features ">
+            <div>
+                <div class="features-content row g-4">
+                    <div class="info-content  col-lg-4 col-md-12 col-sm-12 ">
+                        <div class="info-card mission">
+                            <div class="icon-con">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                            <h3>{{ t('about.who-m-h3') }}</h3>
+                            <p>{{ t('about.who-m-p') }}</p>
+                        </div>
+                    </div>
+                    <div class="info-content col-lg-4 col-md-12 col-sm-12">
+                        <div class="info-card vision">
+                            <div class="icon-con">
+                                <i class="fa-solid fa-eye"></i>
+                            </div>
+                            <h3>{{ t('about.who-v-h3') }}</h3>
+                            <p>{{ t('about.who-v-p') }}</p>
+                        </div>
+                    </div>
+                    <div class="info-content col-lg-4 col-md-12 col-sm-12">
+                        <div class="info-card values">
+                            <div class="icon-con">
+                                <i class="fa-solid fa-gem"></i>
+                            </div>
+                            <h3>{{ t('about.who-c-h3') }}</h3>
+                            <ul>
+                                <li>{{ t('about.who-c-li1') }}</li>
+                                <li>{{ t('about.who-c-li2') }}</li>
+                                <li>{{ t('about.who-c-li3') }}</li>
+                                <li>{{ t('about.who-c-li4') }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="stats-bar">
+        <div class="content">
+            <div class="row text-center">
+                <div class="col-md-3 col-lg-2 col-sm-12">
+                    <h3>10M+</h3>
+                    <p>{{ t('about.sta-p1') }}</p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-sm-12">
+                    <h3>1000+</h3>
+                    <p>{{ t('about.sta-p2') }}</p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-sm-12">
+                    <h3>40+</h3>
+                    <p>{{ t('about.sta-p3') }}</p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-sm-12">
+                    <h3>24/7</h3>
+                    <p>{{ t('about.sta-p4') }}</p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-sm-12">
+                    <h3>99.9%</h3>
+                    <p>{{ t('about.sta-p5') }}</p>
+                </div>
+                <div class="col-md-3 col-lg-2 col-sm-12">
+                    <h3>99.9%</h3>
+                    <p>{{ t('about.sta-p6') }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="about">
+        <div class="whyChoose">
+            <div class="content">
+                <p class="text">{{ t('about.why-p1') }}</p>
+                <h1>{{ t('about.why-h1') }}</h1>
+                <div class="items-con row">
+                    <div class="col-lg-3 col-sm-6 item">
+                        <div class="why-card">
+                            <i class="fa-solid fa-user-doctor"></i>
+                            <h6>{{ t('about.why-f1-h6') }}</h6>
+                            <p>{{ t('about.why-f1-p') }}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 item">
+                        <div class="why-card">
+                            <i class="fa-solid fa-clock"></i>
+                            <h6>{{ t('about.why-f2-h6') }}</h6>
+                            <p>{{ t('about.why-f2-p') }}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 item">
+                        <div class="why-card">
+                            <i class="fa-solid fa-bolt"></i>
+                            <h6>{{ t('about.why-f3-h6') }}</h6>
+                            <p>{{ t('about.why-f3-p') }}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 item">
+                        <div class="why-card">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <h6>{{ t('about.why-f4-h6') }}</h6>
+                            <p>{{ t('about.why-f4-p') }}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 item">
+                        <div class="why-card">
+                            <i class="fa-solid fa-x-ray"></i>
+                            <h6>{{ t('about.why-f5-h6') }}</h6>
+                            <p>{{ t('about.why-f5-p') }}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 item">
+                        <div class="why-card">
+                            <i class="fa-solid fa-stethoscope"></i>
+                            <h6>{{ t('about.why-f6-h6') }}</h6>
+                            <p>{{ t('about.why-f6-p') }}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 item">
+                        <div class="why-card">
+                            <i class="fa-solid fa-truck-medical"></i>
+                            <h6>{{ t('about.why-f7-h6') }}</h6>
+                            <p>{{ t('about.why-f7-p') }}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 item">
+                        <div class="why-card">
+                            <i class="fa-solid fa-file-circle-check"></i>
+                            <h6>{{ t('about.why-f8-h6') }}</h6>
+                            <p>{{ t('about.why-f8-p') }}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 item">
+                        <div class="why-card">
+                            <i class="fa-solid fa-laptop-medical"></i>
+                            <h6>{{ t('about.why-f9-h6') }}</h6>
+                            <p>{{ t('about.why-f9-p') }}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 item">
+                        <div class="why-card">
+                            <i class="fa-solid fa-headset"></i>
+                            <h6>{{ t('about.why-f10-h6') }}</h6>
+                            <p>{{ t('about.why-f10-p') }}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 item">
+                        <div class="why-card">
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+                            <h6>{{ t('about.why-f11-h6') }}</h6>
+                            <p>{{ t('about.why-f11-p') }}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6 item">
+                        <div class="why-card">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <h6>{{ t('about.why-f12-h6') }}</h6>
+                            <p>{{ t('about.why-f12-p') }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="col-lg-3">
+
+    <div class="doctor-card">
+
+    <img src="images/doctor1.jpg">
+
+    <h5>Dr. James Carter</h5>
+
+    <span>Chief Medical Officer</span>
+
+    </div>
+
+    </div> -->
+
+
+    </div>
+</div>
