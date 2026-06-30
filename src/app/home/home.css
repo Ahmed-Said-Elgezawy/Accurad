@@ -91,6 +91,7 @@
   font-size: 14px; cursor: pointer;
   transition: border-color .2s, background .2s;
 }
+
 .btn-ghost:hover { border-color: rgba(255,255,255,0.7); background: rgba(255,255,255,0.05); }
 .hero-badges { display: flex; gap: 20px; flex-wrap: wrap; }
 .hbadge {
@@ -479,9 +480,24 @@
   padding: 13px 28px; border-radius: 8px;
   font-size: 14px; font-weight: 600; cursor: pointer;
   transition: border-color .2s, background .2s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 .btn-ghost-dark:hover {  border: 1px solid rgba(255, 255, 255, 0.541);}
+:host-context([dir="ltr"])  .btn-ghost-dark .right{
+  display:block
+}
+:host-context([dir="ltr"])  .btn-ghost-dark .left{
+  display:none
+}
 
+:host-context([dir="rtl"])  .btn-ghost-dark .right{
+  display:none
+}
+:host-context([dir="rtl"])  .btn-ghost-dark .left{
+  display:block
+}
 /* ── RESPONSIVE ── */
 @media (max-width: 1024px) {
   .services-grid  { grid-template-columns: repeat(3, 1fr); }

@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, Renderer2 } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { TranslocoDirective, TranslocoService } from '@jsverse/transloco';
 
 @Component({
@@ -8,13 +9,14 @@ import { TranslocoDirective, TranslocoService } from '@jsverse/transloco';
   templateUrl: './about.html',
   styleUrl: './about.css',
 })
-export class About {
+export class About implements OnInit{
 currentLang: string;
 languages: string[];
 
 constructor(
   private translocoService: TranslocoService,
-  private renderer: Renderer2
+  private renderer: Renderer2,
+  private router: Router,
 ){
 
   // قراءة اللغة المحفوظة
@@ -62,4 +64,12 @@ changeLang(langCode: string): void {
   // حفظ اللغة
   localStorage.setItem('lang', langCode);
 }
+// =======
+  ngOnInit(): void {
+  this.router.events.subscribe((event: any)=>{
+    if(event  instanceof NavigationEnd){
+      window.scrollTo(0,0)
+    }
+  })
+  }
 }

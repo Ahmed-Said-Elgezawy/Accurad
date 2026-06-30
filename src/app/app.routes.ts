@@ -4,7 +4,7 @@ import { provideTransloco, provideTranslocoScope } from '@jsverse/transloco';
 export const routes: Routes = [
     {
         path:'',
-        redirectTo:'contact',
+        redirectTo:'home',
         pathMatch:'full'
     },
 

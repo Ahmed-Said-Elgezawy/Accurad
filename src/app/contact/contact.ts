@@ -1,5 +1,5 @@
-import { Component, inject, Renderer2 } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject, OnInit, Renderer2 } from '@angular/core';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { Sidebar } from '../service/sidebar';
 import { TranslocoDirective, TranslocoService } from '@jsverse/transloco';
 import { CommonModule } from '@angular/common';
@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './contact.html',
   styleUrl: './contact.css',
 })
-export class Contact {
+export class Contact implements OnInit{
   sidebar = inject(Sidebar)
   toggleMenu(){
     this.sidebar.toggleSidebar();
@@ -21,7 +21,8 @@ languages: string[];
 
 constructor(
   private translocoService: TranslocoService,
-  private renderer: Renderer2
+  private renderer: Renderer2,
+  private router: Router
 ){
 
   // قراءة اللغة المحفوظة
@@ -69,4 +70,13 @@ changeLang(langCode: string): void {
   // حفظ اللغة
   localStorage.setItem('lang', langCode);
 }
+
+// =======
+  ngOnInit(): void {
+  this.router.events.subscribe((event: any)=>{
+    if(event  instanceof NavigationEnd){
+      window.scrollTo(0,0)
+    }
+  })
+  }
 }
