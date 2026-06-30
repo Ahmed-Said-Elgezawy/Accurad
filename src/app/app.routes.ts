@@ -9,6 +9,11 @@ export const routes: Routes = [
     },
 
     {
+        path:'home',
+        loadComponent: ()=> import("./home/home").then((m)=> m.Home),
+        // providers: [provideTranslocoScope('about')]
+    },
+    {
         path:'about',
         loadComponent: ()=> import("./about/about").then((m)=> m.About),
         providers: [provideTranslocoScope('about')]
@@ -26,7 +31,7 @@ export const routes: Routes = [
     {
         path:'request',
         loadComponent: ()=> import("./request/request").then((m)=> m.Request),
-        // providers: [provideTranslocoScope('contact')]
+        providers: [provideTranslocoScope('request')]
     },
 
 ];

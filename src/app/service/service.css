@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.services {
+    background: var(--background-color);
+}
 .services .content{
     padding: 20px 90px 15px;
 }
@@ -81,7 +84,7 @@
     margin-bottom: 15px;
 }
 .ourRadiology .ourRadiology-content .text{
-    color: var(--main-color);
+    color: var(--main-color2);
     text-align: center;
     display: block;
     font-weight: 700;
@@ -104,7 +107,7 @@
     bottom: 0;
     height: 3px;
     width:40px;
-    background-color: var(--main-color);
+    background: var(--main-color);
     transform: translateX(-50%);
     border-radius: 10px;
 }
@@ -116,7 +119,7 @@
     padding: 0 .5rem ;
 }
 .why-card{
-    background:white;
+    background:white; 
     border-radius:18px;
     padding:35px 20px;
     text-align:center;
@@ -139,7 +142,7 @@
 }
 .why-card i{
     font-size: 40px;
-    color: var(--main-color);
+    color: var(--main-color2);
     padding-bottom: 5px;
 }
 .why-card h6{
@@ -167,7 +170,7 @@
     bottom: 0;
     height: 3px;
     width:40px;
-    background-color: var(--main-color);
+    background: var(--main-color);
     transform: translateX(-50%);
     border-radius: 10px;
 }
@@ -182,7 +185,7 @@
 }
 .ourReporting .items .item-con .item-card{
     background:white;
-    background-color: var(--main-color);
+    background: var(--main-color);
     border-radius:18px;
     padding: 50px 20px 35px ;
     text-align:center;
@@ -202,7 +205,7 @@
     height: 40px;
     font-size: 17px;
     color: var(--white-color);
-    background-color: var(--main-color);
+    background: var(--main-color);
     border-radius: 10px;
     display: flex;
     justify-content: center;
@@ -230,7 +233,7 @@
     color: white;
 }
 .ourReporting .items .item-con svg{
-    color: var(--main-color);
+    color: var(--main-color2);
     width: 40px;
     height: 40px;
     /* color: white; */
@@ -257,7 +260,7 @@
     bottom: 0;
     height: 3px;
     width:40px;
-    background-color: var(--main-color);
+    background: var(--main-color);
     transform: translateX(-50%);
     border-radius: 10px;
 }
@@ -286,7 +289,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #612d87a2;
+    background: #612d87a2;
     z-index: 2;
 }
 .modaleties .item-card .img-con img{
@@ -307,14 +310,14 @@
     font-size: var(--small-heading);
     font-weight: 700;
     padding: 10px 0;
-    background-color: var(--main-color);
+    background: var(--main-color);
     color: var(--white-color);
     text-align: center;
 }
 .modaleties .item-card .img-con .info p{
     font-size: var(--less-size);
     padding: 10px;
-    background-color: var(--white-color);
+    background: var(--white-color);
     text-align: center;
 }
 .modaleties .item-card:hover .img-con .info{
@@ -335,7 +338,7 @@
     bottom: 0;
     height: 3px;
     width:40px;
-    background-color: var(--main-color);
+    background: var(--main-color);
     transform: translateX(-50%);
     border-radius: 10px;
 }
@@ -364,7 +367,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #612d87a2;
+    background: #612d87a2;
 }
 .industries .items .item-card .img-con img{
     height: 100%;
@@ -377,7 +380,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--main-color);
+    background: var(--main-color);
     color: var(--white-color);
     border-radius: 50%;
     position: absolute;
@@ -400,7 +403,7 @@
 }
 /* reliable===== */
 .reliableTele {
-    background-color: var(--main-color);
+    background: var(--main-color);
     margin: 5px 0 35px;
     padding: 10px 0;
 }
@@ -428,18 +431,22 @@
     align-items: center;
     gap: .5rem;
     color: var(--white-color);
-    padding: .8rem 1rem;
+    padding: .8rem 1rem ;
     border-radius: 10px;
     border: none;
+    transition: .3s ease;
 }
 .reliableTele .content .parttwo button:nth-of-type(1){
-    background-color: transparent;
+    background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.486)
 }
 
 .reliableTele .content .parttwo button:nth-of-type(2){
     border: 1px solid rgba(255, 255, 255, 0.486);
-    background-color: transparent;
+    background: transparent;
+}
+.reliableTele .content .parttwo button:hover{
+    border: 1px solid rgba(255, 255, 255, 0.849);
 }
 :host-context([dir="ltr"]) .reliableTele .content .parttwo button .right{
   display:block

@@ -1,0 +1,94 @@
+ {
+    "needHelpTitle": "Need Help?",
+    "needHelpDesc": "Your team is here to assist you at every step.",
+
+    "basicInformation": "Basic Information",
+    "basicInformationDesc": "Please provide some basic information about you and your medical center.",
+
+    "doctorName": "Doctor's Name",
+    "enterFullName": "Enter your full name",
+
+    "centerName": "Medical Center / Hospital Name",
+    "enterCenterName": "Enter center or hospital name",
+
+    "mobileNumber": "Mobile Number",
+    "enterMobile": "Enter your mobile number",
+
+    "country": "Country",
+    "selectCountry": "Select your country",
+
+    "secureTitle": "Your Information is Secure",
+    "secureDesc": "All information you provide is encrypted and will only be used to serve you better.",
+
+    "facilityType": "Facility Type",
+    "facilityTypeDesc": "What type of facility do you represent?",
+
+    "imagingVolume": "Imaging Volume",
+    "imagingVolumeDesc": "What is your average monthly imaging volume?",
+
+    "modalities": "Modalities",
+    "modalitiesDesc": "Which modalities are you interested in? (Select all that apply)",
+
+    "coverage": "Coverage",
+    "coverageDesc": "What type of coverage do you require?",
+
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+
+    "successTitle": "Request Sent Successfully! 🎉",
+    "successDesc": "Thank you! Your registration has been received. Our team will review your information and get back to you shortly.",
+    "backHome": "Back to Home",
+
+    "options": {
+      "hospital": "Hospital",
+      "imagingCenter": "Imaging Center",
+      "clinic": "Clinic",
+      "telehealthProvider": "Telehealth Provider",
+
+      "less500": "Less than 500",
+      "500to1000": "500 - 1,000",
+      "1000to5000": "1,000 - 5,000",
+      "more5000": "More than 5,000",
+
+      "xray": "X-Ray",
+      "ct": "CT",
+      "mri": "MRI",
+      "ultrasound": "Ultrasound",
+
+      "dayCoverage": "Day Coverage",
+      "nightCoverage": "Night Coverage",
+      "fullCoverage": "24/7 Coverage"
+    },
+
+    "countries": {
+      "egypt": "Egypt",
+      "saudiArabia": "Saudi Arabia",
+      "uae": "United Arab Emirates",
+      "usa": "United States",
+      "uk": "United Kingdom"
+    },
+
+    "steps": {
+      "basic": {
+        "title": "Basic Information",
+        "desc": "Tell us about you and your center"
+      },
+      "facility": {
+        "title": "Facility Type",
+        "desc": "Select your facility category"
+      },
+      "volume": {
+        "title": "Imaging Volume",
+        "desc": "Tell us about your imaging volume"
+      },
+      "modalities": {
+        "title": "Modalities",
+        "desc": "Choose the modalities you work with"
+      },
+      "coverage": {
+        "title": "Coverage",
+        "desc": "Select your coverage requirements"
+      }
+    }
+  }

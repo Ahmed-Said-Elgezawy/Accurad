@@ -16,11 +16,17 @@ html[dir="ltr"] body{
 html[dir="rtl"] body{
   font-family: "Cairo", sans-serif;
 }
+body{
+    background: var(--background-color);
+}
 :root{
-    --main-color:#622d87;
-    /* --main-color:#612d873f; */
+    /* --main-color:#622d87; */
+    --main-color: linear-gradient(135deg, #4b0671, #622d87);
+    --hover-color: linear-gradient(135deg,#622d87 , #4b0671);
+    --main-color2: #622d87;
+    /* --main-color:#753d9c; */
     --white-color: white;
-    --background-color: rgb(243, 243, 243);
+    --background-color: rgb(247, 247, 247);
     --gray-color:#ccc;
     --gray-white-color:#dddddd;
     --dark-white-color:rgba(255,255,255,.7);

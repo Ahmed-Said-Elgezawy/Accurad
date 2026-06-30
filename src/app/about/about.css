@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.main-about{
+  background: var(--background-color);
+}
 .about{
     padding: 0 90px 30px;
 }
@@ -81,7 +84,7 @@
     padding:50px 0;
 }
 .section-label{
-    color:var(--main-color);
+    color:var(--main-color2);
     font-weight:700;
 }
 .section-space .img-con{
@@ -116,7 +119,7 @@
     bottom: 0;
     height: 3px;
     width:40px;
-    background-color: var(--main-color);
+    background: var(--main-color2);
     border-radius: 10px;
 }
 :host-context([dir="ltr"]) .section-space h1::after{
@@ -200,7 +203,7 @@
     color: var(--white-color);
     font-size: 40px;
     margin-bottom: 20px;
-    background-color: var(--main-color);
+    background: var(--main-color);
 }
 
 
@@ -220,7 +223,7 @@
     bottom: 0;
     height: 3px;
     width: 40px;
-    background-color: var(--main-color);
+    background: var(--main-color);
     border-radius: 20px;
 }
 
@@ -231,7 +234,7 @@
     bottom: 0;
     height: 3px;
     width: 40px;
-    background-color: var(--main-color);
+    background: var(--main-color);
     border-radius: 20px;
 }
 
@@ -247,12 +250,7 @@
 
 /* stats ==== */
 .stats-bar{
-    /* background:
-    linear-gradient(
-    135deg,
-    #340e50,
-    #622d87); */
-    background-color: var(--main-color);
+    background: var(--main-color);
     padding:70px 90px;
     margin-bottom: 25px;
 }
@@ -275,7 +273,7 @@
 }
 /* ===why === */
 .whyChoose .content .text{
-    color: var(--main-color);
+    color: var(--main-color2);
     text-align: center;
     display: block;
     font-weight: 700;
@@ -298,7 +296,7 @@
     bottom: 0;
     height: 3px;
     width:40px;
-    background-color: var(--main-color);
+    background: var(--main-color2);
     transform: translateX(-50%);
     border-radius: 10px;
 
@@ -329,7 +327,7 @@
 }
 .why-card i{
     font-size: 40px;
-    color: var(--main-color);
+    color: var(--main-color2);
     padding-bottom: 5px;
 }
 .why-card h6{
@@ -368,6 +366,14 @@
     right:50%;
     transform: translateX(50%);
     }
+
+:host-context([dir="ltr"]) .section-space .data{
+    padding-left: 0;
+}
+
+:host-context([dir="rtl"]) .section-space .data{
+    padding-right: 0;
+}
 }
 @media (max-width:815px) {
     .about{

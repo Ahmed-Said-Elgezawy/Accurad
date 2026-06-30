@@ -1,5 +1,5 @@
 
- <div class="request">
+ <div class="request" *transloco="let t">
     <div class="content">
  
 <div class="page-wrapper">
@@ -32,8 +32,8 @@
                  00-2-2H3v5zm18 0a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3v5z"/>
           </svg>
           <div>
-            <h5>Need Help?</h5>
-            <p>Your team is here to assist you at every step.</p>
+            <h5>{{ t('request.needHelpTitle') }}</h5>
+            <p>{{ t('request.needHelpDesc') }}</p>
           </div>
         </div>
  
@@ -61,28 +61,37 @@
         <!-- ══ STEP 1 ══ -->
         <div class="step-block" *ngIf="currentStep === 1">
           <div class="step-header">
-            <h2>Basic Information</h2>
-            <p>Please provide some basic information about you and your medical center.</p>
+            <h2>{{ t('request.basicInformation') }}</h2>
+            <p>{{ t('request.basicInformationDesc') }}</p>
           </div>
  
-          <label class="field-label">Doctor's Name</label>
+          <label class="field-label">{{ t('request.doctorName') }}</label>
           <div class="input-wrapper">
             <svg class="input-icon" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
               <circle cx="12" cy="7" r="4" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <input type="text" placeholder="Enter your full name" [(ngModel)]="formData.doctorName"/>
+            <input dir="auto" type="text" placeholder="{{ t('request.enterFullName') }}" [(ngModel)]="formData.doctorName"/>
           </div>
  
-          <label class="field-label">Medical Center / Hospital Name</label>
+          <label class="field-label">{{ t('request.centerName') }}</label>
           <div class="input-wrapper">
             <svg class="input-icon" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M6 21V7l6-4 6 4v14M9 21v-4h6v4"/>
             </svg>
-            <input type="text" placeholder="Enter center or hospital name" [(ngModel)]="formData.centerName"/>
+            <input dir="auto" type="text" placeholder="{{ t('request.enterCenterName') }}" [(ngModel)]="formData.centerName"/>
           </div>
+
+                <label class="field-label">{{ t('request.mobileNumber') }}</label>
+                <div class="input-wrapper">
+                  <svg class="input-icon" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                  </svg>
+                  <input dir="auto" type="tel" placeholder="{{ t('request.enterMobile') }}" [(ngModel)]="formData.mobileNumber"/>
+                </div>
  
-          <label class="field-label">Country</label>
+          <label class="field-label">{{ t('request.country') }}</label>
           <div class="input-wrapper select-wrapper">
             <svg class="input-icon" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -90,8 +99,8 @@
                 d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10
                    A15.3 15.3 0 018 12a15.3 15.3 0 014-10z"/>
             </svg>
-            <select [(ngModel)]="formData.country">
-              <option value="" disabled>Select your country</option>
+            <select [(ngModel)]="formData.country" >
+              <option value="" disabled>{{ t('request.selectCountry') }}</option>
               <option>Egypt</option>
               <option>Saudi Arabia</option>
               <option>United Arab Emirates</option>
@@ -99,7 +108,7 @@
               <option>United Kingdom</option>
             </select>
             <svg class="chevron" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
             </svg>
           </div>
  
@@ -111,8 +120,8 @@
                    5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
             </svg>
             <div>
-              <h5>Your Information is Secure</h5>
-              <p>All information you provide is encrypted and will only be used to serve you better.</p>
+              <h5>{{ t('request.secureTitle') }}</h5>
+              <p>{{ t('request.secureDesc') }}</p>
             </div>
           </div>
         </div>
@@ -120,8 +129,8 @@
         <!-- ══ STEP 2 ══ -->
         <div class="step-block" *ngIf="currentStep === 2">
           <div class="step-header">
-            <h2>Facility Type</h2>
-            <p>What type of facility do you represent?</p>
+            <h2>{{ t('request.facilityType') }}</h2>
+            <p>{{t('request.facilityTypeDesc')}}</p>
           </div>
  
           <div class="options-grid">
@@ -130,7 +139,7 @@
               <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3 21h18M6 21V7l6-4 6 4v14M9 21v-4h6v4"/>
               </svg>
-              <span>Hospital</span>
+              <span>{{t('request.options.hospital')}}</span>
             </label>
  
             <label class="option-card" [class.selected]="formData.facilityType === 'Imaging Center'">
@@ -139,7 +148,7 @@
                 <circle cx="11" cy="11" r="8" stroke-linecap="round" stroke-linejoin="round"/>
                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35"/>
               </svg>
-              <span>Imaging Center</span>
+              <span>{{t('request.options.imagingCenter')}}</span>
             </label>
  
             <label class="option-card" [class.selected]="formData.facilityType === 'Clinic'">
@@ -150,7 +159,7 @@
                      00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2
                      2 0 012 2M12 12v4M10 14h4"/>
               </svg>
-              <span>Clinic</span>
+              <span>{{t('request.options.clinic')}}</span>
             </label>
  
             <label class="option-card" [class.selected]="formData.facilityType === 'Telehealth Provider'">
@@ -159,7 +168,7 @@
                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8 21h8M12 17v4"/>
               </svg>
-              <span>Telehealth Provider</span>
+              <span>{{t('request.options.telehealthProvider')}}</span>
             </label>
           </div>
         </div>
@@ -167,8 +176,8 @@
         <!-- ══ STEP 3 ══ -->
         <div class="step-block" *ngIf="currentStep === 3">
           <div class="step-header">
-            <h2>Imaging Volume</h2>
-            <p>What is your average monthly imaging volume?</p>
+            <h2>{{ t('request.imagingVolume') }}</h2>
+            <p>{{ t('request.imagingVolumeDesc') }}</p>
           </div>
  
           <div class="options-grid">
@@ -177,7 +186,7 @@
               <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V15M12 19V9M15 19v-4"/>
               </svg>
-              <span>Less than 500</span>
+              <span>{{ t('request.options.less500') }}</span>
             </label>
  
             <label class="option-card" [class.selected]="formData.imagingVolume === '500 - 1000'">
@@ -201,7 +210,7 @@
               <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 19V5M12 19V9M15 19v-3"/>
               </svg>
-              <span>More than 5,000</span>
+              <span>{{ t('request.options.more5000') }}</span>
             </label>
           </div>
         </div>
@@ -209,8 +218,8 @@
         <!-- ══ STEP 4 ══ -->
         <div class="step-block" *ngIf="currentStep === 4">
           <div class="step-header">
-            <h2>Modalities</h2>
-            <p>Which modalities are you interested in? (Select all that apply)</p>
+            <h2>{{ t('request.modalities') }}</h2>
+            <p>{{ t('request.modalitiesDesc') }}</p>
           </div>
  
           <div class="options-grid">
@@ -221,7 +230,7 @@
                 <rect x="3" y="3" width="18" height="18" rx="2" stroke-linecap="round" stroke-linejoin="round"/>
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 9l6 6M15 9l-6 6"/>
               </svg>
-              <span>X-Ray</span>
+              <span>{{ t('request.options.xray') }}</span>
             </label>
  
             <label class="option-card" [class.selected]="formData.modalities.includes('CT')">
@@ -231,7 +240,7 @@
                 <circle cx="12" cy="12" r="9" stroke-linecap="round" stroke-linejoin="round"/>
                 <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <span>CT</span>
+              <span>{{ t('request.options.ct') }}</span>
             </label>
  
             <label class="option-card" [class.selected]="formData.modalities.includes('MRI')">
@@ -242,7 +251,7 @@
                   d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h8M12 8v8"/>
               </svg>
-              <span>MRI</span>
+              <span>{{ t('request.options.mri') }}</span>
             </label>
  
             <label class="option-card" [class.selected]="formData.modalities.includes('Ultrasound')">
@@ -253,7 +262,7 @@
                   d="M9 19c-4.418 0-8-1.79-8-4s3.582-4 8-4 8 1.79 8 4-3.582 4-8 4z"/>
                 <path stroke-linecap="round" stroke-linejoin="round" d="M17 8c2.21 0 4 1.79 4 4s-1.79 4-4 4"/>
               </svg>
-              <span>Ultrasound</span>
+              <span>{{ t('request.options.ultrasound') }}</span>
             </label>
           </div>
         </div>
@@ -261,38 +270,38 @@
         <!-- ══ STEP 5 ══ -->
         <div class="step-block" *ngIf="currentStep === 5">
           <div class="step-header">
-            <h2>Coverage</h2>
-            <p>What type of coverage do you require?</p>
+            <h2>{{ t('request.coverage') }}</h2>
+            <p>{{ t('request.coverageDesc') }}</p>
           </div>
  
           <div class="options-grid single-col">
-            <label class="option-card" [class.selected]="formData.coverage === 'Day Coverage'">
-              <input type="radio" name="coverage" value="Day Coverage" [(ngModel)]="formData.coverage"/>
+            <label class="option-card" [class.selected]="formData.coverage === ('Day '+ t('request.coverage'))">
+              <input dir="auto" type="radio" name="coverage" value="Day {{ t('request.coverage') }}" [(ngModel)]="formData.coverage"/>
               <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="5" stroke-linecap="round" stroke-linejoin="round"/>
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42
                      M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
               </svg>
-              <span>Day Coverage</span>
+              <span>{{ t('request.options.dayCoverage') }}</span>
             </label>
  
-            <label class="option-card" [class.selected]="formData.coverage === 'Night Coverage'">
-              <input type="radio" name="coverage" value="Night Coverage" [(ngModel)]="formData.coverage"/>
+            <label class="option-card" [class.selected]="formData.coverage === ('Night ' + t('request.coverage'))">
+              <input dir="auto" type="radio" name="coverage" value="Night {{ t('request.coverage') }}" [(ngModel)]="formData.coverage"/>
               <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
               </svg>
-              <span>Night Coverage</span>
+              <span>{{ t('request.options.nightCoverage') }}</span>
             </label>
  
-            <label class="option-card" [class.selected]="formData.coverage === '24/7 Coverage'">
-              <input type="radio" name="coverage" value="24/7 Coverage" [(ngModel)]="formData.coverage"/>
+            <label class="option-card" [class.selected]="formData.coverage === ('24/7' + t('request.coverage'))">
+              <input dir="auto" type="radio" name="coverage" value="24/7 {{ t('request.coverage') }}" [(ngModel)]="formData.coverage"/>
               <svg width="22" height="22" fill="none" stroke="#622d87" stroke-width="1.8" viewBox="0 0 24 24">
                 <circle cx="12" cy="12" r="10" stroke-linecap="round" stroke-linejoin="round"/>
                 <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2"/>
               </svg>
-              <span>24/7 Coverage</span>
+              <span>{{ t('request.options.fullCoverage') }}</span>
             </label>
           </div>
         </div>
@@ -300,14 +309,20 @@
         <!-- ── Buttons ── -->
         <div class="btn-row">
           <button class="btn-back" (click)="previousStep()" [disabled]="currentStep === 1">
-            Back
+            {{ t('request.back') }}
           </button>
           <button class="btn-next" (click)="currentStep < 5 ? nextStep() : submitForm()"
                   [disabled]="!isStepValid()">
-            {{ currentStep < 5 ? 'Next' : 'Submit' }}
-            <svg *ngIf="currentStep < 5" width="16" height="16" fill="none"
+
+            {{ currentStep < 5 ? t('request.next') : t('request.submit') }} 
+            <svg class="right" *ngIf="currentStep < 5" width="16" height="16" fill="none"
                  stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+            </svg>
+
+             <svg class="left" *ngIf="currentStep < 5" width="16" height="16"  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
+            fill="currentColor" viewBox="0 0 24 24" >
+            <path d="M14.29 6.29 8.59 12l5.7 5.71 1.42-1.42-4.3-4.29 4.3-4.29z"></path>
             </svg>
           </button>
         </div>
@@ -343,14 +358,13 @@
       </svg>
     </div>
  
-    <h2 class="success-title">Request Sent Successfully! 🎉</h2>
+    <h2 class="success-title">{{ t('request.successTitle') }}</h2>
     <p class="success-sub">
-      Thank you! Your registration has been received.<br/>
-      Our team will review your information and get back to you shortly.
+      {{ t('request.successDesc') }}
     </p>
  
     <button class="btn-done" (click)="showSuccess = false">
-      Back to Home
+      {{ t('request.backHome') }}
     </button>
  
   </div>

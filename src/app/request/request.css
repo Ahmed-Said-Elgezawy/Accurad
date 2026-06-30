@@ -3,8 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+.request{
+  background-color: var(--background-color);
+}
 .request .content{
-      padding: 20px 90px 15px;
+  padding: 20px 90px 15px;
 }
 .page-wrapper {
   min-height: 100vh;
@@ -17,10 +20,10 @@
 
 /* ── Card ── */
 .form-card {
-  background: #ffffff;
+  background: white;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.171);
   width: 100%;
   /* max-width: 900px; */
 }
@@ -221,7 +224,7 @@
   margin-bottom: 20px;
 }
  
-.input-icon {
+:host-context([dir="ltr"]) .input-icon {
   position: absolute;
   left: 14px;
   top: 50%;
@@ -231,12 +234,38 @@
   color: #9ca3af;
   pointer-events: none;
 }
+:host-context([dir="rtl"]) .input-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: #9ca3af;
+  pointer-events: none;
+}
  
-.input-wrapper input[type="text"],
-.input-wrapper select {
+:host-context([dir="ltr"]) .input-wrapper input[type="text"],
+:host-context([dir="ltr"]) .input-wrapper input[type="tel"],
+:host-context([dir="ltr"]) .input-wrapper select {
   width: 100%;
   padding: 12px 14px 12px 42px;
-  border: 1.5px solid #d1d5db;
+  border: 1px solid var(--gray-color);
+  border-radius: 8px;
+  font-size: 14px;
+  color: #374151;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+}
+:host-context([dir="rtl"]) .input-wrapper input[type="text"],
+:host-context([dir="rtl"]) .input-wrapper input[type="tel"],
+:host-context([dir="rtl"]) .input-wrapper select {
+  width: 100%;
+  padding: 12px 42px 12px 12px;
+  border: 1px solid var(--gray-color);
   border-radius: 8px;
   font-size: 14px;
   color: #374151;
@@ -247,19 +276,31 @@
   -webkit-appearance: none;
 }
  
-.input-wrapper input[type="text"]::placeholder {
+.input-wrapper input[type="text"]::placeholder,
+.input-wrapper input[type="tel"]::placeholder {
   color: #9ca3af;
 }
  
 .input-wrapper input[type="text"]:focus,
+.input-wrapper input[type="tel"]:focus,
 .input-wrapper select:focus {
   border-color: var(--main-color);
-  box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.08);
 }
  
-.select-wrapper .chevron {
+:host-context([dir="ltr"]) .select-wrapper .chevron {
   position: absolute;
   right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: #6b7280;
+  pointer-events: none;
+}
+
+:host-context([dir="rtl"]) .select-wrapper .chevron {
+  position: absolute;
+  left: 14px;
   top: 50%;
   transform: translateY(-50%);
   width: 18px;
@@ -310,7 +351,7 @@
 }
  
 .option-card {
-  border: 1.5px solid #e5e7eb;
+  border: 1px solid var(--gray-color);
   border-radius: 10px;
   padding: 16px;
   display: flex;
@@ -329,7 +370,7 @@
 .option-card.selected {
   border-color: #612d8796;
   background: #ead0fc4b;
-  box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.08);
+  /* box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.08); */
 }
  
 .option-card input[type="radio"],
@@ -399,7 +440,18 @@
   background: #b48bd1;
   cursor: not-allowed;
 }
- 
+ :host-context([dir="ltr"]) .btn-next svg.right{
+  display: block;
+ }
+ :host-context([dir="ltr"]) .btn-next svg.left{
+  display: none;
+ }
+ :host-context([dir="rtl"]) .btn-next svg.left{
+  display: block;
+ }
+ :host-context([dir="rtl"]) .btn-next svg.right{
+  display: none;
+ }
 /* ══════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════ */
@@ -432,7 +484,7 @@
 .success-overlay {
   position: fixed;
   inset: 0;
-  background-color: #9166af78;
+  background-color: #9166afb4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -582,4 +634,25 @@
       width: 100%;
     }
 
+    .input-wrapper input[type="text"],
+    .input-wrapper input[type="tel"],
+    .input-wrapper select{
+     border: 1px solid var(--gray-white-color);
+    }
+   .option-card{
+    border: 1px solid var(--gray-white-color);
+   }
+
+  .security-box svg{
+  width: 40px;
+  height: 20px;
+ }
+
+ .form-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.171);
+  width: 100%;
+}
 }

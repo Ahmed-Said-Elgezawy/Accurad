@@ -75,7 +75,7 @@
 }
 /* contact ==== */
 .contact{
-    background-color: var(--background-color);
+    background: var(--background-color);
     padding: 35px 90px 30px;
     text-align: center;
 }
@@ -95,7 +95,7 @@
     bottom: 0;
     height: 3px;
     width:40px;
-    background-color: var(--main-color);
+    background: var(--main-color);
     transform: translateX(-50%);
     border-radius: 10px;
 }
@@ -125,27 +125,95 @@
     margin-bottom: 7px;
     font-weight: 500;
 }
-.contact .content .contact-info form  ul li input {
-    padding: 15px;
-    width: 300px;
-    margin-bottom: 20px;
-    border: 1px solid var(--gray-color);
-    border-radius: 5px;
-    outline: none;
-    width: 100%;
-    background-color: transparent;
+.input-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+.input-wrapper:nth-last-of-type(1){
+    margin-bottom: 0;
+}
+ :host-context([dir="ltr"])  .input-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: #9ca3af;
+  pointer-events: none;
+}
+ :host-context([dir="rtl"]) .input-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: #9ca3af;
+  pointer-events: none;
+}
+ .textarea .input-icon{
+    top: 1.6rem;
+}
+ :host-context([dir="ltr"]) .input-wrapper input,
+ :host-context([dir="ltr"]) .input-wrapper textarea,
+ :host-context([dir="ltr"]) .input-wrapper select{
+  width: 100%;
+  padding: 15px 14px 15px 42px;
+  border: 1px solid var(--gray-color);
+  border-radius: 5px;
+  font-size: 14px;
+  background: transparent;
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
-.contact .content .contact-info form  ul li textarea {
-    padding: 10px;
-    width: 300px;
-    height: 150px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-    width: 100%;
-    background-color: transparent;
+ :host-context([dir="rtl"]) .input-wrapper input,
+ :host-context([dir="rtl"]) .input-wrapper textarea,
+ :host-context([dir="rtl"]) .input-wrapper select{
+  width: 100%;
+  padding: 15px 42px 15px 14px;
+  border: 1px solid var(--gray-color);
+  border-radius: 5px;
+  font-size: 14px;
+  background: transparent;
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
 }
+ 
+.input-wrapper input:focus,
+.input-wrapper textarea:focus,
+.input-wrapper select:focus {
+  border-color: var(--main-color);
+}
+:host-context([dir="ltr"]) .select-wrapper .chevron {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: #6b7280;
+  pointer-events: none;
+}
+
+:host-context([dir="rtl"]) .select-wrapper .chevron {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: #6b7280;
+  pointer-events: none;
+}
+ .textarea textarea{
+    min-height: 150px;
+ }
 .contact .content .contact-info form  ul li input:focus ,.contact .content .contact-info form  ul li textarea:focus{
     border-color: var(--main-color);
 }
@@ -154,7 +222,7 @@
 }
 .contact .content .contact-info form button{
     padding: 10px 20px;
-    background-color: var(--main-color);
+    background: var(--main-color);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -187,7 +255,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--main-color);
+    background: var(--main-color);
     color: white;
     border-radius: 5px;
 }
@@ -251,9 +319,16 @@
         padding:  .6rem;
         border: 1px solid var(--gray-white-color);
     }
-    .contact .content .contact-info form ul li input{
+    :host-context([dir="ltr"]) .contact .content .contact-info form ul li input,
+    :host-context([dir="ltr"]) .contact .content .contact-info form ul li select{
         margin-bottom: 10px;
-        padding: 12px;
+        padding: 14px 14px 14px 40px;
+        border: 1px solid var(--gray-white-color);
+    }
+    :host-context([dir="rtl"]) .contact .content .contact-info form ul li input ,
+    :host-context([dir="rtl"]) .contact .content .contact-info form ul li select{
+        margin-bottom: 10px;
+        padding: 14px 40px 14px 14px;
         border: 1px solid var(--gray-white-color);
     }
     .contact .content .contact-info form  ul li textarea{

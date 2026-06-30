@@ -8,7 +8,7 @@
 header{
     padding: 4.5px 90px;
 
-    background-color: var(--main-color);
+    background: var(--main-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,7 +37,7 @@ header .logo .menu svg{
     justify-content: center;
     align-items: center;
     height: 34px;
-    background-color: var(--white-color);
+    background: var(--white-color);
     border-radius: 3px;
     overflow: hidden;
     width: 110px;
@@ -55,7 +55,7 @@ header .logo .menu svg{
     content: " ";
     height: 14px;
     width: 14px;
-    background-color: var(--main-color);
+    background: var(--main-color);
     border-radius: 50%;
     top: 50%;
     transform: translateY(-50%);
@@ -63,7 +63,7 @@ header .logo .menu svg{
 }
 .ticket-Logo  .cups-container{
     position: relative;
-    background-color: var(--main-color);
+    background: var(--main-color);
     height: 100%;
     width: 1px;
 }
@@ -71,7 +71,7 @@ header .logo .menu svg{
     position: absolute;
     width: 5px;
     height: 5px;
-    background-color: var(--main-color);
+    background: var(--main-color);
 }
 .ticket-Logo  .cups-container span.cup1{
     left: 0;
@@ -164,7 +164,7 @@ header nav ul li .text{
     align-items: center;
     gap: 5px;
     padding: 8px 15px;
-    background-color: white;
+    background: white;
 }
 
 .dropdown .lang:nth-of-type(1){
@@ -184,7 +184,7 @@ header nav ul li .text{
     font-size: 13px;
 }
 .dropdown .lang:hover{
-    background-color: var(--main-color);  
+    background: var(--main-color);  
 }
 .dropdown .lang:hover .lang-name{
     color: var(--white-color);
@@ -214,11 +214,11 @@ header nav ul li .text{
     }
 
     .ticket-Logo .text::before{
-        background-color: #000;
+        background: #000;
         left: -16px;
     }
     .ticket-Logo  .cups-container span{
-        background-color: #000;
+        background: #000;
     }
     .ticket-Logo .text{
         padding: 0 13px 0;
@@ -241,7 +241,7 @@ header nav ul li .text{
         top: 50%;
         transform: translateY(-50%);
         left: 0; 
-        background-color: white;
+        background: white;
 }
 :host-context([dir="ltr"]) header nav ul li:not(header nav ul li:nth-last-child(1))::after{
         position: absolute;
@@ -251,7 +251,7 @@ header nav ul li .text{
         top: 50%;
         transform: translateY(-50%);
         right: 0; 
-        background-color: white;
+        background: white;
 }
 }
 @media  (max-width: 576px){
@@ -272,8 +272,8 @@ header nav ul li .text{
 }
 /* ====== saidbar ===== */
   .sidebar{
-    /* background-color: #000; */
-    background-color: #4b0671;
+    /* background: #000; */
+    background: #4b0671;
     padding: 1.8rem 1.5rem 2rem;
     width: 18rem;
     position: fixed;
@@ -304,7 +304,7 @@ header nav ul li .text{
 .sidebar .content .icon-con.x span{ 
     width: 18px;
     height: 2px;
-    background-color: white;
+    background: white;
     display: block;
     margin-bottom: 5px;
     transition: .5s ease;
@@ -431,17 +431,25 @@ html[dir="rtl"] .sidebar.active .content .icon-con.x span.two{
 
 /* footer ======= */
 .footer {
-   background-color: var(--background-color);
-
+   background: var(--background-color);
+   /* background: linear-gradient(135deg, #4b0671, #622d87); */
+   position: relative;
+    border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  overflow: hidden;
 }
 .footer .content {
-  background-color: var(--main-color);
+  background: var(--main-color);
   color: white;
-  border-top-left-radius: 24px;
-  border-top-right-radius: 24px;
+
   /* overflow: hidden; */
   padding-top: 70px;
   /* font-family: "Poppins", sans-serif; */
+     /* inset: 0;
+  background-image:
+    linear-gradient(#612d8771 1px, transparent 1px),
+    linear-gradient(90deg, #612d8771 1px, transparent 1px);
+  background-size: 50px 50px; */
 }
 .footer-container {
   max-width: 1300px;
@@ -460,7 +468,8 @@ html[dir="rtl"] .sidebar.active .content .icon-con.x span.two{
   top: 0;
   width: 1px;
   height: 280px;
-  background: rgba(255,255,255,.15);
+  /* background: rgba(255,255,255,.15); */
+  background: rgba(255, 255, 255, 0.3);
 }
 :host-context([dir="ltr"]) .footer-column:not(:last-child)::after {
   right: -35px;
@@ -520,7 +529,7 @@ footer .Logo-img-footer img{
 .socials a {
   width: 54px;
   height: 54px;
-  border: 1px solid rgba(255,255,255,.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -607,7 +616,7 @@ footer .Logo-img-footer img{
   color: var(--dark-white-color);
 }
 .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -656,7 +665,7 @@ footer .Logo-img-footer img{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: conic-gradient(var(--main-color) var(--progress), transparent  0);
+    background: conic-gradient(var(--main-color2) var(--progress), white  0);
     color: white;
     cursor: pointer;
     transition: .5s ease;
@@ -675,7 +684,7 @@ footer .Logo-img-footer img{
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background-color: var(--main-color);
+    background: var(--main-color);
     border: 1px solid var(--white-color);
     z-index: 150;
     display: flex;

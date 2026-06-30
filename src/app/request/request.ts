@@ -1,35 +1,64 @@
-import { Component, Renderer2 } from '@angular/core';
+import { Component, inject, OnInit, Renderer2 } from '@angular/core';
 import emailjs from '@emailjs/browser';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { TranslocoService } from '@jsverse/transloco';
+import { TranslocoDirective, TranslocoService } from '@jsverse/transloco';
+import { NavigationEnd, Router } from '@angular/router';
+
 @Component({
   selector: 'app-request',
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule,CommonModule,TranslocoDirective],
   templateUrl: './request.html',
   styleUrl: './request.css',
 })
-export class Request {
+export class Request implements OnInit{
+  transloco: any;
 
-  steps = [
-  { title: 'Basic Information', desc: 'Tell us about you and your center' },
-  { title: 'Facility Type',     desc: 'Select your facility category' },
-  { title: 'Imaging Volume',    desc: 'Tell us about your imaging volume' },
-  { title: 'Modalities',        desc: 'Choose the modalities you work with' },
-  { title: 'Coverage',          desc: 'Select your coverage requirements' },
-];
+//   steps = [
+//   { title: 'Basic Information', desc: 'Tell us about you and your center' },
+//   { title: 'Facility Type',     desc: 'Select your facility category' },
+//   { title: 'Imaging Volume',    desc: 'Tell us about your imaging volume' },
+//   { title: 'Modalities',        desc: 'Choose the modalities you work with' },
+//   { title: 'Coverage',          desc: 'Select your coverage requirements' },
+// ];
+get steps() {
+  return [
+    {
+      title: this.translocoService.translate('request.steps.basic.title'),
+      desc: this.translocoService.translate('request.steps.basic.desc')
+    },
+    {
+      title: this.translocoService.translate('request.steps.facility.title'),
+      desc: this.translocoService.translate('request.steps.facility.desc')
+    },
+    {
+      title: this.translocoService.translate('request.steps.volume.title'),
+      desc: this.translocoService.translate('request.steps.volume.desc')
+    },
+    {
+      title: this.translocoService.translate('request.steps.modalities.title'),
+      desc: this.translocoService.translate('request.steps.modalities.desc')
+    },
+    {
+      title: this.translocoService.translate('request.steps.coverage.title'),
+      desc: this.translocoService.translate('request.steps.coverage.desc')
+    }
+  ];
+}
 
   currentStep = 1;
 
 formData = {
   doctorName: '',
   centerName: '',
+  mobileNumber: '',
   country: '',
   facilityType: '',
   imagingVolume: '',
   modalities: [] as string[],
   coverage: ''
 };
+
 
   nextStep() {
 
@@ -102,6 +131,8 @@ onModalityChange(event: any, modality: string) {
 
       center_name: this.formData.centerName,
 
+      doctor_phone: this.formData.mobileNumber,
+
       country: this.formData.country,
 
       facility_type: this.formData.facilityType,
@@ -130,6 +161,7 @@ onModalityChange(event: any, modality: string) {
 this.formData = {
         doctorName: '',
         centerName: '',
+        mobileNumber: '',
         country: '',
         facilityType: '',
         imagingVolume: '',
@@ -175,7 +207,8 @@ languages: string[];
 
 constructor(
   private translocoService: TranslocoService,
-  private renderer: Renderer2
+  private renderer: Renderer2,
+  private router: Router,
 ){
 
   // قراءة اللغة المحفوظة
@@ -205,6 +238,7 @@ constructor(
 }
 
 
+
 updateDirection(lang: string) {
 
   const rtlLangs = ['ar'];
@@ -223,4 +257,16 @@ changeLang(langCode: string): void {
   // حفظ اللغة
   localStorage.setItem('lang', langCode);
 }
+
+
+// =========t
+
+  ngOnInit(): void {
+  this.router.events.subscribe((event: any)=>{
+    if(event  instanceof NavigationEnd){
+      window.scrollTo(0,0)
+    }
+  })
+  }
+
 }
