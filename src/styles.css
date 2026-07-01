@@ -3,13 +3,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    /* font-family: "Encode Sans Expanded", sans-serif; */
-    /* font-family: "Cairo", sans-serif; */
 }
 
-
 html[dir="ltr"] body{
-  /* font-family: "Encode Sans Expanded", sans-serif; */
   font-family: "Roboto", sans-serif;
 }
 
@@ -24,7 +20,6 @@ body{
     --main-color: linear-gradient(135deg, #4b0671, #622d87);
     --hover-color: linear-gradient(135deg,#622d87 , #4b0671);
     --main-color2: #622d87;
-    /* --main-color:#753d9c; */
     --white-color: white;
     --background-color: rgb(247, 247, 247);
     --gray-color:#ccc;

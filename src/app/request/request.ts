@@ -3,11 +3,11 @@ import emailjs from '@emailjs/browser';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TranslocoDirective, TranslocoService } from '@jsverse/transloco';
-import { NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-request',
-  imports: [FormsModule,CommonModule,TranslocoDirective],
+  imports: [FormsModule,CommonModule,TranslocoDirective,RouterLink],
   templateUrl: './request.html',
   styleUrl: './request.css',
 })

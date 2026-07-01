@@ -7,7 +7,7 @@ import { FormsModule } from '@angular/forms';
 import emailjs from '@emailjs/browser';
 @Component({
   selector: 'app-contact',
-  imports: [CommonModule,FormsModule,TranslocoDirective],
+  imports: [CommonModule,FormsModule,TranslocoDirective,RouterLink],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
 })
