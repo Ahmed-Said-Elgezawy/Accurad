@@ -13,6 +13,7 @@
    "address-details":"Cairo, Nasr City",
    "name":"Name",
    "email":"Email",
+   "center-name":"Center Name",
    "message":"Message",
    "button":"Send",
 
@@ -20,6 +21,10 @@
    "placeholder-email":"Enter your email",
     "placeholder-message":"Enter your message",
     "placeholder-phone":"Enter your phone number",
-    "placeholder-country":"Enter your country"
+    "placeholder-country":"Enter your country",
+
+    "successTitle": "Request Sent Successfully! 🎉",
+    "successDesc": "Thank you! Your registration has been received. Our team will review your information and get back to you shortly.",
+    "backHome": "Back to Home"
 
 }

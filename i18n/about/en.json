@@ -52,5 +52,13 @@
      "why-f11-h6":"Cost-Effective Services",
      "why-f11-p":"Reduce operational costs without compromising quality.",
      "why-f12-h6":"Scalable Solutions",
-     "why-f12-p":"Services designed to grow with your healthcare facility's needs."
+     "why-f12-p":"Services designed to grow with your healthcare facility's needs.",
+     "stats": {
+      "eyebrow": "OUR NUMBERS",
+      "title": "Accurad By The Numbers",
+      "partners": "Healthcare Partners",
+      "studies": "Studies Interpreted",
+      "sla": "Report Turnaround Within SLA",
+      "coverage": "Radiologist Coverage"
+    }
 }
