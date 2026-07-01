@@ -1,0 +1,173 @@
+ {
+    "process": {
+      "eyebrow": "OUR PROCESS",
+      "title": {
+        "line1": "Simple Steps.",
+        "line2": "Powerful Results."
+      },
+      "steps": {
+        "step1": {
+          "title": "01. Image Upload",
+          "description": "Secure transmission of imaging studies."
+        },
+        "step2": {
+          "title": "02. Case Assignment",
+          "description": "Studies assigned to the appropriate specialist."
+        },
+        "step3": {
+          "title": "03. Expert Interpretation",
+          "description": "Detailed review by qualified radiologists."
+        },
+        "step4": {
+          "title": "04. Quality Check",
+          "description": "Multi-level quality assurance process."
+        },
+        "step5": {
+          "title": "05. Report Delivery",
+          "description": "Timely and secure report submission."
+        }
+      },
+      "video": {
+        "title": "Secure. Fast. Reliable.",
+        "subtitle": "Watch how Accurad Streamlines Your Radiology Workflow",
+        "duration": "02:15 min"
+      }
+    },
+
+    "stats": {
+      "eyebrow": "OUR NUMBERS",
+      "title": "Accurad By The Numbers",
+      "partners": "Healthcare Partners",
+      "studies": "Studies Interpreted",
+      "sla": "Report Turnaround Within SLA",
+      "coverage": "Radiologist Coverage"
+    },
+
+    "services": {
+      "eyebrow": "OUR SERVICES",
+      "title": "Comprehensive Teleradiology Solutions",
+
+      "generalRadiology": {
+        "title": "General Radiology",
+        "description": "X-ray, CT, MRI and more interpreted by expert radiologists."
+      },
+
+      "subspecialtyReads": {
+        "title": "Subspecialty Reads",
+        "description": "Neuroradiology, MSK, Cardiac, Body, Breast and more."
+      },
+
+      "priorityReads": {
+        "title": "Stat / Priority Reads",
+        "description": "Urgent cases prioritized with rapid turnaround times."
+      },
+
+      "coverage247": {
+        "title": "24/7 Coverage",
+        "description": "Round-the-clock support so you never miss a critical case."
+      },
+
+      "button": "Explore All Services"
+    },
+
+    "why": {
+      "eyebrow": "WHY CHOOSE ACCURAD",
+      "title": "Technology. People. Performance.",
+
+      "experiencedRadiologists": {
+        "title": "Experienced Radiologists",
+        "description": "Board-certified experts with subspecialty training."
+      },
+
+      "advancedTechnology": {
+        "title": "Advanced Technology",
+        "description": "AI-powered tools and secure platforms for accuracy and efficiency."
+      },
+
+      "scalableSolutions": {
+        "title": "Scalable Solutions",
+        "description": "Flexible services tailored to practices of every size and specialty."
+      },
+
+      "support": {
+        "title": "Unmatched Support",
+        "description": "Real people. Real support. Whenever you need us."
+      },
+
+      "button": "Explore All Features"
+    },
+    "promise": {
+      "eyebrow": "WHAT WE PROMISE",
+      "title": "Your Partner in Better Patient Care",
+
+      "items": {
+        "accurateReporting": "Accurate Reporting",
+        "fastTurnaround": "Fast Turnaround",
+        "qualityAssurance": "Quality Assurance",
+        "experiencedRadiologists": "Experienced Radiologists",
+        "subspecialtyExpertise": "Subspecialty Expertise",
+        "secureDataProtection": "Secure Data Protection",
+        "advancedTechnology": "Advanced Technology",
+        "scalableSolutions": "Scalable Solutions",
+        "hipaaWorkflow": "HIPAA Compliant Workflow",
+
+        "accuracyYouCanTrust": "Accuracy You Can Trust",
+        "turnaroundYouCanCountOn": "Turnaround You Can Count On",
+        "securityYouCanRelyOn": "Security You Can Rely On",
+        "partnershipYouCanDependOn": "Partnership You Can Depend On",
+        "resultsThatMatter": "Results That Matter",
+        "dedicatedSupport": "Dedicated Support",
+        "globalCoverage": "Global Coverage",
+        "trustedPartnership": "Trusted Partnership"
+      }
+    },
+
+    "testimonials": {
+      "eyebrow": "CUSTOMER REVIEWS",
+      "title": "Trusted by Healthcare Providers Nationwide",
+
+      "review1": {
+        "text": "Accurad has been a game-changer for our practice. Fast turnaround, accurate reads, and excellent support.",
+        "name": "Dr. Sarah Mitchell",
+        "role": "Medical Director"
+      },
+
+      "review2": {
+        "text": "Accurad has been a game-changer for our practice. Fast turnaround, accurate reads, and excellent support.",
+        "name": "Dr. Sarah Mitchell",
+        "role": "Medical Director"
+      },
+
+      "review3": {
+        "text": "Accurad has been a game-changer for our practice. Fast turnaround, accurate reads, and excellent support.",
+        "name": "Dr. Sarah Mitchell",
+        "role": "Medical Director"
+      },
+
+      "review4": {
+        "text": "Accurad has been a game-changer for our practice. Fast turnaround, accurate reads, and excellent support.",
+        "name": "Dr. Sarah Mitchell",
+        "role": "Medical Director"
+      },
+
+      "review5": {
+        "text": "Accurad has been a game-changer for our practice. Fast turnaround, accurate reads, and excellent support.",
+        "name": "Dr. Sarah Mitchell",
+        "role": "Medical Director"
+      }
+    },
+
+    "cta": {
+      "title": {
+        "line1": "Ready to Upgrade Your",
+        "line2": "Radiology Coverage?"
+      },
+
+      "description": "Partner with Accurad and experience the difference in accuracy, speed, and care.",
+
+      "buttons": {
+        "contact": "Contact Us",
+        "demo": "Request a Demo"
+      }
+    }
+  }

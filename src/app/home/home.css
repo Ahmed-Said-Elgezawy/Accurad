@@ -422,7 +422,7 @@
   /* background: #8956ad; */
   border-radius: 10px;
 }
-.swiper1 .swiper-slide {
+.swiper .swiper-slide {
   padding: 1rem;
 }
 
@@ -458,6 +458,35 @@
   width: 30px;
   height: 30px;
 }
+
+/* :host-context([dir="ltr"])  .swiper-button-prev .left{
+  display:block
+}
+:host-context([dir="ltr"])  .swiper-button-prev .right{
+  display:none
+}
+
+:host-context([dir="rtl"])  .swiper-button-prev .right{
+  display:block
+}
+:host-context([dir="rtl"])  .swiper-button-prev .left{
+  display:none
+} */
+
+/* :host-context([dir="ltr"])  .swiper-button-next .right{
+  display:block
+}
+:host-context([dir="ltr"])  .swiper-button-next .left{
+  display:none
+}
+:host-context([dir="rtl"])  .swiper-button-next .right{
+  display:none
+}
+:host-context([dir="rtl"])  .swiper-button-next .left{
+  display:block
+} */
+
+
 /* ── CTA ── */
 .cta-section {
   position: relative; overflow: hidden;
@@ -470,7 +499,7 @@
 .cta-text h2 {
   font-size: var(--larg-size2);
   font-weight: 700; color: var(--white-color);
-  line-height: 1.15; margin-bottom: 14px;
+  line-height: 1.50; margin-bottom: 14px;
 }
 .cta-text p { font-size: var(--small-size); color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 28px; }
 .cta-btns { display: flex; gap: 12px; flex-wrap: wrap;justify-content: center; }

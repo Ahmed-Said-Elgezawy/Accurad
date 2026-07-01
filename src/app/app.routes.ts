@@ -11,7 +11,7 @@ export const routes: Routes = [
     {
         path:'home',
         loadComponent: ()=> import("./home/home").then((m)=> m.Home),
-        // providers: [provideTranslocoScope('about')]
+        providers: [provideTranslocoScope('home')]
     },
     {
         path:'about',

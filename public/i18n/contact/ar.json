@@ -12,6 +12,7 @@
    "address-details":"القاهرة , مدينة نصر",
    "name":"الاسم",
    "email":"البريد الإلكتروني",
+   "center-name":"اسم المركز",
    "message":"الرسالة",
    "button":"إرسال"
 
@@ -19,6 +20,10 @@
    "placeholder-email":"أدخل بريدك الإلكتروني",
    "placeholder-message":"أدخل رسالتك",
    "placeholder-phone":"أدخل رقم هاتفك",
-   "placeholder-country":"أدخل اسم بلدك"
+   "placeholder-country":"أدخل اسم بلدك",
+
+   "successTitle": "تم إرسال الطلب بنجاح! 🎉",
+    "successDesc": "شكراً لك، تم استلام طلبك بنجاح. سيقوم فريقنا بمراجعة بياناتك والتواصل معك في أقرب وقت.",
+    "backHome": "العودة للرئيسية"
 
 }

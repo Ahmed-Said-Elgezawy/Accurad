@@ -249,7 +249,7 @@
 }
 
 /* stats ==== */
-.stats-bar{
+/* .stats-bar{
     background: var(--main-color);
     padding:70px 90px;
     margin-bottom: 25px;
@@ -270,7 +270,39 @@
 
 .stats-bar p{
     color:#dbeafe;
+} */
+
+.stats-section { 
+  background: var(--main-color);
+  padding: 32px 0;
+  margin-bottom: 25px;
+  }
+  /* .stats-section .container{
+    padding: 32px 50px !important;
+  } */
+.stats-eyebrow {
+    position: relative;
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: var(--larg-size);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
 }
+.stats-eyebrow::after{
+    content: " ";
+    position: absolute;
+    left:50%;
+    bottom: 0;
+    height: 3px;
+    width:40px;
+    background: var(--main-color);
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+.stat-item { text-align: center; padding: 24px 0px; }
+.stat-item svg { margin-bottom: 18px; height: 38px;width: 38px;}
+.stat-num {   font-size: 48px; font-weight: 800;  line-height: 1; margin-bottom: 10px; color: var(--white-color);font-family: "Roboto", sans-serif;}
+.stat-lbl {  color: #dbeafe; }
 /* ===why === */
 .whyChoose .content .text{
     color: var(--main-color2);

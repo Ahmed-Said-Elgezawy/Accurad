@@ -1,193 +1,166 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, Renderer2, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { TranslocoService } from '@jsverse/transloco';
+import { TranslocoDirective, TranslocoService } from '@jsverse/transloco';
 import Swiper from 'swiper';
-import { Keyboard } from 'swiper/modules';
-import { Navigation } from 'swiper/modules';
-import { Pagination } from 'swiper/modules';
-import { Mousewheel } from 'swiper/modules';
-import { EffectCoverflow } from 'swiper/modules';
-Swiper.use([Navigation, Pagination, EffectCoverflow, Keyboard, Mousewheel]);
+import { Keyboard, Mousewheel, Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Subscription } from 'rxjs';
+
 @Component({
   selector: 'app-home',
-  imports: [RouterLink],
+  imports: [RouterLink, TranslocoDirective],
   templateUrl: './home.html',
-  styleUrl: './home.css',
+  styleUrl:  './home.css',
 })
-export class Home implements OnInit ,AfterViewInit,OnDestroy{
+export class Home implements OnInit, AfterViewInit, OnDestroy {
 
-currentLang: string;
-languages: string[];
+  // ── Language ─────────────────────────────────────────────────────────────
+  currentLang: string;
+  languages:   string[];
 
+  private langSub!: Subscription;
 
-constructor(
-  private translocoService: TranslocoService,
-  private renderer: Renderer2
-){
+  // ── Swiper ───────────────────────────────────────────────────────────────
+  private mainSwiper!: Swiper;
 
-  // قراءة اللغة المحفوظة
-  const savedLang = localStorage.getItem('lang');
+  // timer used to restart autoplay after manual navigation
+  private resumeTimer: ReturnType<typeof setTimeout> | null = null;
 
-  this.currentLang = savedLang || this.translocoService.getDefaultLang();
+  // ── Constructor ──────────────────────────────────────────────────────────
+  constructor(
+    private translocoService: TranslocoService,
+    private renderer:         Renderer2,
+  ) {
+    // read saved language
+    const savedLang    = localStorage.getItem('lang');
+    this.currentLang   = savedLang || this.translocoService.getDefaultLang();
 
-  // تفعيل اللغة
-  this.translocoService.setActiveLang(this.currentLang);
+    this.translocoService.setActiveLang(this.currentLang);
 
-  const availableLangs = this.translocoService.getAvailableLangs();
+    // build languages list
+    const available = this.translocoService.getAvailableLangs();
+    this.languages  = Array.isArray(available) && typeof available[0] === 'string'
+      ? (available as string[])
+      : (available as { id: string; label: string }[]).map(l => l.id);
 
-  if(Array.isArray(availableLangs) && typeof availableLangs[0] === 'string'){
-    this.languages = availableLangs as string[];
-  }else{
-    this.languages = (availableLangs as {id:string; label:string}[])
-      .map(lang => lang.id)
+    // set direction on load
+    this.updateDirection(this.currentLang);
+
+    // react to language changes
+    this.langSub = this.translocoService.langChanges$.subscribe(lang => {
+      this.updateDirection(lang);
+      // rebuild swiper so RTL/LTR re-initialises correctly
+      setTimeout(() => this.initSwiper(), 0);
+    });
   }
 
-  // تغيير الاتجاه عند تغيير اللغة
-  this.translocoService.langChanges$.subscribe(lang => {
-    this.updateDirection(lang);
-  });
+  // ── Lifecycle ────────────────────────────────────────────────────────────
+  ngOnInit(): void {}
 
-  // تعيين الاتجاه عند تحميل الصفحة
-  this.updateDirection(this.currentLang);
-}
-  ngOnInit(): void {
-    this.swiper()
+  ngAfterViewInit(): void {
+    this.initSwiper();
   }
 
+  ngOnDestroy(): void {
+    this.langSub?.unsubscribe();
+    this.clearResumeTimer();
+    this.mainSwiper?.destroy(true, true);
+  }
 
-updateDirection(lang: string) {
+  // ── Direction ─────────────────────────────────────────────────────────────
+  updateDirection(lang: string): void {
+    const dir = ['ar'].includes(lang) ? 'rtl' : 'ltr';
+    this.renderer.setAttribute(document.documentElement, 'dir', dir);
+  }
 
-  const rtlLangs = ['ar'];
-  const direction = rtlLangs.includes(lang) ? 'rtl' : 'ltr';
+  // ── Language change ───────────────────────────────────────────────────────
+  changeLang(langCode: string): void {
+    this.translocoService.setActiveLang(langCode);
+    this.currentLang = langCode;
+    localStorage.setItem('lang', langCode);
+  }
 
-  this.renderer.setAttribute(document.documentElement,'dir',direction);
+  // ── Swiper ────────────────────────────────────────────────────────────────
+  initSwiper(): void {
 
-}
-
-
-changeLang(langCode: string): void {
-
-  this.translocoService.setActiveLang(langCode);
-  this.currentLang = langCode;
-
-  // حفظ اللغة
-  localStorage.setItem('lang', langCode);
-}
-
-// =======
-swiper(){
-         this.mainSwiper = new Swiper(".mainSwiper", {
-          spaceBetween:24,
-          loop:true,
-          grabCursor:true,
-          navigation: {
-          nextEl: ".swiper1-next",
-          prevEl: ".swiper1-prev",
-          },
-          breakpoints: {
-              640: {
-              slidesPerView: 1,
-              spaceBetween: 10,
-              },
-              768: {
-              slidesPerView: 2,
-              spaceBetween: 15,
-              },
-              1000: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-              },
-          },
-      });
-
-    //   this.mainSwiper = new Swiper(".mainSwiper", {
-    //   effect: "coverflow",
-    //   grabCursor: true,
-    //   centeredSlides: true,
-    //   slidesPerView: 'auto',
-    //   coverflowEffect: {
-    //     rotate: 0,
-    //     stretch: 0,
-    //     depth: 100,
-    //     modifier: 3,
-    //     slideShadows: true
-    //   },
-    //   keyboard: {
-    //     enabled: true
-    //   },
-    //   mousewheel: {
-    //   releaseOnEdges: true, 
-    //   sensitivity: 1, 
-    //   },
-    //   loop: true,
-    //   pagination: {
-    //     el: ".swiper-pagination",
-    //     clickable: true
-    //   },
-    //   breakpoints: {
-    //     640: {
-    //       slidesPerView: 2
-    //     },
-    //     768: {
-    //       slidesPerView: 1
-    //     },
-    //     1024: {
-    //       slidesPerView: 2
-    //     },
-    //     1560: {
-    //       slidesPerView: 3
-    //     }
-    //   }
-    // });
+    // destroy previous instance if exists
+    if (this.mainSwiper) {
+      this.mainSwiper.destroy(true, true);
     }
 
-// === autoSlide ===
-mainSwiper!: Swiper;
+    const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
 
-private autoSlideInterval: any;
-private restartTimeout: any;
+    this.mainSwiper = new Swiper('.mainSwiper', {
+      modules: [Navigation, Pagination, Keyboard, Mousewheel, Autoplay],
 
-ngAfterViewInit() {
-  this.startAutoSlide();
-}
 
-ngOnDestroy() {
-  clearInterval(this.autoSlideInterval);
-  clearTimeout(this.restartTimeout);
-}
+      // ── Autoplay: starts automatically ──
+      autoplay: {
+        delay:                3000,
+        disableOnInteraction: false,   // keeps autoplay alive after interaction
+        pauseOnMouseEnter:    true,
+        waitForTransition:    true,
+      },
 
-startAutoSlide() {
-  this.stopAutoSlide();
+      slidesPerView:  1,
+      spaceBetween:   24,
+      loop:           true,           // loop so autoplay never stops at the end
+      grabCursor:     true,
+      speed:          600,
 
-  this.autoSlideInterval = setInterval(() => {
-    this.slidePrev();
-  }, 3000);
-}
+      observer:        true,
+      observeParents:  true,
+      resizeObserver:  true, 
 
-stopAutoSlide() {
-  if (this.autoSlideInterval) {
-    clearInterval(this.autoSlideInterval);
+      navigation: {
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
+      },
+
+      breakpoints: {
+        640:  { slidesPerView: 1, spaceBetween: 10 },
+        768:  { slidesPerView: 2, spaceBetween: 15 },
+        1000: { slidesPerView: 3, spaceBetween: 20 },
+      },
+    });
+
+    // ── Stop autoplay on manual navigation, resume after 3 s ──
+    this.mainSwiper.on('navigationNext', () => this.onManualNav());
+    this.mainSwiper.on('navigationPrev', () => this.onManualNav());
   }
-}
 
-pauseAndRestartAutoSlide() {
-  this.stopAutoSlide();
+  /**
+   * Called whenever the user clicks Next or Prev.
+   * Stops autoplay immediately and schedules a restart after 3 s.
+   */
+  private onManualNav(): void {
+    if (!this.mainSwiper) return;
 
-  clearTimeout(this.restartTimeout);
+    // stop autoplay
+    this.mainSwiper.autoplay.stop();
 
-  this.restartTimeout = setTimeout(() => {
-    this.startAutoSlide();
-  }, 6000);
-}
+    // cancel any previously scheduled resume
+    this.clearResumeTimer();
 
-slideNext() {
-  this.mainSwiper?.slideNext();
-  this.pauseAndRestartAutoSlide();
-}
+    // restart autoplay after 3 seconds
+    this.resumeTimer = setTimeout(() => {
+      if (this.mainSwiper && !this.mainSwiper.destroyed) {
+        this.mainSwiper.autoplay.start();
+      }
+    }, 3000);
+  }
 
-slidePrev() {
-  this.mainSwiper?.slidePrev();
-  this.pauseAndRestartAutoSlide();
-}
-
+  private clearResumeTimer(): void {
+    if (this.resumeTimer !== null) {
+      clearTimeout(this.resumeTimer);
+      this.resumeTimer = null;
+    }
+  }
 }

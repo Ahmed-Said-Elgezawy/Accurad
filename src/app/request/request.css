@@ -570,7 +570,7 @@
 /* Button */
 .btn-done {
   /* background: linear-gradient(135deg, #1a56db, #2d7dd2); */
-  background-color: var(--main-color);
+  background: var(--main-color);
   color: #fff;
   border: none;
   padding: 13px 40px;

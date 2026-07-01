@@ -14,13 +14,6 @@ import { NavigationEnd, Router } from '@angular/router';
 export class Request implements OnInit{
   transloco: any;
 
-//   steps = [
-//   { title: 'Basic Information', desc: 'Tell us about you and your center' },
-//   { title: 'Facility Type',     desc: 'Select your facility category' },
-//   { title: 'Imaging Volume',    desc: 'Tell us about your imaging volume' },
-//   { title: 'Modalities',        desc: 'Choose the modalities you work with' },
-//   { title: 'Coverage',          desc: 'Select your coverage requirements' },
-// ];
 get steps() {
   return [
     {
@@ -56,7 +49,7 @@ formData = {
   facilityType: '',
   imagingVolume: '',
   modalities: [] as string[],
-  coverage: ''
+  coverage: '',
 };
 
 
