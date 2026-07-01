@@ -274,12 +274,11 @@
 
 .stats-section { 
   background: var(--main-color);
-  padding: 32px 0;
   margin-bottom: 25px;
   }
-  /* .stats-section .container{
-    padding: 32px 50px !important;
-  } */
+  .stats-section .content{
+    padding: 32px 50px
+  }
 .stats-eyebrow {
     position: relative;
     text-align: center;
@@ -288,7 +287,7 @@
     font-weight: 700;
     margin-bottom: 1.5rem;
 }
-.stats-eyebrow::after{
+.stats-eyebrow::after{ 
     content: " ";
     position: absolute;
     left:50%;
@@ -475,6 +474,11 @@
     .text-center div:not(.text-center div:nth-last-of-type(1)){
     border-bottom: 1px solid rgba(255, 255, 255, 0.452);
 }
+
+.stat-item:not(.stat-item:nth-last-of-type(1)) {
+       border-bottom: 1px solid rgba(255, 255, 255, 0.452); 
+    }
+
 :host-context([dir="ltr"]) .mini-feature:nth-of-type(2) .info h6{
     width: auto;
 }
