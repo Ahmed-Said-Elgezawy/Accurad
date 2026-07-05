@@ -375,7 +375,7 @@
  
 .option-card input[type="radio"],
 .option-card input[type="checkbox"] {
-  accent-color: var(--main-color);
+  accent-color: var(--main-color2);
   width: 16px;
   height: 16px;
   flex-shrink: 0;

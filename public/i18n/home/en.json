@@ -34,6 +34,14 @@
       }
     },
 
+    "hero": {
+        "line1": "Expert Radiology Every Scan.",
+        "line2": "Every Time.",
+        "description": "Accurad delivers accurate, timely, and reliable radiology reports 24/7—empowering better decisions and better patient outcomes.",
+        "button1": "Request a Consultation",
+        "button2": "Contact Us"
+    },
+
     "stats": {
       "eyebrow": "OUR NUMBERS",
       "title": "Accurad By The Numbers",
@@ -167,7 +175,7 @@
 
       "buttons": {
         "contact": "Contact Us",
-        "demo": "Request a Demo"
+        "consultation": "Request a consultation"
       }
     }
   }

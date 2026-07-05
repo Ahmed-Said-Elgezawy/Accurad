@@ -42,6 +42,9 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
     const savedLang    = localStorage.getItem('lang');
     this.currentLang   = savedLang || this.translocoService.getDefaultLang();
 
+    // ← طبّق الاتجاه فوراً قبل أي شيء آخر
+    this.updateDirection(this.currentLang);
+
     this.translocoService.setActiveLang(this.currentLang);
 
     // build languages list
@@ -50,14 +53,13 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
       ? (available as string[])
       : (available as { id: string; label: string }[]).map(l => l.id);
 
-    // set direction on load
-    this.updateDirection(this.currentLang);
-
     // react to language changes
     this.langSub = this.translocoService.langChanges$.subscribe(lang => {
       this.updateDirection(lang);
-      // rebuild swiper so RTL/LTR re-initialises correctly
-      setTimeout(() => this.initSwiper(), 0);
+      // نفس منطق الانتظار: نضمن وصول بيانات اللغة الجديدة قبل إعادة البناء
+      this.translocoService.load(lang).subscribe(() => {
+        setTimeout(() => this.initSwiper(), 0);
+      });
     });
   }
 
@@ -65,7 +67,19 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
-    this.initSwiper();
+    // ★ الإصلاح الجوهري ★
+    // *transloco directive لا يرسم محتوى الـ swiper في الـ DOM إلا بعد
+    // وصول بيانات الترجمة الفعلية. عند إعادة تحميل الصفحة (cold load)
+    // هذا التحميل يمر عبر HTTP ويأخذ وقتاً حقيقياً، لذلك عنصر .mainSwiper
+    // غير موجود أصلاً في الـ DOM لحظة تنفيذ ngAfterViewInit، فتفشل تهيئة
+    // Swiper بصمت. عند تغيير اللغة يدوياً لاحقاً تكون البيانات محمّلة
+    // بالفعل من المرة الأولى، لذلك يبدو أن "اختيار اللغة" هو ما يُصلح
+    // الأمر، بينما الحقيقة أنها أول مرة يجد فيها initSwiper() الـ DOM
+    // الحقيقي جاهزاً. الحل: ننتظر تحميل الترجمة الفعلي قبل لمس Swiper.
+    this.translocoService.load(this.currentLang).subscribe(() => {
+      // tick إضافي يضمن أن Angular أنهى فعلياً رسم الـ DOM بعد وصول البيانات
+      setTimeout(() => this.initSwiper(), 0);
+    });
   }
 
   ngOnDestroy(): void {
@@ -95,9 +109,20 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
       this.mainSwiper.destroy(true, true);
     }
 
+    const swiperContainer = document.querySelector('.mainSwiper') as HTMLElement | null;
+    if (!swiperContainer) return;
+
     const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
 
-    this.mainSwiper = new Swiper('.mainSwiper', {
+    // نفرض dir على عنصر الـ swiper نفسه بشكل متزامن، مباشرةً قبل
+    // إنشاء Swiper، لأن Swiper يقرأ هذه الخاصية من الـ DOM لحظة
+    // التهيئة (this.el.dir) وليس من الـ config. هذا يزيل أي اعتماد
+    // على توقيت Angular's change detection لتطبيق [dir] binding.
+    swiperContainer.setAttribute('dir', isRtl ? 'rtl' : 'ltr');
+
+    // نمرر العنصر نفسه (وليس السلاكتور النصي) حتى نضمن أن Swiper
+    // يقرأ بالضبط نفس العنصر الذي عدّلنا عليه الـ dir للتو.
+    this.mainSwiper = new Swiper(swiperContainer, {
       modules: [Navigation, Pagination, Keyboard, Mousewheel, Autoplay],
 
 
@@ -117,7 +142,7 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
 
       observer:        true,
       observeParents:  true,
-      resizeObserver:  true, 
+      resizeObserver:  true,
 
       navigation: {
         nextEl: '.swiper-next',
