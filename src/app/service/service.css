@@ -505,5 +505,12 @@
         margin-bottom: 1rem;
         font-size: 13px;
     }
+    .reliableTele .content .parttwo{
+        gap: 0.5rem;
+    }
+    .reliableTele .content .parttwo button{
+        gap:0;
+        padding: .8rem 11px ;
+    }
 }
 
