@@ -13,6 +13,14 @@
    "name":"الاسم",
    "email":"البريد الإلكتروني",
    "center-name":"اسم المركز",
+    "selectCountery":"أختر دولتك",
+   "options":{
+     "option1":"مصر",
+     "option2":"السعودية",
+     "option3":"الإمارات",
+     "option4":"العراق",
+     "option5":"ليبيا"
+   },
    "message":"الرسالة",
    "button":"إرسال"
 

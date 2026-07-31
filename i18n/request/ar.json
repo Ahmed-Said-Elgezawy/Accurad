@@ -16,6 +16,13 @@
 
     "country": "الدولة",
     "selectCountry": "اختر دولتك",
+    "optionsCountries":{
+     "option1":"مصر",
+     "option2":"السعودية",
+     "option3":"الإمارات",
+     "option4":"العراق",
+     "option5":"ليبيا"
+   },
 
     "secureTitle": "بياناتك آمنة",
     "secureDesc": "جميع المعلومات التي تقدمها مشفرة ولن تُستخدم إلا لخدمتك بشكل أفضل.",

@@ -14,6 +14,14 @@
    "name":"Name",
    "email":"Email",
    "center-name":"Center Name",
+   "selectCountery":"Select your country",
+   "options":{
+     "option1":"Egypt",
+     "option2":"Saudi Arabia",
+     "option3":"United Arab Emirates",
+     "option4":"Iraq",
+     "option5":"Libya"
+   },
    "message":"Message",
    "button":"Send",
 
