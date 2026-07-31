@@ -36,7 +36,7 @@
         font-weight:800;
 }
 .hero p{
-    color:#dbeafe;
+    color:var(--white-color);
     font-size:var(--sumary-size);
     line-height:1.8;
     text-align: center;
@@ -184,6 +184,7 @@
   appearance: none;
   -webkit-appearance: none;
 }
+
  .input-wrapper input,
  .input-wrapper select{
     margin-bottom: 10px;
@@ -211,7 +212,7 @@
   transform: translateY(-50%);
   width: 18px;
   height: 18px;
-  color: #6b7280;
+  color: #6b7280; 
   pointer-events: none;
 }
  .textarea textarea{

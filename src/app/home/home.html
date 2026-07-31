@@ -4,10 +4,6 @@
 <div class="Container">
 <section class="hero">
     <div class="hero-copy">
-      <!-- <div class="badge">
-        <i class="fa-solid fa-globe"></i>
-        24/7 • Global • Reliable
-      </div> -->
       <h1>{{ t('home.hero.line1') }}<span class="accent">{{ t('home.hero.line2') }}</span></h1>
       <p>{{ t('home.hero.description') }}</p>
       <div class="hero-actions">
@@ -166,47 +162,9 @@
 
       <!-- Right -->
       <div class="process-right">
-
-        <div class="process-video" id="processVideo">
-
-          <canvas id="processCanvas">
-            <video src=""></video>
-          </canvas>
-
-          <div class="video-caption">
-
-            <div class="caption-text">
-              <strong>{{ t('home.process.video.title') }}</strong>
-              <span>{{ t('home.process.video.subtitle') }}</span>
-            </div>
-
-            <div class="caption-time">
-
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="#622d87"
-                stroke-width="2">
-
-                <circle cx="12" cy="12" r="10"></circle>
-
-                <path
-                  stroke-linecap="round"
-                  d="M12 6v6l4 2">
-                </path>
-
-              </svg>
-
-              {{ t('home.process.video.duration') }}
-
-            </div>
-
-          </div>
-
-        </div>
-
+       <div class="img-con">
+         <img src="process2.png" alt="">
+       </div>
       </div>
 
     </div>
@@ -624,156 +582,146 @@
       <div class="swiper mainSwiper" [attr.dir]="currentLang === 'ar' ? 'rtl' : 'ltr'">
 
         <div class="swiper-wrapper">
-
-          <!-- Review 1 -->
-
-          <div class="swiper-slide">
-            <div class="testi-card">
-
-              <div class="quote-icon">"</div>
-
-              <p>{{ t('home.testimonials.review1.text') }}</p>
-
-              <div class="testi-stars">★★★★★</div>
-
-              <div class="testi-author">
-
-                <div class="testi-avatar">S</div>
-
-                <div>
-                  <div class="testi-name">
-                    {{ t('home.testimonials.review1.name') }}
-                  </div>
-
-                  <div class="testi-role">
-                    {{ t('home.testimonials.review1.role') }}
-                  </div>
-                </div>
-
+        <div class="swiper-slide">
+          <div class="Card">
+            <div class="quote-mark">&rdquo;</div>
+        
+            <div class="header">
+              <div class="avatar">
+                <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="44" height="44" fill="#622d87"/>
+                  <circle cx="22" cy="17" r="7" fill="white"/>
+                  <path d="M8 42c0-9 6-15 14-15s14 6 14 15" fill="white"/>
+                </svg>
               </div>
-
+              <div class="name-block">
+                <p class="name">{{ t('home.testimonials.review1.name') }}</p>
+                <p class="role">{{ t('home.testimonials.review1.role') }}</p>
+              </div>
+            </div>
+        
+            <p class="quote-text">
+              {{ t('home.testimonials.review1.text') }}
+            </p>
+        
+            <hr>
+        
+            <div class="footer">
+              <div class="stars">★★★★★</div>
+              <div class="date">02/01/2026</div>
             </div>
           </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="Card">
+            <div class="quote-mark">&rdquo;</div>
+        
+            <div class="header">
+              <div class="avatar">
+                <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="44" height="44" fill="#622d87"/>
+                  <circle cx="22" cy="17" r="7" fill="white"/>
+                  <path d="M8 42c0-9 6-15 14-15s14 6 14 15" fill="white"/>
+                </svg>
+              </div>
+              <div class="name-block">
+                <p class="name">{{ t('home.testimonials.review1.name') }}</p>
+                <p class="role">{{ t('home.testimonials.review1.role') }}</p>
+              </div>
+            </div>
+        
+            <p class="quote-text">
+              {{ t('home.testimonials.review1.text') }}
+            </p>
+        
+            <hr>
+        
+            <div class="footer">
+              <div class="stars">★★★★★</div>
+              <div class="date">02/01/2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="Card">
+            <div class="quote-mark">&rdquo;</div>
+        
+            <div class="header">
+              <div class="avatar">
+                <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="44" height="44" fill="#622d87"/>
+                  <circle cx="22" cy="17" r="7" fill="white"/>
+                  <path d="M8 42c0-9 6-15 14-15s14 6 14 15" fill="white"/>
+                </svg>
+              </div>
+              <div class="name-block">
+                <p class="name">{{ t('home.testimonials.review1.name') }}</p>
+                <p class="role">{{ t('home.testimonials.review1.role') }}</p>
+              </div>
+            </div>
+        
+            <p class="quote-text">
+              {{ t('home.testimonials.review1.text') }}
+            </p>
+        
+            <hr>
+        
+            <div class="footer">
+              <div class="stars">★★★★★</div>
+              <div class="date">02/01/2026</div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="Card">
+            <div class="quote-mark">&rdquo;</div>
+        
+            <div class="header">
+              <div class="avatar">
+                <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="44" height="44" fill="#622d87"/>
+                  <circle cx="22" cy="17" r="7" fill="white"/>
+                  <path d="M8 42c0-9 6-15 14-15s14 6 14 15" fill="white"/>
+                </svg>
+              </div>
+              <div class="name-block">
+                <p class="name">{{ t('home.testimonials.review1.name') }}</p>
+                <p class="role">{{ t('home.testimonials.review1.role') }}</p>
+              </div>
+            </div>
+        
+            <p class="quote-text">
+              {{ t('home.testimonials.review1.text') }}
+            </p>
+        
+            <hr>
+        
+            <div class="footer">
+              <div class="stars">★★★★★</div>
+              <div class="date">02/01/2026</div>
+            </div>
+          </div>
+        </div>
+
+
+
+
 
           <!-- Review 2 -->
 
-          <div class="swiper-slide">
-            <div class="testi-card">
 
-              <div class="quote-icon">"</div>
-
-              <p>{{ t('home.testimonials.review2.text') }}</p>
-
-              <div class="testi-stars">★★★★★</div>
-
-              <div class="testi-author">
-
-                <div class="testi-avatar">S</div>
-
-                <div>
-                  <div class="testi-name">
-                    {{ t('home.testimonials.review2.name') }}
-                  </div>
-
-                  <div class="testi-role">
-                    {{ t('home.testimonials.review2.role') }}
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-          </div>
 
           <!-- Review 3 -->
 
-          <div class="swiper-slide">
-            <div class="testi-card">
 
-              <div class="quote-icon">"</div>
-
-              <p>{{ t('home.testimonials.review3.text') }}</p>
-
-              <div class="testi-stars">★★★★★</div>
-
-              <div class="testi-author">
-
-                <div class="testi-avatar">S</div>
-
-                <div>
-                  <div class="testi-name">
-                    {{ t('home.testimonials.review3.name') }}
-                  </div>
-
-                  <div class="testi-role">
-                    {{ t('home.testimonials.review3.role') }}
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-          </div>
 
           <!-- Review 4 -->
 
-          <div class="swiper-slide">
-            <div class="testi-card">
 
-              <div class="quote-icon">"</div>
-
-              <p>{{ t('home.testimonials.review4.text') }}</p>
-
-              <div class="testi-stars">★★★★★</div>
-
-              <div class="testi-author">
-
-                <div class="testi-avatar">S</div>
-
-                <div>
-                  <div class="testi-name">
-                    {{ t('home.testimonials.review4.name') }}
-                  </div>
-
-                  <div class="testi-role">
-                    {{ t('home.testimonials.review4.role') }}
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-          </div>
 
           <!-- Review 5 -->
 
-          <div class="swiper-slide">
-            <div class="testi-card">
 
-              <div class="quote-icon">"</div>
-
-              <p>{{ t('home.testimonials.review5.text') }}</p>
-
-              <div class="testi-stars">★★★★★</div>
-
-              <div class="testi-author">
-
-                <div class="testi-avatar">S</div>
-
-                <div>
-                  <div class="testi-name">
-                    {{ t('home.testimonials.review5.name') }}
-                  </div>
-
-                  <div class="testi-role">
-                    {{ t('home.testimonials.review5.role') }}
-                  </div>
-                </div>
-
-              </div>
-
-            </div>
-          </div>
 
         </div>
 

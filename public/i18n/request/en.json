@@ -16,6 +16,13 @@
 
     "country": "Country",
     "selectCountry": "Select your country",
+    "optionsCountries":{
+     "option1":"Egypt",
+     "option2":"Saudi Arabia",
+     "option3":"United Arab Emirates",
+     "option4":"Iraq",
+     "option5":"Libya"
+   },
 
     "secureTitle": "Your Information is Secure",
     "secureDesc": "All information you provide is encrypted and will only be used to serve you better.",

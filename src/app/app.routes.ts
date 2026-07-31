@@ -1,5 +1,10 @@
 import { Routes } from '@angular/router';
 import { provideTransloco, provideTranslocoScope } from '@jsverse/transloco';
+import { Home } from './home/home';
+import { About } from './about/about';
+import { Service } from './service/service';
+import { Contact } from './contact/contact';
+import { Request } from './request/request';
 
 export const routes: Routes = [
     {
@@ -10,27 +15,31 @@ export const routes: Routes = [
 
     {
         path:'home',
-        loadComponent: ()=> import("./home/home").then((m)=> m.Home),
+        component: Home,
         providers: [provideTranslocoScope('home')]
     },
     {
         path:'about',
-        loadComponent: ()=> import("./about/about").then((m)=> m.About),
+        component:About,
+        // loadComponent: ()=> import("./about/about").then((m)=> m.About),
         providers: [provideTranslocoScope('about')]
     },
     {
         path:'service',
-        loadComponent: ()=> import("./service/service").then((m)=> m.Service),
+        component:Service,
+        // loadComponent: ()=> import("./service/service").then((m)=> m.Service),
         providers: [provideTranslocoScope('services')]
     },
     {
         path:'contact',
-        loadComponent: ()=> import("./contact/contact").then((m)=> m.Contact),
+        component:Contact,
+        // loadComponent: ()=> import("./contact/contact").then((m)=> m.Contact),
         providers: [provideTranslocoScope('contact')]
     },
     {
         path:'request',
-        loadComponent: ()=> import("./request/request").then((m)=> m.Request),
+        component:Request,
+        // loadComponent: ()=> import("./request/request").then((m)=> m.Request),
         providers: [provideTranslocoScope('request')]
     },
 

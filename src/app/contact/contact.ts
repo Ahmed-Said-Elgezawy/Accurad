@@ -117,7 +117,7 @@ submitForm() {
 
     center_name: this.formData.centerName,
 
-    doctor_phone: this.formData.mobileNumber,
+    phone: this.formData.mobileNumber,
 
     country: this.formData.country,
 

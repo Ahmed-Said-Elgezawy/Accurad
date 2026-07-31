@@ -94,6 +94,7 @@ onModalityChange(event: any, modality: string) {
         return !!(
           this.formData.doctorName &&
           this.formData.centerName &&
+          this.formData.mobileNumber &&
           this.formData.country
         );
 
@@ -124,7 +125,7 @@ onModalityChange(event: any, modality: string) {
 
       center_name: this.formData.centerName,
 
-      doctor_phone: this.formData.mobileNumber,
+      phone: this.formData.mobileNumber,
 
       country: this.formData.country,
 

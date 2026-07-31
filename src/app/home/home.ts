@@ -78,7 +78,7 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
     // الحقيقي جاهزاً. الحل: ننتظر تحميل الترجمة الفعلي قبل لمس Swiper.
     this.translocoService.load(this.currentLang).subscribe(() => {
       // tick إضافي يضمن أن Angular أنهى فعلياً رسم الـ DOM بعد وصول البيانات
-      setTimeout(() => this.initSwiper(), 0);
+      setTimeout(() => this.initSwiper(), 1000);
     });
   }
 
@@ -103,7 +103,6 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
 
   // ── Swiper ────────────────────────────────────────────────────────────────
   initSwiper(): void {
-
     // destroy previous instance if exists
     if (this.mainSwiper) {
       this.mainSwiper.destroy(true, true);
@@ -128,7 +127,7 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
 
       // ── Autoplay: starts automatically ──
       autoplay: {
-        delay:                3000,
+        delay:                4000,
         disableOnInteraction: false,   // keeps autoplay alive after interaction
         pauseOnMouseEnter:    true,
         waitForTransition:    true,
@@ -138,7 +137,7 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
       spaceBetween:   24,
       loop:           true,           // loop so autoplay never stops at the end
       grabCursor:     true,
-      speed:          600,
+      speed:          800,
 
       observer:        true,
       observeParents:  true,
@@ -151,8 +150,8 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
 
       breakpoints: {
         640:  { slidesPerView: 1, spaceBetween: 10 },
-        768:  { slidesPerView: 2, spaceBetween: 15 },
-        1000: { slidesPerView: 3, spaceBetween: 20 },
+        768:  { slidesPerView: 2, spaceBetween: 23 },
+        1000: { slidesPerView: 2, spaceBetween: 23 },
       },
     });
 
@@ -180,7 +179,7 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
         this.mainSwiper.autoplay.start();
       }
     }, 3000);
-  }
+  } 
 
   private clearResumeTimer(): void {
     if (this.resumeTimer !== null) {
@@ -189,3 +188,4 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 }
+

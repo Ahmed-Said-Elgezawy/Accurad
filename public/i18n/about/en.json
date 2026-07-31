@@ -2,7 +2,7 @@
      "h1-1":"About",
      "h1-2":"Accurad Teleradiology Solutions",
      "h-p":"Delivering accurate, reliable and timely radiology reporting services to healthcare providers worldwide.",
-     "who-span":"WHO WE ARE",
+     "who-span":"ABOUT ACCURAD",
      "who-h1":"Who We Are",
      "who-p2":"Accurad is a trusted tele-reporting radiology partner, dedicated to providing fast, accurate, and secure remote diagnostic interpretations for hospitals, clinics, and imaging centers. By combining cutting-edge technology with a network of board-certified radiologists, we bridge gaps in radiology coverage and enhance patient care anytime, anywhere.",
      "who-p3":"We have a team of highly qualified, board-certified radiologists available 24/7 to deliver accurate and timely interpretations across a wide range of imaging modalities.",
@@ -60,5 +60,11 @@
       "studies": "Studies Interpreted",
       "sla": "Report Turnaround Within SLA",
       "coverage": "Radiologist Coverage"
-    }
+    },
+    "achiveHeading":"Milestones That Matter",
+    "achive5":"expanded to 100+ clinics across 5+ countries.",
+    "achive4":"Launched AI-assisted STAT reports, now 30% of total volume.",
+    "achive3":"expanded to 50+ clinics across 5+ countries.",
+    "achive2":"Achieved under 30-minute average turnaround for ER partners.",
+    "achive1":"Achieved over 20,000 reports annually."
 }
