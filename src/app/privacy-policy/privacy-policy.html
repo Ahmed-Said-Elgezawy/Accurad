@@ -1,0 +1,568 @@
+<div *transloco="let t">
+<div class="grain" aria-hidden="true"></div>
+<main>
+
+  <section class="hero">
+    <div class="content">
+
+    <span class="eyebrow">
+      {{ t('privacy.text') }}
+    </span>
+
+    <div class="viewport">
+
+      <div class="vp-br1" aria-hidden="true"></div>
+      <div class="scanline" aria-hidden="true"></div>
+
+      <h1>
+        {{ t('privacy.hero.title1') }}
+        <span>{{ t('privacy.hero.title2') }}</span>
+        {{ t('privacy.hero.title3') }}
+      </h1>
+
+      <p>
+        {{ t('privacy.hero.description') }}
+      </p>
+
+      <div class="hero-meta">
+        <div>{{ t('privacy.hero.stats.sections') }}</div>
+        <span class="line"></span>
+        <div>{{ t('privacy.hero.stats.medicalData') }}</div>
+        <span class="line"></span>
+        <div>{{ t('privacy.hero.stats.confidentiality') }}</div>
+      </div>
+
+    </div>
+    </div>
+  </section>
+
+  <div class="layout">
+
+    <nav class="toc" aria-label="{{ t('privacy.toc.title') }}">
+
+      <div class="toc-title">
+        {{ t('privacy.toc.title') }}
+      </div>
+
+      <ul class="toc-list" id="tocList">
+
+        <li>
+          <a href="#s1">
+            <span class="toc-num">01</span>
+            {{ t('privacy.toc.items.information') }}
+          </a>
+        </li>
+
+        <li>
+          <a href="#s2">
+            <span class="toc-num">02</span>
+            {{ t('privacy.toc.items.usage') }}
+          </a>
+        </li>
+
+        <li>
+          <a href="#s3">
+            <span class="toc-num">03</span>
+            {{ t('privacy.toc.items.contactForm') }}
+          </a>
+        </li>
+
+        <li>
+          <a href="#s4">
+            <span class="toc-num">04</span>
+            {{ t('privacy.toc.items.cookies') }}
+          </a>
+        </li>
+
+        <li>
+          <a href="#s5">
+            <span class="toc-num">05</span>
+            {{ t('privacy.toc.items.thirdParty') }}
+          </a>
+        </li>
+
+        <li>
+          <a href="#s6">
+            <span class="toc-num">06</span>
+            {{ t('privacy.toc.items.security') }}
+          </a>
+        </li>
+
+        <li>
+          <a href="#s7">
+            <span class="toc-num">07</span>
+            {{ t('privacy.toc.items.medicalPrivacy') }}
+          </a>
+        </li>
+
+        <li>
+          <a href="#s8">
+            <span class="toc-num">08</span>
+            {{ t('privacy.toc.items.sharing') }}
+          </a>
+        </li>
+
+        <li>
+          <a href="#s9">
+            <span class="toc-num">09</span>
+            {{ t('privacy.toc.items.externalLinks') }}
+          </a>
+        </li>
+
+        <li>
+          <a href="#s10">
+            <span class="toc-num">10</span>
+            {{ t('privacy.toc.items.rights') }}
+          </a>
+        </li>
+
+        <li>
+          <a href="#s11">
+            <span class="toc-num">11</span>
+            {{ t('privacy.toc.items.children') }}
+          </a>
+        </li>
+
+        <li>
+          <a href="#s12">
+            <span class="toc-num">12</span>
+            {{ t('privacy.toc.items.updates') }}
+          </a>
+        </li>
+
+        <li>
+          <a href="#s13">
+            <span class="toc-num">13</span>
+            {{ t('privacy.toc.items.contact') }}
+          </a>
+        </li>
+
+      </ul>
+
+    </nav>
+
+    <article class="content">
+
+      <!-- Section 1 -->
+
+      <section class="section" id="s1">
+
+        <div class="section-head">
+          <div class="section-tag">01</div>
+          <h2>{{ t('privacy.sections.information.title') }}</h2>
+        </div>
+
+        <div class="section-body">
+
+          <p>{{ t('privacy.sections.information.intro') }}</p>
+
+          <ul>
+            <li>{{ t('privacy.sections.information.items.fullName') }}</li>
+            <li>{{ t('privacy.sections.information.items.email') }}</li>
+            <li>{{ t('privacy.sections.information.items.phone') }}</li>
+            <li>{{ t('privacy.sections.information.items.organization') }}</li>
+            <li>{{ t('privacy.sections.information.items.country') }}</li>
+            <li>{{ t('privacy.sections.information.items.contactInfo') }}</li>
+            <li>{{ t('privacy.sections.information.items.attachments') }}</li>
+          </ul>
+
+          <p style="margin-top:18px;">
+            {{ t('privacy.sections.information.technicalIntro') }}
+          </p>
+
+          <ul>
+            <li>{{ t('privacy.sections.information.technical.ip') }}</li>
+            <li>{{ t('privacy.sections.information.technical.browser') }}</li>
+            <li>{{ t('privacy.sections.information.technical.device') }}</li>
+            <li>{{ t('privacy.sections.information.technical.os') }}</li>
+            <li>{{ t('privacy.sections.information.technical.pages') }}</li>
+            <li>{{ t('privacy.sections.information.technical.time') }}</li>
+          </ul>
+
+        </div>
+
+      </section>
+
+      <!-- Section 2 -->
+
+      <section class="section" id="s2">
+
+        <div class="section-head">
+          <div class="section-tag">02</div>
+          <h2>{{ t('privacy.sections.usage.title') }}</h2>
+        </div>
+
+        <div class="section-body">
+
+          <p>{{ t('privacy.sections.usage.intro') }}</p>
+
+          <ul>
+            <li>{{ t('privacy.sections.usage.items.reply') }}</li>
+            <li>{{ t('privacy.sections.usage.items.services') }}</li>
+            <li>{{ t('privacy.sections.usage.items.communication') }}</li>
+            <li>{{ t('privacy.sections.usage.items.experience') }}</li>
+            <li>{{ t('privacy.sections.usage.items.development') }}</li>
+            <li>{{ t('privacy.sections.usage.items.security') }}</li>
+            <li>{{ t('privacy.sections.usage.items.legal') }}</li>
+          </ul>
+
+        </div>
+
+      </section>
+            <!-- Section 3 -->
+
+      <section class="section" id="s3">
+
+        <div class="section-head">
+          <div class="section-tag">03</div>
+          <h2>{{ t('privacy.sections.contactForm.title') }}</h2>
+        </div>
+
+        <div class="section-body">
+
+          <p>
+            {{ t('privacy.sections.contactForm.description') }}
+          </p>
+
+          <div class="note-box">
+            <span>
+              {{ t('privacy.sections.contactForm.note') }}
+            </span>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Section 4 -->
+
+      <section class="section" id="s4">
+
+        <div class="section-head">
+          <div class="section-tag">04</div>
+          <h2>{{ t('privacy.sections.cookies.title') }}</h2>
+        </div>
+
+        <div class="section-body">
+
+          <p>
+            {{ t('privacy.sections.cookies.description') }}
+          </p>
+
+          <p>
+            {{ t('privacy.sections.cookies.note') }}
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- Section 5 -->
+
+      <section class="section" id="s5">
+
+        <div class="section-head">
+          <div class="section-tag">05</div>
+          <h2>{{ t('privacy.sections.thirdParty.title') }}</h2>
+        </div>
+
+        <div class="section-body">
+
+          <p>
+            {{ t('privacy.sections.thirdParty.intro') }}
+          </p>
+
+          <ul>
+            <li>{{ t('privacy.sections.thirdParty.items.emailjs') }}</li>
+            <li>{{ t('privacy.sections.thirdParty.items.maps') }}</li>
+            <li>{{ t('privacy.sections.thirdParty.items.analytics') }}</li>
+            <li>{{ t('privacy.sections.thirdParty.items.social') }}</li>
+          </ul>
+
+          <p style="margin-top:16px;">
+            {{ t('privacy.sections.thirdParty.note') }}
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- Section 6 -->
+
+      <section class="section" id="s6">
+
+        <div class="section-head">
+          <div class="section-tag">06</div>
+          <h2>{{ t('privacy.sections.security.title') }}</h2>
+        </div>
+
+        <div class="section-body">
+
+          <p>
+            {{ t('privacy.sections.security.paragraph1') }}
+          </p>
+
+          <p>
+            {{ t('privacy.sections.security.paragraph2') }}
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- Section 7 -->
+
+      <section class="section" id="s7">
+
+        <div class="section-head">
+          <div class="section-tag">07</div>
+          <h2>{{ t('privacy.sections.medicalPrivacy.title') }}</h2>
+        </div>
+
+        <div class="section-body">
+
+          <p>
+            {{ t('privacy.sections.medicalPrivacy.paragraph') }}
+          </p>
+
+          <div class="note-box">
+            <span>
+              {{ t('privacy.sections.medicalPrivacy.note') }}
+            </span>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Section 8 -->
+
+      <section class="section" id="s8">
+
+        <div class="section-head">
+          <div class="section-tag">08</div>
+          <h2>{{ t('privacy.sections.sharing.title') }}</h2>
+        </div>
+
+        <div class="section-body">
+
+          <p>
+            {{ t('privacy.sections.sharing.paragraph1') }}
+          </p>
+
+          <p>
+            {{ t('privacy.sections.sharing.paragraph2') }}
+          </p>
+
+        </div>
+
+      </section>
+            <!-- Section 9 -->
+
+      <section class="section" id="s9">
+
+        <div class="section-head">
+          <div class="section-tag">09</div>
+          <h2>{{ t('privacy.sections.externalLinks.title') }}</h2>
+        </div>
+
+        <div class="section-body">
+
+          <p>
+            {{ t('privacy.sections.externalLinks.paragraph1') }}
+          </p>
+
+          <p>
+            {{ t('privacy.sections.externalLinks.paragraph2') }}
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- Section 10 -->
+
+      <section class="section" id="s10">
+
+        <div class="section-head">
+          <div class="section-tag">10</div>
+          <h2>{{ t('privacy.sections.rights.title') }}</h2>
+        </div>
+
+        <div class="section-body">
+
+          <p>
+            {{ t('privacy.sections.rights.intro') }}
+          </p>
+
+          <ul>
+            <li>{{ t('privacy.sections.rights.items.view') }}</li>
+            <li>{{ t('privacy.sections.rights.items.edit') }}</li>
+            <li>{{ t('privacy.sections.rights.items.delete') }}</li>
+            <li>{{ t('privacy.sections.rights.items.contact') }}</li>
+          </ul>
+
+        </div>
+
+      </section>
+
+      <!-- Section 11 -->
+
+      <section class="section" id="s11">
+
+        <div class="section-head">
+          <div class="section-tag">11</div>
+          <h2>{{ t('privacy.sections.children.title') }}</h2>
+        </div>
+
+        <div class="section-body">
+
+          <p>
+            {{ t('privacy.sections.children.paragraph1') }}
+          </p>
+
+          <p>
+            {{ t('privacy.sections.children.paragraph2') }}
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- Section 12 -->
+
+      <section class="section" id="s12">
+
+        <div class="section-head">
+          <div class="section-tag">12</div>
+          <h2>{{ t('privacy.sections.updates.title') }}</h2>
+        </div>
+
+        <div class="section-body">
+
+          <p>
+            {{ t('privacy.sections.updates.paragraph1') }}
+          </p>
+
+          <p>
+            {{ t('privacy.sections.updates.paragraph2') }}
+          </p>
+
+        </div>
+
+      </section>
+
+      <!-- Section 13 -->
+
+      <section class="section" id="s13">
+
+        <div class="section-head">
+          <div class="section-tag">13</div>
+          <h2>{{ t('privacy.sections.contact.title') }}</h2>
+        </div>
+
+        <div class="section-body">
+
+          <p>
+            {{ t('privacy.sections.contact.paragraph1') }}
+          </p>
+
+          <p style="margin-top:10px;">
+
+            {{ t('privacy.sections.contact.email') }}:
+
+            <span class="email-link">
+                info.accurad@gmail.com
+            </span>
+
+            <br>
+
+            {{ t('privacy.sections.contact.website') }}:
+
+            <span class="email-link" >
+
+                www.accurad.com
+            </span>
+
+          </p>
+
+          <p style="margin-top:16px;font-size:.85rem;">
+
+            {{ t('privacy.sections.contact.note') }}
+
+          </p>
+
+        </div>
+
+      </section>
+
+    </article>
+
+  </div>
+
+</main>
+
+<!-- <footer class="contact-block">
+
+  <div class="contact-inner">
+
+    <div>
+
+      <h3>
+
+        {{ t('privacy.footer.title1') }}
+
+        <span>
+
+          {{ t('privacy.footer.title2') }}
+
+        </span>
+
+        {{ t('privacy.footer.title3') }}
+
+      </h3>
+
+      <p>
+
+        {{ t('privacy.footer.description') }}
+
+      </p>
+
+    </div>
+
+    <div class="contact-links">
+
+      <a href="">
+
+        {{ t('privacy.footer.email') }}
+
+      </a>
+
+      <a href="">
+
+        {{ t('privacy.footer.website') }}
+
+      </a>
+
+    </div>
+
+  </div>
+
+</footer> -->
+
+<!-- <div class="fine-print">
+
+  <span>
+
+    {{ t('privacy.footer.copyright') }}
+
+  </span>
+
+  <span>
+
+    {{ t('privacy.footer.lastUpdate') }}
+
+  </span>
+
+</div> -->
+</div>

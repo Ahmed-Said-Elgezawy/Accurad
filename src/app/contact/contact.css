@@ -4,6 +4,25 @@
     box-sizing: border-box;
     list-style: none;
 }
+.heading-title {
+  position: relative;
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: var(--small-heading2);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.heading-title::after {
+  content: ' ';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 3px;
+  width: 40px;
+  background: var(--main-color2);
+  transform: translateX(-50%);
+  border-radius: 10px;
+}
 /* hero=== */
 .hero{
     position: relative;
@@ -33,7 +52,7 @@
 }
 .hero h1:nth-of-type(1){
     font-size: var(--main-heading);
-        font-weight:800;
+    font-weight:800;
 }
 .hero p{
     color:var(--white-color);
@@ -80,25 +99,6 @@
     text-align: center;
 }
 
-.contact .content .contact-info h2 {
-    position: relative;
-    text-align: center;
-    padding-bottom: 20px;
-    font-size: var(--small-heading2);
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-.contact .content .contact-info  h2::after{
-    content: " ";
-    position: absolute;
-    left:50%;
-    bottom: 0;
-    height: 3px;
-    width:40px;
-    background: var(--main-color);
-    transform: translateX(-50%);
-    border-radius: 10px;
-}
 .contact .content .text-con{
     display: flex;
     justify-content: center;
@@ -132,57 +132,46 @@
 .input-wrapper:nth-last-of-type(1){
     margin-bottom: 0;
 }
- :host-context([dir="ltr"])  .input-icon {
+.input-icon{
   position: absolute;
-  left: 14px;
   top: 50%;
   transform: translateY(-50%);
   width: 18px;
   height: 18px;
   color: #9ca3af;
-  pointer-events: none;
+  pointer-events: none; 
+}
+ :host-context([dir="ltr"])  .input-icon {
+  left: 14px;
 }
  :host-context([dir="rtl"]) .input-icon {
-  position: absolute;
   right: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 18px;
-  height: 18px;
-  color: #9ca3af;
-  pointer-events: none;
 }
  .textarea .input-icon{
     top: 1.6rem;
 }
+ .input-wrapper input,
+ .input-wrapper textarea,
+ .input-wrapper select{
+  width: 100%;
+  border: 1px solid var(--gray-color);
+  border-radius: 5px;
+  font-size: 14px;
+  background: transparent;
+  outline: none;
+  transition: border-color 0.2s;
+  appearance: none;
+  -webkit-appearance: none; 
+ }
  :host-context([dir="ltr"]) .input-wrapper input,
  :host-context([dir="ltr"]) .input-wrapper textarea,
  :host-context([dir="ltr"]) .input-wrapper select{
-  width: 100%;
   padding: 15px 14px 15px 42px;
-  border: 1px solid var(--gray-color);
-  border-radius: 5px;
-  font-size: 14px;
-  background: transparent;
-  outline: none;
-  transition: border-color 0.2s;
-  appearance: none;
-  -webkit-appearance: none;
 }
-
  :host-context([dir="rtl"]) .input-wrapper input,
  :host-context([dir="rtl"]) .input-wrapper textarea,
  :host-context([dir="rtl"]) .input-wrapper select{
-  width: 100%;
   padding: 15px 42px 15px 14px;
-  border: 1px solid var(--gray-color);
-  border-radius: 5px;
-  font-size: 14px;
-  background: transparent;
-  outline: none;
-  transition: border-color 0.2s;
-  appearance: none;
-  -webkit-appearance: none;
 }
 
  .input-wrapper input,
@@ -194,9 +183,8 @@
 .input-wrapper select:focus {
   border-color: var(--main-color2);
 }
-:host-context([dir="ltr"]) .select-wrapper .chevron {
+.select-wrapper .chevron{
   position: absolute;
-  right: 14px;
   top: 50%;
   transform: translateY(-50%);
   width: 18px;
@@ -204,16 +192,12 @@
   color: #6b7280;
   pointer-events: none;
 }
+:host-context([dir="ltr"]) .select-wrapper .chevron {
+  right: 14px;
+}
 
 :host-context([dir="rtl"]) .select-wrapper .chevron {
-  position: absolute;
   left: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 18px;
-  height: 18px;
-  color: #6b7280; 
-  pointer-events: none;
 }
  .textarea textarea{
     min-height: 150px;
@@ -382,7 +366,6 @@
  
 /* Button */
 .btn-done {
-  /* background: linear-gradient(135deg, #1a56db, #2d7dd2); */
   background: var(--main-color);
   color: #fff;
   border: none;
@@ -460,17 +443,18 @@
         padding:  .6rem;
         border: 1px solid var(--gray-white-color);
     }
+    .contact .content .contact-info form ul li input,
+    .contact .content .contact-info form ul li select{
+        margin-bottom: 10px;
+        border: 1px solid var(--gray-white-color);        
+    }
     :host-context([dir="ltr"]) .contact .content .contact-info form ul li input,
     :host-context([dir="ltr"]) .contact .content .contact-info form ul li select{
-        margin-bottom: 10px;
         padding: 14px 14px 14px 40px;
-        border: 1px solid var(--gray-white-color);
     }
     :host-context([dir="rtl"]) .contact .content .contact-info form ul li input ,
     :host-context([dir="rtl"]) .contact .content .contact-info form ul li select{
-        margin-bottom: 10px;
         padding: 14px 40px 14px 14px;
-        border: 1px solid var(--gray-white-color);
     }
     .contact .content .contact-info form  ul li textarea{
         border: 1px solid var(--gray-white-color);

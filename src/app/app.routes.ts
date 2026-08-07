@@ -5,6 +5,7 @@ import { About } from './about/about';
 import { Service } from './service/service';
 import { Contact } from './contact/contact';
 import { Request } from './request/request';
+import { PrivacyPolicy } from './privacy-policy/privacy-policy';
 
 export const routes: Routes = [
     {
@@ -27,20 +28,22 @@ export const routes: Routes = [
     {
         path:'service',
         component:Service,
-        // loadComponent: ()=> import("./service/service").then((m)=> m.Service),
         providers: [provideTranslocoScope('services')]
     },
     {
         path:'contact',
         component:Contact,
-        // loadComponent: ()=> import("./contact/contact").then((m)=> m.Contact),
         providers: [provideTranslocoScope('contact')]
     },
     {
         path:'request',
         component:Request,
-        // loadComponent: ()=> import("./request/request").then((m)=> m.Request),
         providers: [provideTranslocoScope('request')]
+    },
+    {
+        path:'privacy-policy',
+        component:PrivacyPolicy,
+        providers: [provideTranslocoScope('privacy')]
     },
 
 ];

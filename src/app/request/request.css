@@ -11,11 +11,9 @@
 }
 .page-wrapper {
   min-height: 100vh;
-  /* background: linear-gradient(135deg, #0d2b6b 0%, #1a4fa8 50%, #2d7dd2 100%); */
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: 24px 16px; */
 }
 
 /* ── Card ── */
@@ -25,7 +23,6 @@
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.171);
   width: 100%;
-  /* max-width: 900px; */
 }
  
 .form-layout {
@@ -223,33 +220,25 @@
   position: relative;
   margin-bottom: 20px;
 }
- 
-:host-context([dir="ltr"]) .input-icon {
+.input-icon {
   position: absolute;
-  left: 14px;
   top: 50%;
   transform: translateY(-50%);
   width: 18px;
   height: 18px;
   color: #9ca3af;
   pointer-events: none;
+}
+:host-context([dir="ltr"]) .input-icon {
+  left: 14px;
 }
 :host-context([dir="rtl"]) .input-icon {
-  position: absolute;
   right: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 18px;
-  height: 18px;
-  color: #9ca3af;
-  pointer-events: none;
 }
- 
-:host-context([dir="ltr"]) .input-wrapper input[type="text"],
-:host-context([dir="ltr"]) .input-wrapper input[type="tel"],
-:host-context([dir="ltr"]) .input-wrapper select {
+ .input-wrapper input[type="text"],
+ .input-wrapper input[type="tel"],
+ .input-wrapper select {
   width: 100%;
-  padding: 12px 14px 12px 42px;
   border: 1px solid var(--gray-color);
   border-radius: 8px;
   font-size: 14px;
@@ -259,25 +248,21 @@
   transition: border-color 0.2s;
   appearance: none;
   -webkit-appearance: none;
-    direction: ltr;
-    text-align: left;
+}
+
+:host-context([dir="ltr"]) .input-wrapper input[type="text"],
+:host-context([dir="ltr"]) .input-wrapper input[type="tel"],
+:host-context([dir="ltr"]) .input-wrapper select {
+  padding: 12px 14px 12px 42px;
+  direction: ltr;
+  text-align: left;
 }
 :host-context([dir="rtl"]) .input-wrapper input[type="text"],
 :host-context([dir="rtl"]) .input-wrapper input[type="tel"],
 :host-context([dir="rtl"]) .input-wrapper select {
-  width: 100%;
   padding: 12px 42px 12px 12px;
-  border: 1px solid var(--gray-color);
-  border-radius: 8px;
-  font-size: 14px;
-  color: #374151;
-  background: #fff;
-  outline: none;
-  transition: border-color 0.2s;
-  appearance: none;
-  -webkit-appearance: none;
   direction: rtl;
-    text-align: right;
+  text-align: right;
 }
  
 .input-wrapper input[type="text"]::placeholder,
@@ -290,10 +275,8 @@
 .input-wrapper select:focus {
   border-color: var(--main-color);
 }
- 
-:host-context([dir="ltr"]) .select-wrapper .chevron {
+.select-wrapper .chevron{
   position: absolute;
-  right: 14px;
   top: 50%;
   transform: translateY(-50%);
   width: 18px;
@@ -301,16 +284,11 @@
   color: #6b7280;
   pointer-events: none;
 }
-
+:host-context([dir="ltr"]) .select-wrapper .chevron {
+  right: 14px;
+}
 :host-context([dir="rtl"]) .select-wrapper .chevron {
-  position: absolute;
   left: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 18px;
-  height: 18px;
-  color: #6b7280;
-  pointer-events: none;
 }
  
 /* ── Security box ── */
@@ -374,7 +352,6 @@
 .option-card.selected {
   border-color: #612d8796;
   background: #ead0fc4b;
-  /* box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.08); */
 }
  
 .option-card input[type="radio"],
@@ -573,7 +550,6 @@
  
 /* Button */
 .btn-done {
-  /* background: linear-gradient(135deg, #1a56db, #2d7dd2); */
   background: var(--main-color);
   color: #fff;
   border: none;

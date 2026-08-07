@@ -21,7 +21,7 @@ body{
     --hover-color: linear-gradient(135deg,#622d87 , #4b0671);
     --main-color2: #622d87;
     /* --light-purple:#9950ce; */
-    --light-purple:#9950ced0;
+    --light-purple:#9950ced0; 
     --white-color: white;
     --background-color: rgb(247, 247, 247);
     --gray-color:#ccc;
@@ -39,7 +39,7 @@ body{
     --main-heading:clamp(45px,5vw,70px);
     --small-heading:clamp(19px,4vw,21px);
     --small-heading2:clamp(23px,4vw,25px);
-    --sumary-size:clamp(18px,2vw,20px)
+    --sumary-size:clamp(18px,2vw,20px);
 
 
     --primary:#2563eb;
@@ -49,6 +49,7 @@ body{
     --gray:#64748b;
     --light:#f8fafc;
 }
+
 
 .ant-collapse-content > .ant-collapse-content-box{
     padding: 0 16px;

@@ -1,0 +1,334 @@
+{
+
+    "text": "Privacy Policy",
+
+    "updated": "Last Updated: August 6, 2026",
+
+    "hero": {
+      "title1": "Your Privacy",
+      "title2": "Protected",
+      "title3": "With the Same Precision We Apply to Every Radiology Interpretation",
+
+      "description": "Welcome to Accurad Teleradiology Solutions. This page explains how we collect, use, and protect your information when you visit our website, in accordance with the sensitive nature of our medical teleradiology services.",
+
+      "stats": {
+        "sections": "14 Sections",
+        "medicalData": "Medical Institutions & Visitor Data",
+        "confidentiality": "Complete Medical Confidentiality"
+      }
+    },
+
+    "toc": {
+      "title": "Contents",
+
+      "items": {
+        "information": "Information We Collect",
+        "usage": "How We Use Information",
+        "contactForm": "Contact Form",
+        "cookies": "Cookies",
+        "thirdParty": "Third-Party Services",
+        "security": "Information Security",
+        "medicalPrivacy": "Medical Data Confidentiality",
+        "sharing": "Information Sharing",
+        "externalLinks": "External Links",
+        "rights": "Your Rights",
+        "children": "Children's Privacy",
+        "updates": "Policy Updates",
+        "contact": "Contact Us"
+      }
+    },
+
+    "sections": {
+
+      "information": {
+
+        "title": "Information We Collect",
+
+        "intro": "We may collect the following information when you use our website:",
+
+        "items": {
+
+          "fullName": "Full Name",
+
+          "email": "Email Address",
+
+          "phone": "Phone Number",
+
+          "organization": "Hospital, Radiology Center, or Healthcare Organization (if applicable)",
+
+          "country": "Country",
+
+          "contactInfo": "Any information you provide through the contact form",
+
+          "attachments": "Any files or documents you choose to upload through the contact form (if this feature is available)"
+        },
+
+        "technicalIntro": "We may also automatically collect certain technical information, including:",
+
+        "technical": {
+
+          "ip": "IP Address",
+
+          "browser": "Browser Type",
+
+          "device": "Device Type",
+
+          "os": "Operating System",
+
+          "pages": "Visited Pages",
+
+          "time": "Date and Time of Visit"
+        }
+      },
+
+      "usage": {
+
+        "title": "How We Use Information",
+
+        "intro": "The information we collect may be used for the following purposes:",
+
+        "items": {
+
+          "reply": "Responding to inquiries and contact requests",
+
+          "services": "Providing information about our services",
+
+          "communication": "Communicating with hospitals, radiology centers, and potential clients",
+
+          "experience": "Improving the website user experience",
+
+          "development": "Continuously improving our services",
+
+          "security": "Maintaining website security and preventing misuse",
+
+          "legal": "Complying with applicable legal requirements when necessary"
+        }
+      },
+
+      "contactForm": {
+
+        "title": "Contact Form",
+
+        "description": "When you use the contact form on our website, the information you submit is sent directly to the official email address of Accurad Teleradiology Solutions using the EmailJS service.",
+
+        "note": "Our website does not store contact form submissions in a website database. The information is used solely to respond to your inquiries or communicate with you regarding the services you requested."
+      },
+
+      "cookies": {
+
+        "title": "Cookies",
+
+        "description": "Our website may use cookies to improve your browsing experience and analyze website performance.",
+
+        "note": "You can disable cookies through your browser settings. However, some website features may not function properly."
+,
+      "thirdParty": {
+        "title": "Third-Party Services",
+
+        "intro": "Our website may use certain third-party services to enhance the user experience or analyze website performance, including:",
+
+        "items": {
+          "emailjs": "EmailJS for sending contact form messages",
+          "maps": "Google Maps (if available)",
+          "analytics": "Google Analytics (if implemented in the future)",
+          "social": "Social Media Links"
+        },
+
+        "note": "These services are governed by their own privacy policies. Accurad Teleradiology Solutions is not responsible for the privacy practices of such third parties."
+      },
+
+      "security": {
+        "title": "Information Security",
+
+        "paragraph1": "We are committed to taking appropriate measures to protect the information submitted through our website against unauthorized access, use, modification, or disclosure.",
+
+        "paragraph2": "Although we strive to maintain the highest level of security, no method of data transmission over the Internet can be guaranteed to be 100% secure."
+      },
+
+      "medicalPrivacy": {
+        "title": "Medical Data Confidentiality",
+
+        "paragraph": "Accurad Teleradiology Solutions is committed to maintaining the confidentiality of all medical information and patient-related data.",
+
+        "note": "When using any of our medical or teleradiology services, all medical information is handled according to the highest standards of confidentiality and professionalism and is used solely for providing the requested medical services."
+      },
+
+      "sharing": {
+        "title": "Information Sharing",
+
+        "paragraph1": "We do not sell, rent, or share your personal information with third parties for marketing purposes.",
+
+        "paragraph2": "Certain information may only be disclosed if required by law or when necessary to protect the rights of the company or the users of our website."
+      },
+
+      "externalLinks": {
+        "title": "External Links",
+
+        "paragraph1": "Our website may contain links to external websites.",
+
+        "paragraph2": "This Privacy Policy does not apply to those websites. We encourage you to review their privacy policies before using their services."
+      },
+
+      "rights": {
+        "title": "Your Rights",
+
+        "intro": "You have the right at any time to:",
+
+        "items": {
+          "view": "Request access to the personal information you have provided",
+
+          "edit": "Request correction of inaccurate or incomplete information",
+
+          "delete": "Request deletion of your personal information whenever applicable",
+
+          "contact": "Contact us to inquire about how your information is being used"
+        }
+      },
+
+      "children": {
+        "title": "Children's Privacy",
+
+        "paragraph1": "This website is intended for hospitals, radiology centers, physicians, and healthcare organizations and is not directed toward children.",
+
+        "paragraph2": "We do not knowingly collect personal information from children under the age of 13."
+      },
+
+      "updates": {
+        "title": "Privacy Policy Updates",
+
+        "paragraph1": "We may update this Privacy Policy from time to time to reflect legal, technical, or operational changes.",
+
+        "paragraph2": "Any updates will be published on this page together with the latest revision date."
+      },
+
+      "contact": { 
+        "title": "Contact Us",
+
+        "paragraph1": "If you have any questions or concerns regarding this Privacy Policy or the way we handle your information, please feel free to contact us.",
+
+        "email": "Email",
+
+        "website": "Website",
+
+        "emailPlaceholder": "(Insert the company's official email address here)",
+
+        "websitePlaceholder": "(Insert the company's official website URL here)",
+
+        "note": "Note: This Privacy Policy applies only to the official website of Accurad Teleradiology Solutions and does not apply to any external services or websites accessed through third-party links."
+      }
+    },
+      "thirdParty": {
+        "title": "Third-Party Services",
+
+        "intro": "Our website may use certain third-party services to enhance the user experience or analyze website performance, including:",
+
+        "items": {
+          "emailjs": "EmailJS for sending contact form messages",
+          "maps": "Google Maps (if available)",
+          "analytics": "Google Analytics (if implemented in the future)",
+          "social": "Social Media Links"
+        },
+
+        "note": "These services are governed by their own privacy policies. Accurad Teleradiology Solutions is not responsible for the privacy practices of such third parties."
+      },
+
+      "security": {
+        "title": "Information Security",
+
+        "paragraph1": "We are committed to taking appropriate measures to protect the information submitted through our website against unauthorized access, use, modification, or disclosure.",
+
+        "paragraph2": "Although we strive to maintain the highest level of security, no method of data transmission over the Internet can be guaranteed to be 100% secure."
+      },
+
+      "medicalPrivacy": {
+        "title": "Medical Data Confidentiality",
+
+        "paragraph": "Accurad Teleradiology Solutions is committed to maintaining the confidentiality of all medical information and patient-related data.",
+
+        "note": "When using any of our medical or teleradiology services, all medical information is handled according to the highest standards of confidentiality and professionalism and is used solely for providing the requested medical services."
+      },
+
+      "sharing": {
+        "title": "Information Sharing",
+
+        "paragraph1": "We do not sell, rent, or share your personal information with third parties for marketing purposes.",
+
+        "paragraph2": "Certain information may only be disclosed if required by law or when necessary to protect the rights of the company or the users of our website."
+      },
+
+      "externalLinks": {
+        "title": "External Links",
+
+        "paragraph1": "Our website may contain links to external websites.",
+
+        "paragraph2": "This Privacy Policy does not apply to those websites. We encourage you to review their privacy policies before using their services."
+      },
+
+      "rights": {
+        "title": "Your Rights",
+
+        "intro": "You have the right at any time to:",
+
+        "items": {
+          "view": "Request access to the personal information you have provided",
+
+          "edit": "Request correction of inaccurate or incomplete information",
+
+          "delete": "Request deletion of your personal information whenever applicable",
+
+          "contact": "Contact us to inquire about how your information is being used"
+        }
+      },
+
+      "children": {
+        "title": "Children's Privacy",
+
+        "paragraph1": "This website is intended for hospitals, radiology centers, physicians, and healthcare organizations and is not directed toward children.",
+
+        "paragraph2": "We do not knowingly collect personal information from children under the age of 13."
+      },
+
+      "updates": {
+        "title": "Privacy Policy Updates",
+
+        "paragraph1": "We may update this Privacy Policy from time to time to reflect legal, technical, or operational changes.",
+
+        "paragraph2": "Any updates will be published on this page together with the latest revision date."
+      },
+
+      "contact": {
+        "title": "Contact Us",
+
+        "paragraph1": "If you have any questions or concerns regarding this Privacy Policy or the way we handle your information, please feel free to contact us.",
+
+        "email": "Email",
+
+        "website": "Website",
+
+        "emailPlaceholder": "(Insert the company's official email address here)",
+
+        "websitePlaceholder": "(Insert the company's official website URL here)",
+
+        "note": "Note: This Privacy Policy applies only to the official website of Accurad Teleradiology Solutions and does not apply to any external services or websites accessed through third-party links."
+      }
+    },
+
+    "footer": {
+      "title1": "Have a Question About",
+
+      "title2": "Your Privacy",
+
+      "title3": "?",
+
+      "description": "The Accurad Teleradiology Solutions team is ready to answer your questions regarding this Privacy Policy and how your information is handled.",
+
+      "email": "Official Email →",
+
+      "website": "Official Website →",
+
+      "copyright": "© 2026 Accurad Teleradiology Solutions",
+
+      "lastUpdate": "Last Updated: August 6, 2026"
+    }
+
+  }
