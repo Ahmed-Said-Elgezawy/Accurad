@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Renderer2 } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, QueryList, Renderer2, ViewChildren } from '@angular/core';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { TranslocoDirective, TranslocoService } from '@jsverse/transloco';
 
@@ -9,7 +9,7 @@ import { TranslocoDirective, TranslocoService } from '@jsverse/transloco';
   templateUrl: './privacy-policy.html',
   styleUrl: './privacy-policy.css',
 })
-export class PrivacyPolicy {
+export class PrivacyPolicy implements AfterViewInit, OnDestroy {
 currentLang: string;
 languages: string[];
 
@@ -71,5 +71,60 @@ changeLang(langCode: string): void {
       window.scrollTo(0,0)
     }
   })
+  }
+
+  // اربط هذه المتغيرات بعناصر القالب عبر #tocLink و #sectionRef
+  // (انظر التعديلات المطلوبة على ملف الـ HTML أسفل هذا الملف)
+  @ViewChildren('tocLink') tocLinks!: QueryList<ElementRef<HTMLAnchorElement>>;
+  @ViewChildren('sectionRef') sectionRefs!: QueryList<ElementRef<HTMLElement>>;
+ 
+  private observer?: IntersectionObserver;
+ 
+  ngAfterViewInit(): void {
+    // ننتظر جولة الرصد التالية لضمان استقرار القوائم بعد أول Change Detection
+    queueMicrotask(() => this.setupScrollSpy());
+  }
+ 
+  private setupScrollSpy(): void {
+    const linkEls = this.tocLinks.map(ref => ref.nativeElement);
+ 
+    this.observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = '#' + entry.target.id;
+          const link = linkEls.find(
+            (l) => l.getAttribute('href') === id
+          );
+ 
+          if (entry.isIntersecting) {
+            linkEls.forEach((l) => l.classList.remove('active'));
+            link?.classList.add('active');
+          }
+        });
+      },
+      { rootMargin: '-20% 0px -70% 0px', threshold: 0 }
+    );
+ 
+    this.sectionRefs.forEach((ref) => {
+      if (ref?.nativeElement) {
+        this.observer?.observe(ref.nativeElement);
+      }
+    });
+  }
+ 
+  ngOnDestroy(): void {
+    this.observer?.disconnect();
+  }
+ 
+  // يمنع Angular Router من اعتراض الرابط، ويقوم بالتمرير يدويًا داخل نفس الصفحة
+  scrollToSection(sectionId: string, event: Event): void {
+    event.preventDefault();
+ 
+    const target = document.getElementById(sectionId);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // اختياري: تحديث الرابط في شريط العنوان دون إعادة تحميل أو تنقّل عبر الراوتر
+      history.replaceState(null, '', '#' + sectionId);
+    }
   }
 }

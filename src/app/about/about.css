@@ -62,7 +62,7 @@
 }
 .hero p {
   color: var(--white-color);
-  font-size: var(--sumary-size);
+  font-size: clamp(15px, 2vw, 18px);
   line-height: 1.8;
   text-align: center;
 }
@@ -359,7 +359,6 @@
   position: relative;
   box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.07);
   border: 18px;
-  padding: 20px 45px 20px 10px;
   width: 100%;
   min-height: 90px;
   display: flex;
@@ -486,10 +485,15 @@
   :host-context([dir='rtl']) .achievments .item {
     padding: 0.5rem;
   }
-  .achievments .items .achive {
-    padding: 31px 10px;
+  .achievments .items .achive{
     justify-content: center;
     text-align: center;
+  }
+  :host-context([dir='ltr']) .achievments .items .achive {
+    padding: 31px 10px;
+  }
+  :host-context([dir='rtl']) .achievments .items .achive {
+    padding: 31px 10px;
   }
   .achievments .items .achive .year {
     background-color: var(--main-color2);

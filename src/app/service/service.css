@@ -61,7 +61,7 @@
 }
 .hero p {
   color: var(--white-color);
-  font-size: var(--sumary-size);
+  font-size: clamp(15px, 2vw, 18px);
   line-height: 1.8;
   text-align: center;
 }

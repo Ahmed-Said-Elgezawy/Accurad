@@ -47,91 +47,91 @@
       <ul class="toc-list" id="tocList">
 
         <li>
-          <a href="#s1">
+          <a  #tocLink (click)="scrollToSection('s1', $event)">
             <span class="toc-num">01</span>
             {{ t('privacy.toc.items.information') }}
           </a>
         </li>
 
         <li>
-          <a href="#s2">
+          <a  #tocLink (click)="scrollToSection('s2', $event)">
             <span class="toc-num">02</span>
             {{ t('privacy.toc.items.usage') }}
           </a>
         </li>
 
         <li>
-          <a href="#s3">
+          <a  #tocLink (click)="scrollToSection('s3', $event)">
             <span class="toc-num">03</span>
             {{ t('privacy.toc.items.contactForm') }}
           </a>
         </li>
 
         <li>
-          <a href="#s4">
+          <a  #tocLink (click)="scrollToSection('s4', $event)">
             <span class="toc-num">04</span>
             {{ t('privacy.toc.items.cookies') }}
           </a>
         </li>
 
         <li>
-          <a href="#s5">
+          <a  #tocLink (click)="scrollToSection('s5', $event)">
             <span class="toc-num">05</span>
             {{ t('privacy.toc.items.thirdParty') }}
           </a>
         </li>
 
         <li>
-          <a href="#s6">
+          <a  #tocLink (click)="scrollToSection('s6', $event)">
             <span class="toc-num">06</span>
             {{ t('privacy.toc.items.security') }}
           </a>
         </li>
 
         <li>
-          <a href="#s7">
+          <a  #tocLink (click)="scrollToSection('s7', $event)">
             <span class="toc-num">07</span>
             {{ t('privacy.toc.items.medicalPrivacy') }}
           </a>
         </li>
 
         <li>
-          <a href="#s8">
+          <a  #tocLink (click)="scrollToSection('s8', $event)">
             <span class="toc-num">08</span>
             {{ t('privacy.toc.items.sharing') }}
           </a>
         </li>
 
         <li>
-          <a href="#s9">
+          <a  #tocLink (click)="scrollToSection('s9', $event)">
             <span class="toc-num">09</span>
             {{ t('privacy.toc.items.externalLinks') }}
           </a>
         </li>
 
         <li>
-          <a href="#s10">
+          <a  #tocLink (click)="scrollToSection('s10', $event)">
             <span class="toc-num">10</span>
             {{ t('privacy.toc.items.rights') }}
           </a>
         </li>
 
         <li>
-          <a href="#s11">
+          <a  #tocLink (click)="scrollToSection('s11', $event)">
             <span class="toc-num">11</span>
             {{ t('privacy.toc.items.children') }}
           </a>
         </li>
 
         <li>
-          <a href="#s12">
+          <a  #tocLink (click)="scrollToSection('s12', $event)">
             <span class="toc-num">12</span>
             {{ t('privacy.toc.items.updates') }}
           </a>
         </li>
 
         <li>
-          <a href="#s13">
+          <a  #tocLink (click)="scrollToSection('s13', $event)">
             <span class="toc-num">13</span>
             {{ t('privacy.toc.items.contact') }}
           </a>
@@ -145,7 +145,7 @@
 
       <!-- Section 1 -->
 
-      <section class="section" id="s1">
+      <section class="section" #sectionRef id="s1">
 
         <div class="section-head">
           <div class="section-tag">01</div>
@@ -185,7 +185,7 @@
 
       <!-- Section 2 -->
 
-      <section class="section" id="s2">
+      <section class="section" #sectionRef id="s2">
 
         <div class="section-head">
           <div class="section-tag">02</div>
@@ -211,7 +211,7 @@
       </section>
             <!-- Section 3 -->
 
-      <section class="section" id="s3">
+      <section class="section" #sectionRef id="s3">
 
         <div class="section-head">
           <div class="section-tag">03</div>
@@ -236,7 +236,7 @@
 
       <!-- Section 4 -->
 
-      <section class="section" id="s4">
+      <section class="section" #sectionRef id="s4">
 
         <div class="section-head">
           <div class="section-tag">04</div>
@@ -259,7 +259,7 @@
 
       <!-- Section 5 -->
 
-      <section class="section" id="s5">
+      <section class="section" #sectionRef id="s5">
 
         <div class="section-head">
           <div class="section-tag">05</div>
@@ -289,7 +289,7 @@
 
       <!-- Section 6 -->
 
-      <section class="section" id="s6">
+      <section class="section" #sectionRef id="s6">
 
         <div class="section-head">
           <div class="section-tag">06</div>
@@ -312,7 +312,7 @@
 
       <!-- Section 7 -->
 
-      <section class="section" id="s7">
+      <section class="section" #sectionRef id="s7">
 
         <div class="section-head">
           <div class="section-tag">07</div>
@@ -337,7 +337,7 @@
 
       <!-- Section 8 -->
 
-      <section class="section" id="s8">
+      <section class="section" #sectionRef id="s8">
 
         <div class="section-head">
           <div class="section-tag">08</div>
@@ -359,7 +359,7 @@
       </section>
             <!-- Section 9 -->
 
-      <section class="section" id="s9">
+      <section class="section" #sectionRef id="s9">
 
         <div class="section-head">
           <div class="section-tag">09</div>
@@ -382,7 +382,7 @@
 
       <!-- Section 10 -->
 
-      <section class="section" id="s10">
+      <section class="section" #sectionRef id="s10">
 
         <div class="section-head">
           <div class="section-tag">10</div>
@@ -408,7 +408,7 @@
 
       <!-- Section 11 -->
 
-      <section class="section" id="s11">
+      <section class="section" #sectionRef id="s11">
 
         <div class="section-head">
           <div class="section-tag">11</div>
@@ -431,7 +431,7 @@
 
       <!-- Section 12 -->
 
-      <section class="section" id="s12">
+      <section class="section" #sectionRef id="s12">
 
         <div class="section-head">
           <div class="section-tag">12</div>
@@ -454,7 +454,7 @@
 
       <!-- Section 13 -->
 
-      <section class="section" id="s13">
+      <section class="section" #sectionRef id="s13">
 
         <div class="section-head">
           <div class="section-tag">13</div>
