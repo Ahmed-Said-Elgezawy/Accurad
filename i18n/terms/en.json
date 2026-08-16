@@ -1,0 +1,121 @@
+{
+    "hero": {
+      "brand": "Terms & Conditions",
+      "title": "Clear Terms Are the First Step Toward a Trusted Partnership",
+      "description": "Welcome to the Accurad Teleradiology Solutions website. By accessing or using this website, you acknowledge and agree to all the terms and conditions stated on this page. If you do not agree with any of these terms, please do not use the website."
+    },
+
+    "toc": {
+      "label": "Page Contents",
+      "items": {
+        "definition": "Website Definition",
+        "usage": "Use of the Website",
+        "information": "Information Provided",
+        "intellectualProperty": "Intellectual Property",
+        "services": "Company Services",
+        "contactForm": "Contact Form",
+        "externalLinks": "External Links",
+        "liability": "Limitation of Liability",
+        "security": "Website Security",
+        "updates": "Terms Updates",
+        "law": "Applicable Law",
+        "contact": "Contact Us"
+      }
+    },
+
+    "sections": {
+      "definition": {
+        "title": "Website Definition",
+        "paragraph": "This website is the official website of Accurad Teleradiology Solutions. It is intended to introduce the company's services, provide information about teleradiology services, and provide means of communication with clients, hospitals, radiology centers, and healthcare organizations."
+      },
+
+      "usage": {
+        "title": "Use of the Website",
+        "intro": "The user agrees to use the website in a lawful and responsible manner and shall not engage in any activity that may:",
+        "items": {
+          "damage": "Damage or disrupt the website.",
+          "unauthorizedAccess": "Attempt to gain unauthorized access to the website's systems.",
+          "harmfulContent": "Enter or publish harmful or illegal content.",
+          "fraudulent": "Use the website for fraudulent or unlawful purposes.",
+          "rights": "Violate the rights of the company or any other party."
+        }
+      },
+
+      "information": {
+        "title": "Information Provided",
+        "paragraph1": "We strive to provide accurate and up-to-date information on the website. However, Accurad Teleradiology Solutions does not guarantee that all published information will always be completely error-free or current.",
+        "paragraph2": "The company may modify or update the website content or services at any time without prior notice."
+      },
+
+      "intellectualProperty": {
+        "title": "Intellectual Property",
+        "intro": "All content on this website, including but not limited to:",
+        "items": {
+          "companyName": "Company name.",
+          "logo": "Logo.",
+          "text": "Text.",
+          "images": "Images.",
+          "designs": "Designs.",
+          "graphics": "Graphics.",
+          "icons": "Icons.",
+          "media": "Media files.",
+          "software": "Software.",
+          "code": "Website source code."
+        },
+        "paragraph1": "Is owned by Accurad Teleradiology Solutions or licensed for its use and is protected by applicable intellectual property laws.",
+        "paragraph2": "No part of the website's content may be copied, republished, modified, or distributed without prior written permission from the company."
+      },
+
+      "services": {
+        "title": "Company Services",
+        "paragraph1": "The website is intended to provide information about the services offered by Accurad Teleradiology Solutions. Accessing the website or submitting a contact form does not constitute a binding agreement to provide any service.",
+        "paragraph2": "Actual services are provided in accordance with contracts or agreements entered into between the company and its clients."
+      },
+
+      "contactForm": {
+        "title": "Contact Form",
+        "paragraph1": "Users may contact the company through the contact form available on the website.",
+        "paragraph2": "The user agrees that all information provided is true and accurate and that the contact form will not be used to send spam, misleading messages, or unlawful content."
+      },
+
+      "externalLinks": {
+        "title": "External Links",
+        "paragraph1": "The website may contain links to websites or services operated by third parties.",
+        "paragraph2": "Accurad Teleradiology Solutions is not responsible for the content, privacy policies, or services provided by such external websites."
+      },
+
+      "liability": {
+        "title": "Limitation of Liability",
+        "paragraph1": "Accurad Teleradiology Solutions makes every effort to maintain the website in a stable and secure manner. However, we do not guarantee that the website will always be available without interruption or completely free from technical errors.",
+        "paragraph2": "The company shall not be liable for any direct or indirect losses or damages that may arise from the use of the website or the inability to access it."
+      },
+
+      "security": {
+        "title": "Website Security",
+        "paragraph1": "Any attempt to test or compromise the security of the website, interfere with its operation, or use any means that may affect its performance or put its data at risk is prohibited.",
+        "paragraph2": "The company may take appropriate measures to protect the website when any unlawful use is detected."
+      },
+
+      "updates": {
+        "title": "Terms & Conditions Updates",
+        "paragraph1": "Accurad Teleradiology Solutions reserves the right to modify these Terms & Conditions at any time without prior notice.",
+        "paragraph2": "Continued use of the website after any modifications are published constitutes acceptance of the updated terms."
+      },
+
+      "law": {
+        "title": "Applicable Law",
+        "paragraph": "These Terms & Conditions are governed by and interpreted in accordance with the applicable laws and regulations, without prejudice to any legal rights granted to the user under applicable law."
+      },
+
+      "contact": {
+        "title": "Contact Us",
+        "intro": "If you have any questions regarding these Terms & Conditions, you may contact us through:",
+        "emailLabel": "Email:",
+        "email": "info@accurad-example.com",
+        "websiteLabel": "Website:",
+        "website": "www.accurad-example.com"
+      }
+    },
+
+    "closing": "By accessing or using this website, you confirm that you have read, understood, and agreed to comply with these Terms & Conditions."
+  }
