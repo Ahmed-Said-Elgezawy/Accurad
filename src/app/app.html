@@ -9,32 +9,11 @@
         </svg>
         </div>
     <div class="logo-img" routerLink="/home">
-      <img src="logo1.png" alt="">
+      <img src="images/logo.webp" alt="">
     </div>
     </div>
     <nav>
       <ul>
-        <!-- <li routerLink="/Register">
-            <svg  xmlns="http://www.w3.org/2000/svg" width="29" height="24"  
-            fill="currentColor" viewBox="0 0 23 23" >
-            <path d="M22 11h-3V8h-2v3h-3v2h3v3h2v-3h3zM4 8c0 2.28 1.72 4 4 4s4-1.72 4-4-1.72-4-4-4-4 1.72-4 4m6 0c0 1.18-.82 2-2 2s-2-.82-2-2 .82-2 2-2 2 .82 2 2M3 20h10c.55 0 1-.45 1-1v-1c0-2.76-2.24-5-5-5H7c-2.76 0-5 2.24-5 5v1c0 .55.45 1 1 1m4-5h2c1.65 0 3 1.35 3 3H4c0-1.65 1.35-3 3-3"></path>
-            </svg>
-            <p>{{t ('about.l1')}}</p>
-        </li>
-        <li routerLink="/sign">
-            <svg  xmlns="http://www.w3.org/2000/svg" width="22" height="22"  
-            fill="currentColor" viewBox="0 0 25 25" >
-            <path d="M6 22h12c1.1 0 2-.9 2-2v-9c0-1.1-.9-2-2-2h-1V7c0-2.76-2.24-5-5-5S7 4.24 7 7v2H6c-1.1 0-2 .9-2 2v9c0 1.1.9 2 2 2M9 7c0-1.65 1.35-3 3-3s3 1.35 3 3v2H9zm-3 4h12v9H6z"></path>
-            </svg>
-            <p>{{t ('about.l2')}}</p>
-        </li>
-        <li routerLink="/update">
-            <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20"  
-            fill="currentColor" viewBox="0 0 27 27" >
-            <path d="M16 16H2v2h14v4l6-5-6-5zM8 1 2 6l6 5V7h14V5H8z"></path>
-            </svg>
-            <p>{{t ('about.l3')}}</p>
-        </li> -->
         <li class="drop">
         <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24"  
         fill="currentColor" viewBox="0 0 24 24" >
@@ -82,16 +61,13 @@
         <div class="licon" style="--i:4; --x:8;"  routerLink="/home" (click)="closeMenul()">
           <li>{{t ('n1')}}</li>
         </div>
-        <div class="licon" style="--i:5;--x:7;"  routerLink="/about" (click)="closeMenul()">
+        <div class="licon" style="--i:5;--x:7;"  routerLink="/about-us" (click)="closeMenul()">
         <li>{{t ('n2')}}</li>
         </div>
-        <div class="licon" style="--i:6;--x:6;"  routerLink="/service" (click)="closeMenul()">
+        <div class="licon" style="--i:6;--x:6;"  routerLink="/services" (click)="closeMenul()">
         <li>{{t ('n3')}}</li>
         </div>
-        <div class="licon" style="--i:7;--x:5;"  routerLink="/faq" (click)="closeMenul()">
-        <li>{{t ('n4')}}</li>
-        </div>
-        <div class="licon" style="--i:8;--x:4;"  routerLink="/contact" (click)="closeMenul()">
+        <div class="licon" style="--i:8;--x:4;"  routerLink="/contact-us" (click)="closeMenul()">
         <li>{{t ('n5')}}</li>
         </div>
       </ul>
@@ -119,7 +95,7 @@
     <div class="footer-column company">
       <div class="logo-wrapper">
         <div class="Logo-img-footer" routerLink="/home">
-          <img src="logo1.png" alt="Company Logo">
+          <img src="images/logo.webp" alt="Company Logo">
         </div>
 
         <div class="text">
@@ -147,10 +123,10 @@
       <div class="links-con">
         <ul>
           <li><a routerLink="/home">{{t('link1')}}</a></li>
-          <li><a routerLink="/about">{{t('link2')}}</a></li>
-          <li><a routerLink="/service">{{t('link3')}}</a></li>
+          <li><a routerLink="/about-us">{{t('link2')}}</a></li>
+          <li><a routerLink="/services">{{t('link3')}}</a></li>
           <li><a routerLink="/portal">{{t('link4')}}</a></li>
-          <li><a routerLink="/contact">{{t('link5')}}</a></li>
+          <li><a routerLink="/contact-us">{{t('link5')}}</a></li>
         </ul>
         <ul class="arrows left-icon" >
           <li>
@@ -259,7 +235,7 @@
     <div class="footer-policy">
       <a routerLink="/privacy-policy">{{t('policy')}}</a>
       <span>|</span>
-      <a href="#">{{t('terms')}}</a>
+      <a routerLink="/terms-conditions">{{t('terms')}}</a>
     </div>
   </div>
   </div>

@@ -5,6 +5,7 @@ import { TranslocoDirective, TranslocoService } from '@jsverse/transloco';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import emailjs from '@emailjs/browser';
+import { Meta, Title } from '@angular/platform-browser';
 @Component({
   selector: 'app-contact',
   imports: [CommonModule,FormsModule,TranslocoDirective,RouterLink],
@@ -23,7 +24,8 @@ languages: string[];
 constructor(
   private translocoService: TranslocoService,
   private renderer: Renderer2,
-  private router: Router
+  private router: Router,
+  private titleService: Title, private meta: Meta
 ){
 
   // قراءة اللغة المحفوظة
@@ -79,6 +81,11 @@ changeLang(langCode: string): void {
       window.scrollTo(0,0)
     }
   })
+this.titleService.setTitle('Contact Us | Accurad Teleradiology Solutions');
+this.meta.updateTag({ 
+  name: 'description', 
+  content: 'Get in touch with Accurad Teleradiology Solutions to learn more about our remote radiology services, request a quote, or start a partnership. Our team is ready to answer your inquiries anytime.' 
+});
   }
   // ======
 isSending = false;

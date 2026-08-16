@@ -1,16 +1,16 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, ElementRef, OnDestroy, QueryList, Renderer2, ViewChildren } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
-import { NavigationEnd, Router, RouterLink } from '@angular/router';
+import { Component, Renderer2 } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { TranslocoDirective, TranslocoService } from '@jsverse/transloco';
-
+import { ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 @Component({
-  selector: 'app-privacy-policy',
+  selector: 'app-terms',
   imports: [CommonModule,TranslocoDirective],
-  templateUrl: './privacy-policy.html',
-  styleUrl: './privacy-policy.css',
+  templateUrl: './terms.html',
+  styleUrl: './terms.css',
 })
-export class PrivacyPolicy implements AfterViewInit, OnDestroy {
+export class Terms {
 currentLang: string;
 languages: string[];
 
@@ -73,10 +73,10 @@ changeLang(langCode: string): void {
       window.scrollTo(0,0)
     }
   })
-  this.titleService.setTitle('Privacy Policy | Accurad Teleradiology Solutions');
+  this.titleService.setTitle('Terms & Conditions | Accurad Teleradiology Solutions');
 this.meta.updateTag({ 
   name: 'description', 
-  content: 'Read the Privacy Policy of Accurad Teleradiology Solutions to understand how we collect, use, and protect your personal and medical data in accordance with the highest standards of security and confidentiality.' 
+  content: 'Read the Terms & Conditions governing the use of Accurad Teleradiology Solutions\' services, including client rights and obligations, the nature of services provided, and data and medical report handling policies.' 
 });
   }
 

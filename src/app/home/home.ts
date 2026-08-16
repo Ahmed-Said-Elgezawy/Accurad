@@ -1,17 +1,16 @@
 import {
   AfterViewInit,
   Component,
-  ElementRef,
   OnDestroy,
   OnInit,
   Renderer2,
-  ViewChild,
 } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { TranslocoDirective, TranslocoService } from '@jsverse/transloco';
 import Swiper from 'swiper';
 import { Keyboard, Mousewheel, Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { Subscription } from 'rxjs';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -36,7 +35,9 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
   // ── Constructor ──────────────────────────────────────────────────────────
   constructor(
     private translocoService: TranslocoService,
-    private renderer:         Renderer2,
+    private renderer:Renderer2,
+    private router: Router,
+    private titleService: Title, private meta: Meta
   ) {
     // read saved language
     const savedLang    = localStorage.getItem('lang');
@@ -64,20 +65,21 @@ export class Home implements OnInit, AfterViewInit, OnDestroy {
   }
 
   // ── Lifecycle ────────────────────────────────────────────────────────────
-  ngOnInit(): void {}
+  ngOnInit(): void {
+this.router.events.subscribe((event: any)=>{
+    if(event  instanceof NavigationEnd){
+      window.scrollTo(0,0)
+    }
+  })
+this.titleService.setTitle('Accurad Teleradiology Solutions | Remote Radiology Interpretation');
+this.meta.updateTag({ 
+  name: 'description', 
+  content: 'Accurad Teleradiology Solutions delivers accurate, high-quality remote radiology interpretation services, powered by expert radiologists, providing fast and reliable reports around the clock for hospitals and medical centers.' 
+});
+  }
 
   ngAfterViewInit(): void {
-    // ★ الإصلاح الجوهري ★
-    // *transloco directive لا يرسم محتوى الـ swiper في الـ DOM إلا بعد
-    // وصول بيانات الترجمة الفعلية. عند إعادة تحميل الصفحة (cold load)
-    // هذا التحميل يمر عبر HTTP ويأخذ وقتاً حقيقياً، لذلك عنصر .mainSwiper
-    // غير موجود أصلاً في الـ DOM لحظة تنفيذ ngAfterViewInit، فتفشل تهيئة
-    // Swiper بصمت. عند تغيير اللغة يدوياً لاحقاً تكون البيانات محمّلة
-    // بالفعل من المرة الأولى، لذلك يبدو أن "اختيار اللغة" هو ما يُصلح
-    // الأمر، بينما الحقيقة أنها أول مرة يجد فيها initSwiper() الـ DOM
-    // الحقيقي جاهزاً. الحل: ننتظر تحميل الترجمة الفعلي قبل لمس Swiper.
     this.translocoService.load(this.currentLang).subscribe(() => {
-      // tick إضافي يضمن أن Angular أنهى فعلياً رسم الـ DOM بعد وصول البيانات
       setTimeout(() => this.initSwiper(), 1000);
     });
   }

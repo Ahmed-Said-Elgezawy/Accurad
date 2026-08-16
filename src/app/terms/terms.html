@@ -1,0 +1,486 @@
+<div *transloco="let t">
+<div class="scanfield">
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="brand">{{ t('terms.hero.brand') }}</span>
+
+      <h1>{{ t('terms.hero.title') }}</h1>
+
+      <p class="lede">
+        {{ t('terms.hero.description') }}
+      </p>
+    </div>
+  </header>
+</div>
+
+<div class="page">
+
+  <nav class="toc" id="toc">
+
+    <span class="toc-label">
+      {{ t('terms.toc.label') }}
+    </span>
+
+    <ol id="tocList">
+
+      <li>
+        <a #tocLink (click)="scrollToSection('c1', $event)" >
+          <span class="n">01</span>
+          {{ t('terms.toc.items.definition') }}
+        </a>
+      </li>
+
+      <li>
+        <a #tocLink (click)="scrollToSection('c2', $event)" >
+          <span class="n">02</span>
+          {{ t('terms.toc.items.usage') }}
+        </a>
+      </li>
+
+      <li>
+        <a #tocLink (click)="scrollToSection('c3', $event)"href="#c3">
+          <span class="n">03</span>
+          {{ t('terms.toc.items.information') }}
+        </a>
+      </li>
+
+      <li>
+        <a #tocLink (click)="scrollToSection('c4', $event)">
+          <span class="n">04</span>
+          {{ t('terms.toc.items.intellectualProperty') }}
+        </a>
+      </li>
+
+      <li>
+        <a #tocLink (click)="scrollToSection('c5', $event)">
+          <span class="n">05</span>
+          {{ t('terms.toc.items.services') }}
+        </a>
+      </li>
+
+      <li>
+        <a #tocLink (click)="scrollToSection('c6', $event)">
+          <span class="n">06</span>
+          {{ t('terms.toc.items.contactForm') }}
+        </a>
+      </li>
+
+      <li>
+        <a #tocLink (click)="scrollToSection('c7', $event)">
+          <span class="n">07</span>
+          {{ t('terms.toc.items.externalLinks') }}
+        </a>
+      </li>
+
+      <li>
+        <a #tocLink (click)="scrollToSection('c8', $event)">
+          <span class="n">08</span>
+          {{ t('terms.toc.items.liability') }}
+        </a>
+      </li>
+
+      <li>
+        <a #tocLink (click)="scrollToSection('c9', $event)">
+          <span class="n">09</span>
+          {{ t('terms.toc.items.security') }}
+        </a>
+      </li>
+
+      <li>
+        <a #tocLink (click)="scrollToSection('c10', $event)">
+          <span class="n">10</span>
+          {{ t('terms.toc.items.updates') }}
+        </a>
+      </li>
+
+      <li>
+        <a #tocLink (click)="scrollToSection('c11', $event)">
+          <span class="n">11</span>
+          {{ t('terms.toc.items.law') }}
+        </a>
+      </li>
+
+      <li>
+        <a #tocLink (click)="scrollToSection('c12', $event)">
+          <span class="n">12</span>
+          {{ t('terms.toc.items.contact') }}
+        </a>
+      </li>
+
+    </ol>
+  </nav>
+
+  <main>
+
+    <!-- Section 01 -->
+
+    <section class="clause"  #sectionRef  id="c1">
+
+      <div class="clause-head">
+        <span class="clause-num">01</span>
+        <h2>{{ t('terms.sections.definition.title') }}</h2>
+      </div>
+
+      <div class="clause-body">
+
+        <p>
+          {{ t('terms.sections.definition.paragraph') }}
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Section 02 -->
+
+    <section class="clause"  #sectionRef id="c2">
+
+      <div class="clause-head">
+        <span class="clause-num">02</span>
+        <h2>{{ t('terms.sections.usage.title') }}</h2>
+      </div>
+
+      <div class="clause-body">
+
+        <p>
+          {{ t('terms.sections.usage.intro') }}
+        </p>
+
+        <ul>
+
+          <li>
+            {{ t('terms.sections.usage.items.damage') }}
+          </li>
+
+          <li>
+            {{ t('terms.sections.usage.items.unauthorizedAccess') }}
+          </li>
+
+          <li>
+            {{ t('terms.sections.usage.items.harmfulContent') }}
+          </li>
+
+          <li>
+            {{ t('terms.sections.usage.items.fraudulent') }}
+          </li>
+
+          <li>
+            {{ t('terms.sections.usage.items.rights') }}
+          </li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <!-- Section 03 -->
+
+    <section class="clause"  #sectionRef id="c3">
+
+      <div class="clause-head">
+        <span class="clause-num">03</span>
+        <h2>{{ t('terms.sections.information.title') }}</h2>
+      </div>
+
+      <div class="clause-body">
+
+        <p>
+          {{ t('terms.sections.information.paragraph1') }}
+        </p>
+
+        <p>
+          {{ t('terms.sections.information.paragraph2') }}
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Section 04 -->
+
+    <section class="clause"  #sectionRef id="c4">
+
+      <div class="clause-head">
+        <span class="clause-num">04</span>
+        <h2>{{ t('terms.sections.intellectualProperty.title') }}</h2>
+      </div>
+
+      <div class="clause-body">
+
+        <p>
+          {{ t('terms.sections.intellectualProperty.intro') }}
+        </p>
+
+        <ul>
+
+          <li>
+            {{ t('terms.sections.intellectualProperty.items.companyName') }}
+          </li>
+
+          <li>
+            {{ t('terms.sections.intellectualProperty.items.logo') }}
+          </li>
+
+          <li>
+            {{ t('terms.sections.intellectualProperty.items.text') }}
+          </li>
+
+          <li>
+            {{ t('terms.sections.intellectualProperty.items.images') }}
+          </li>
+
+          <li>
+            {{ t('terms.sections.intellectualProperty.items.designs') }}
+          </li>
+
+          <li>
+            {{ t('terms.sections.intellectualProperty.items.graphics') }}
+          </li>
+
+          <li>
+            {{ t('terms.sections.intellectualProperty.items.icons') }}
+          </li>
+
+          <li>
+            {{ t('terms.sections.intellectualProperty.items.media') }}
+          </li>
+
+          <li>
+            {{ t('terms.sections.intellectualProperty.items.software') }}
+          </li>
+
+          <li>
+            {{ t('terms.sections.intellectualProperty.items.code') }}
+          </li>
+
+        </ul>
+
+        <p>
+          {{ t('terms.sections.intellectualProperty.paragraph1') }}
+        </p>
+
+        <p>
+          {{ t('terms.sections.intellectualProperty.paragraph2') }}
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Section 05 -->
+
+    <section class="clause"  #sectionRef id="c5">
+
+      <div class="clause-head">
+        <span class="clause-num">05</span>
+        <h2>{{ t('terms.sections.services.title') }}</h2>
+      </div>
+
+      <div class="clause-body">
+
+        <p>
+          {{ t('terms.sections.services.paragraph1') }}
+        </p>
+
+        <p>
+          {{ t('terms.sections.services.paragraph2') }}
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Section 06 -->
+
+    <section class="clause"  #sectionRef id="c6">
+
+      <div class="clause-head">
+        <span class="clause-num">06</span>
+        <h2>{{ t('terms.sections.contactForm.title') }}</h2>
+      </div>
+
+      <div class="clause-body">
+
+        <p>
+          {{ t('terms.sections.contactForm.paragraph1') }}
+        </p>
+
+        <p>
+          {{ t('terms.sections.contactForm.paragraph2') }}
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- Section 07 -->
+
+    <section class="clause"  #sectionRef id="c7">
+
+      <div class="clause-head">
+        <span class="clause-num">07</span>
+        <h2>{{ t('terms.sections.externalLinks.title') }}</h2>
+      </div>
+
+      <div class="clause-body">
+
+        <p>
+          {{ t('terms.sections.externalLinks.paragraph1') }}
+        </p>
+
+        <p>
+          {{ t('terms.sections.externalLinks.paragraph2') }}
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Section 08 -->
+
+    <section class="clause"  #sectionRef id="c8">
+
+      <div class="clause-head">
+        <span class="clause-num">08</span>
+        <h2>{{ t('terms.sections.liability.title') }}</h2>
+      </div>
+
+      <div class="clause-body">
+
+        <p>
+          {{ t('terms.sections.liability.paragraph1') }}
+        </p>
+
+        <p>
+          {{ t('terms.sections.liability.paragraph2') }}
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Section 09 -->
+
+    <section class="clause"  #sectionRef id="c9">
+
+      <div class="clause-head">
+        <span class="clause-num">09</span>
+        <h2>{{ t('terms.sections.security.title') }}</h2>
+      </div>
+
+      <div class="clause-body">
+
+        <p>
+          {{ t('terms.sections.security.paragraph1') }}
+        </p>
+
+        <p>
+          {{ t('terms.sections.security.paragraph2') }}
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Section 10 -->
+
+    <section class="clause"  #sectionRef id="c10">
+
+      <div class="clause-head">
+        <span class="clause-num">10</span>
+        <h2>{{ t('terms.sections.updates.title') }}</h2>
+      </div>
+
+      <div class="clause-body">
+
+        <p>
+          {{ t('terms.sections.updates.paragraph1') }}
+        </p>
+
+        <p>
+          {{ t('terms.sections.updates.paragraph2') }}
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Section 11 -->
+
+    <section class="clause"  #sectionRef id="c11">
+
+      <div class="clause-head">
+        <span class="clause-num">11</span>
+        <h2>{{ t('terms.sections.law.title') }}</h2>
+      </div>
+
+      <div class="clause-body">
+
+        <p>
+          {{ t('terms.sections.law.paragraph') }}
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Section 12 -->
+
+    <section class="clause"  #sectionRef id="c12">
+
+      <div class="clause-head">
+        <span class="clause-num">12</span>
+        <h2>{{ t('terms.sections.contact.title') }}</h2>
+      </div>
+
+      <div class="clause-body">
+
+        <p>
+          {{ t('terms.sections.contact.intro') }}
+        </p>
+
+        <div class="contact-card">
+
+          <div class="email">
+            {{ t('terms.sections.contact.emailLabel') }}
+
+            <span>
+              {{ t('terms.sections.contact.email') }}
+            </span>
+          </div>
+
+          <div class="website">
+            {{ t('terms.sections.contact.websiteLabel') }}
+
+            <span>
+              {{ t('terms.sections.contact.website') }}
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <p class="closing-note">
+      {{ t('terms.closing') }}
+    </p>
+
+
+  </main>
+
+</div>
+</div>

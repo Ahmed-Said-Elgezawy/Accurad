@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { TranslocoDirective, TranslocoService } from '@jsverse/transloco';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-request',
@@ -203,6 +204,7 @@ constructor(
   private translocoService: TranslocoService,
   private renderer: Renderer2,
   private router: Router,
+  private titleService: Title, private meta: Meta
 ){
 
   // قراءة اللغة المحفوظة
@@ -261,6 +263,11 @@ changeLang(langCode: string): void {
       window.scrollTo(0,0)
     }
   })
+  this.titleService.setTitle('Request a Consultation | Accurad Teleradiology Solutions');
+this.meta.updateTag({ 
+  name: 'description', 
+  content: 'Request a specialized consultation from Accurad Teleradiology Solutions to get accurate and fast interpretation of your radiology reports, supported by expert radiologists available around the clock.' 
+});
   }
 
 }

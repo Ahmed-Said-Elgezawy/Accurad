@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 import { NavigationEnd, Router } from '@angular/router';
 import { TranslocoDirective, TranslocoService } from '@jsverse/transloco';
 
@@ -17,6 +18,7 @@ constructor(
   private translocoService: TranslocoService,
   private renderer: Renderer2,
   private router: Router,
+  private titleService: Title, private meta: Meta
 ){
 
   // قراءة اللغة المحفوظة
@@ -71,5 +73,10 @@ changeLang(langCode: string): void {
       window.scrollTo(0,0)
     }
   })
+this.titleService.setTitle('About Us | Accurad Teleradiology Solutions');
+this.meta.updateTag({ 
+  name: 'description', 
+  content: 'Learn about Accurad Teleradiology Solutions, a leading provider of remote radiology interpretation services, delivering accurate, high-quality diagnostic reports through a team of expert radiologists for hospitals and medical centers.' 
+});
   }
 }

@@ -18,7 +18,7 @@
     background: var(--background-color);
     padding: 35px 90px 30px;
 }
-
+ 
   /* ===== background texture — faint dot grid, DICOM-viewport feel ===== */
   .grain{
     position:fixed;
@@ -59,25 +59,6 @@
     overflow:hidden;
   }
 
-  .viewport::before{ top:-1px; right:-1px; border-width:2px 2px 0 0; }
-  .viewport::after{ bottom:-1px; left:-1px; border-width:0 0 2px 2px; }
- 
-  .scanline{
-    position:absolute;
-    right:0; left:0;
-    height:2px;
-    background:linear-gradient(90deg, transparent, var(--purple-soft), transparent);
-    opacity:.65;
-    animation:scan 6s ease-in-out infinite;
-  }
-  @keyframes scan{
-    0%{ top:6%; opacity:0; }
-    10%{ opacity:.65; }
-    50%{ top:94%; opacity:.65; }
-    60%{ opacity:0; }
-    100%{ top:94%; opacity:0; }
-  }
- 
   .hero h1{
     position:relative;
     font-size:clamp(1.4rem, 4.4vw, 2.5rem);
@@ -93,6 +74,7 @@
     font-size:clamp(15px, 2vw, 17px);
     font-weight:400;
     text-align: center;
+    line-height: 1.8;
   }
   .hero-meta{
     position:relative;
@@ -115,7 +97,6 @@
  
   /* ===== layout ===== */
   .layout{
-    max-width:1180px;
     display:grid;
     grid-template-columns:250px 1fr;
     gap:10rem;
@@ -131,7 +112,7 @@
     height:fit-content;
   }
   .toc-title{
-    font-size:.72rem;
+    font-size:.86rem;
     text-transform:uppercase;
     font-weight:700;
     margin-bottom:18px;
@@ -283,7 +264,6 @@
     opacity:.5;
   }
   .contact-inner{
-    max-width:1180px;
     margin:0 auto;
     position:relative;
     display:flex;
@@ -298,7 +278,7 @@
     margin-bottom:10px;
   }
   .contact-inner h3 span{ color:var(--purple-soft); }
-  .contact-inner p{ color:#b8b0c2; max-width:420px; font-size:.92rem; }
+  .contact-inner p{ color:#b8b0c2;  font-size:.92rem; }
   .contact-links{ display:flex; flex-direction:column; gap:10px; }
   .contact-links a{
     color:#f2eef6;
@@ -314,7 +294,6 @@
   .contact-links a:hover{ color:var(--purple-soft); border-color:var(--purple-soft); }
  
   .fine-print{
-    max-width:1180px;
     margin:0 auto;
     padding:22px 32px 40px;
     font-size:.78rem;
@@ -326,7 +305,7 @@
   }
  
   /* ===== responsive ===== */
-    @media (max-width:1010px){
+    @media (max-width:1030px){
     .layout{
       gap:28px;
     }
