@@ -415,7 +415,7 @@
     padding-right: 0;
   }
 }
-@media (max-width: 815px) {
+@media (max-width: 970px) {
   .about {
     padding: 0 39px 30px;
   }

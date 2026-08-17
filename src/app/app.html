@@ -1,4 +1,6 @@
 
+
+<div class="app-layout">
 <div *transloco="let t">
   <header>
     <div class="logo">
@@ -9,7 +11,7 @@
         </svg>
         </div>
     <div class="logo-img" routerLink="/home">
-      <img src="images/logo.webp" alt="">
+      <img src="images/logo-v1.webp" alt="">
     </div>
     </div>
     <nav>
@@ -46,8 +48,6 @@
       </ul>
     </nav>
   </header>
-</div>
-
 
 <div class="sidebar" [class.active]="isActive" [class.removeActive]="removeActive" *transloco="let t">
    <div class="content">
@@ -67,6 +67,9 @@
         <div class="licon" style="--i:6;--x:6;"  routerLink="/services" (click)="closeMenul()">
         <li>{{t ('n3')}}</li>
         </div>
+        <div class="licon" style="--i:6;--x:6;"  routerLink="/" (click)="closeMenul()">
+        <li>{{t ('n4')}}</li>
+        </div>
         <div class="licon" style="--i:8;--x:4;"  routerLink="/contact-us" (click)="closeMenul()">
         <li>{{t ('n5')}}</li>
         </div>
@@ -85,9 +88,12 @@
     </div>
    </div>
 </div>
-<router-outlet />
 
-<footer class="footer" *transloco="let t">
+<main class="main-content">
+<router-outlet/>
+</main>
+
+<footer class="footer">
   <div class="content">
   <div class="footer-container">
 
@@ -95,7 +101,7 @@
     <div class="footer-column company">
       <div class="logo-wrapper">
         <div class="Logo-img-footer" routerLink="/home">
-          <img src="images/logo.webp" alt="Company Logo">
+          <img src="images/logo-v1.webp" alt="Company Logo">
         </div>
 
         <div class="text">
@@ -249,5 +255,8 @@
       <path d="M13 18V9.91l3.29 3.3 1.42-1.42L12 6.09l-5.71 5.7 1.42 1.42L11 9.91V18z"></path>
       </svg>
     </div>
+</div>
+</div>
+
 </div>
 </div>

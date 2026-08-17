@@ -152,8 +152,8 @@ this.meta.updateTag({
 
       breakpoints: {
         640:  { slidesPerView: 1, spaceBetween: 10 },
-        768:  { slidesPerView: 2, spaceBetween: 23 },
-        1000: { slidesPerView: 2, spaceBetween: 23 },
+        768:  { slidesPerView: 2, spaceBetween: 15 },
+        1000: { slidesPerView: 2, spaceBetween: 15 },
       },
     });
 

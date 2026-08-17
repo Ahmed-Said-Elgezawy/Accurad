@@ -328,7 +328,7 @@
     outline-offset:2px;
   }
 
-  @media (max-width:815px) {
+  @media (max-width:970px) {
     .hero,.layout{
         padding: 30px 39px;
     }

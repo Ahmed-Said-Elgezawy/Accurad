@@ -589,7 +589,7 @@
   100% { opacity: 0; transform: translate(var(--tx), var(--ty)) scale(0.2); }
 }
 
-@media (max-width:815px) {
+@media (max-width:970px) {
     .request .content{
       padding: 20px  39px 15px;
     }

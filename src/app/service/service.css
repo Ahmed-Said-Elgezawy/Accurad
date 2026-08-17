@@ -475,7 +475,7 @@
 :host-context([dir='rtl']) .reliableTele .content .parttwo button .left {
   display: block;
 }
-@media (max-width: 815px) {
+@media (max-width: 970px) {
   .services .content {
     padding: 20px 39px 15px;
   }

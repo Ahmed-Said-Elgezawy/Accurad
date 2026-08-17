@@ -247,6 +247,11 @@
       gap:28px;
     }
     }
+        @media (max-width:970px) {
+    .hero,.page{
+        padding: 30px 39px;
+    }
+    }
   @media (max-width: 900px){
     .page{
       grid-template-columns: 1fr;
@@ -273,11 +278,7 @@
     }
   }
  
-    @media (max-width:815px) {
-    .hero,.page{
-        padding: 30px 39px;
-    }
-    }
+
       @media  (max-width: 576px){
     .hero,.page{
         padding: 25px 11.6px;
