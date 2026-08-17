@@ -689,16 +689,14 @@
 .swiper-slide{
   border: 1px solid var(--main-color);
   background: #8956ad1f;
-  /* background: #8956ad; */
   border-radius: 10px;
-
 }
 .swiper .swiper-slide {
   padding: 0 .5rem;
 }
 
-:host-context([dir="ltr"]) .swiper-button-next,
-:host-context([dir="ltr"]) .swiper-button-prev {
+ .swiper-button-next,
+ .swiper-button-prev {
   top: 50%;
   border: 1px solid var(--main-color2);
   background: #f4e5ff;
@@ -709,40 +707,31 @@
   box-shadow: var(--gray-shadow);
   transition: 0.1s ease;
   cursor: pointer;
-  right: -1.2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-:host-context([dir="rtl"]) .swiper-button-next,
-:host-context([dir="rtl"]) .swiper-button-prev {
-  top: 50%;
-  border: 1px solid var(--main-color2);
-  background: #f4e5ff;
-  width: 30px;
-  height: 45px;
-  border-radius: 5px;
-  color: var(--white-color);
-  box-shadow: var(--gray-shadow);
-  transition: 0.1s ease;
-  cursor: pointer;
-  left: -1.2%;
-}
-:host-context([dir="ltr"]) .swiper-button-next:hover,
-:host-context([dir="ltr"]) .swiper-button-prev:hover {
-  color: white;
+
+
+ .swiper-button-next:hover,
+ .swiper-button-prev:hover {
   background: var(--main-color2);
 }
-:host-context([dir="rtl"]) .swiper-button-next:hover,
-:host-context([dir="rtl"]) .swiper-button-prev:hover {
-  color: white;
-  background: var(--main-color2);
-}
+
 .swiper-button-next:hover svg,
 .swiper-button-prev:hover svg{
   color: white;
 }
-:host-context([dir="ltr"]) .swiper-button-prev {
+  :host-context([dir="ltr"]) .swiper-button-next{
+   right: -1.2%;
+ }
+  :host-context([dir="rtl"]) .swiper-button-next{
+   left: -1.2%;
+ }
+ :host-context([dir="ltr"]) .swiper-button-prev {
   left: -1.2%;
 }
-:host-context([dir="rtl"]) .swiper-button-prev {
+ :host-context([dir="rtl"]) .swiper-button-prev {
   right: -1.2%;
 }
 .swiper-button-next::after,
@@ -846,24 +835,18 @@
   .stat-item:not(.stat-item:nth-last-of-type(1)) {
       border-bottom: 1px solid rgba(255, 255, 255, 0.452); 
     }
-     .swiper-con {
+  .swiper-con {
     overflow: hidden;
     padding: 1.5rem 8px 1rem;
 }
-:host-context([dir="ltr"]) .swiper-button-next,
-:host-context([dir="ltr"]) .swiper-button-prev {
+ .swiper-button-next,
+ .swiper-button-prev {
   border-radius: 2px;
   width: 20px;
   height: 40px;
 
 }
-:host-context([dir="rtl"]) .swiper-button-next,
-:host-context([dir="rtl"]) .swiper-button-prev {
-  border-radius: 2px;
-  width: 20px;
-  height: 40px;
-  left: -1.2%;
-}
+
 }
 @media (max-width: 640px) {
   .services-grid  { grid-template-columns: 1fr 1fr; }
