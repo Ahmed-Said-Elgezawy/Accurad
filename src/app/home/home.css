@@ -882,10 +882,16 @@
  .why-card{
   min-height: 200px;
  }
+ .testimonials-section{
+  padding: 30px 0 20px;
+ }
    .quote-text{
     min-height: 135px;
     display: flex;
     align-items: center;
+    text-align: center;
+    margin: 10px 0;
+    min-height: 174px;
    }
 
 }
